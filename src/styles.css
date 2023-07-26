@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: FiraSansCondensed;
+  src: url(./assets/font/FiraSansCondensed-ExtraLight.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: FiraSansCondensed;
+  src: url(./assets/font/FiraSansCondensed-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: FiraSansCondensed;
+  src: url(./assets/font/FiraSansCondensed-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: FiraSansCondensed;
+  src: url(./assets/font/FiraSansCondensed-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: FiraSansCondensed;
+  src: url(./assets/font/FiraSansCondensed-Bold.ttf);
+  font-weight: bold;
+}
+body {
+  margin: 0px;
+  font-family: FiraSansCondensed;
+}
+
+:root {
+  --myColor: #406ca5;
+}
+input {
+  font-size: 0.88vw;
+  font-family: FiraSansCondensed;
+}
+textarea {
+  font-size: 0.88vw;
+  font-family: FiraSansCondensed;
+}
+input::placeholder {
+  font-size: 0.88vw;
+}
+select {
+  font-size: 0.88vw;
+  font-family: FiraSansCondensed;
+}
+button {
+  border: none;
+}
+/* .isLoading {
+  position: fixed;
+  top: 3.5vw;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  background-size: 5vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./assets/ic_loader.gif);
+} */
+.defaultInput {
+  border: 0.1vw solid #8080807d;
+  border-radius: 0.3vw;
+  padding: 0.4vw 0.5vw;
+  box-sizing: border-box;
+}
+.defaultSelect {
+  padding: 0.3vw 0.4vw;
+  border: 0.1vw solid #8080807d;
+  border-radius: 0.3vw;
+  box-sizing: border-box;
+}
