@@ -1,0 +1,52 @@
+<div class="header">
+  <div class="logoDiv">
+    <div>हिंदुस्तान पेट्रोलियम कॉर्पोरेशन लिमिटेड</div>
+    <div>Hindustan Petroleum Corporation Limited</div>
+  </div>
+  <div class="title">Centralized Retail Information System</div>
+  <div class="profileDiv">
+    <div>
+      <div class="welcome">Welcome</div>
+      <div class="userName">Jafar Alhusayn</div>
+    </div>
+    <div class="profilePic" (click)="showProfileDrower = !showProfileDrower">
+      <div class="profileDrower" *ngIf="showProfileDrower">
+        <div>User Settings</div>
+        <div>Change Password</div>
+        <div>Logout</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="body">
+  <app-dashboard *ngIf="selectedTab === 'dashboard'" />
+  <app-settings *ngIf="selectedTab === 'settings'" />
+</div>
+<div class="sidebar">
+  <div
+    (click)="selectedTab = 'dashboard'"
+    [className]="selectedTab == 'dashboard' ? 'tab_' : 'tab'"
+  >
+    <div
+      [className]="
+        selectedTab == 'dashboard' ? 'icon dashboard_' : 'icon dashboard'
+      "
+    ></div>
+    <div [className]="selectedTab == 'dashboard' ? 'title_' : 'title'">
+      Dashboard
+    </div>
+  </div>
+  <div
+    (click)="selectedTab = 'settings'"
+    [className]="selectedTab == 'settings' ? 'tab_' : 'tab'"
+  >
+    <div
+      [className]="
+        selectedTab == 'settings' ? 'icon settings_' : 'icon settings'
+      "
+    ></div>
+    <div [className]="selectedTab == 'settings' ? 'title_' : 'title'">
+      Settings
+    </div>
+  </div>
+</div>

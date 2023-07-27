@@ -10,4 +10,5 @@ export class LoginComponent {
     e.preventDefault();
     window.location.pathname = 'dashboard';
   };
+  
 }
