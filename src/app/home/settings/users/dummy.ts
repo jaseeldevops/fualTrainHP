@@ -1,5 +1,9 @@
 export const dummyUsers = {
-  paging: {},
+  paging: {
+    page: 1,
+    count: 10,
+    total: 1515,
+  },
   data: [
     {
       roleId: '01',
@@ -33,7 +37,11 @@ export const dummyUsers = {
 };
 
 export const dummyRoles = {
-  paging: {},
+  paging: {
+    page: 1,
+    count: 10,
+    total: 1515,
+  },
   data: [
     {
       siteId: '01',

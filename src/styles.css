@@ -78,7 +78,7 @@ button.myBtn.bordered {
 }
 input.myInput,
 select.myInput {
-  border: 0.10vw solid #9fa3a99c;
+  border: 0.1vw solid #9fa3a99c;
   padding: 0.4vw 0.6vw;
   box-sizing: border-box;
   border-radius: 0.2vw;
@@ -153,3 +153,49 @@ select.myInput {
 /* ////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////// */
+.tablePaging {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 0.5vw;
+  font-size: 0.9vw;
+  font-weight: 500;
+}
+.tablePaging .pagingCounter {
+  display: flex;
+  align-items: center;
+  color: #2426298c;
+}
+.tablePaging .pagingCounter input {
+  width: 3.5vw;
+  margin: 0 0.5vw;
+}
+.tablePaging .pagingPages {
+  display: flex;
+  align-items: center;
+  color: #2426298c;
+  color: var(--myColor);
+}
+.tablePaging .pagingPages div {
+  padding: 0.4vw;
+  cursor: pointer;
+}
+.tablePaging .pagingPages button {
+  min-width: 1.5vw;
+  margin: 0 0.15vw;
+  border: 0.06vw solid var(--myColor);
+  padding: 0.5vw 0.3vw;
+  box-sizing: border-box;
+  border-radius: 0.3vw;
+  cursor: pointer;
+  color: var(--myColor);
+  font-weight: bold;
+  background-color: white;
+}
+.tablePaging .pagingPages button.selected {
+  background-color: var(--myColor);
+  color: white;
+}
+.tablePaging .pagingPages button.disabled {
+  background-color: transparent;
+}

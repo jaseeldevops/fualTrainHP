@@ -13,6 +13,11 @@ export class UsersComponent {
   allUsers: any = dummyUsers;
   allRoles: any = dummyRoles;
 
+  ngOnInit() {
+    this.setUserPaging(1);
+    this.setRolesPaging(1);
+  }
+
   isEdit: boolean = false;
 
   allRolesSelected: boolean = false;
@@ -43,5 +48,18 @@ export class UsersComponent {
   };
   onClickAssigneRole = () => {
     this.page = 'home';
+  };
+
+  setUserPaging = (k: number) => {
+    const pg = this.allUsers?.paging || 0;
+    pg.counter = [];
+    const tl = pg?.total / pg?.count;
+    for (let i = 1; i <= tl && i <= 10; i++) pg.counter.push(i);
+  };
+  setRolesPaging = (k: number) => {
+    const pg = this.allRoles?.paging || 0;
+    pg.counter = [];
+    const tl = pg?.total / pg?.count;
+    for (let i = 1; i <= tl && i <= 10; i++) pg.counter.push(i);
   };
 }
