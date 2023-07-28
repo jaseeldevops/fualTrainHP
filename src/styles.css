@@ -49,6 +49,40 @@ select {
 button {
   border: none;
 }
+button.myBtn {
+  border: none;
+  padding: 0.35vw;
+  text-align: center;
+  border: 0.12vw solid var(--myColor);
+  background-color: var(--myColor);
+  border-radius: 0.3vw;
+  font-size: 1vw;
+  color: white;
+  width: 9vw;
+  cursor: pointer;
+  margin: 0 0.5vw;
+  font-weight: 500;
+}
+button.myBtn.delete {
+  color: #c52b2b;
+  border: 0.12vw solid #c52b2b;
+  background-color: white;
+  background-image: url(./assets/icDelete.svg);
+  background-size: 0.8vw;
+  background-position: 0.6vw;
+  background-repeat: no-repeat;
+}
+button.myBtn.bordered {
+  color: var(--myColor);
+  background-color: white;
+}
+input.myInput,
+select.myInput {
+  border: 0.10vw solid #9fa3a99c;
+  padding: 0.4vw 0.6vw;
+  box-sizing: border-box;
+  border-radius: 0.2vw;
+}
 /* .isLoading {
   position: fixed;
   top: 3.5vw;
@@ -73,3 +107,49 @@ button {
   border-radius: 0.3vw;
   box-sizing: border-box;
 }
+
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+.myTable {
+  background-color: white;
+  border-radius: 0.8vw;
+  padding: 1vw;
+  padding-bottom: 0.2vw;
+  box-shadow: 0px 13px 54px #695f9714;
+}
+.myTableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1vw;
+  font-weight: 500;
+  padding: 0.3vw;
+  border-bottom: 0.12vw solid #1453d25a;
+}
+.myTableHeader div {
+  padding: 0.2vw;
+}
+.myTableBody {
+  overflow: auto;
+}
+.myTableRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1vw;
+  padding: 0.3vw;
+  border-bottom: 0.12vw solid #1453d234;
+}
+.myTableRow:nth-child(even) {
+  background-color: #deeffc;
+}
+.myTableRow div {
+  padding: 0.2vw;
+}
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */

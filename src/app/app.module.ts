@@ -8,9 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { SettingsComponent } from './home/settings/settings.component';
+import { UsersComponent } from './home/settings/users/users.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, DashboardComponent, SettingsComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, DashboardComponent, SettingsComponent, UsersComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

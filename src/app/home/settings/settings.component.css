@@ -3,29 +3,71 @@
   border-bottom: 0.15vw solid #a0b6d281;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 1.5vw;
   font-weight: 500;
   font-size: 1.2vw;
 }
+.header .backBtn {
+  height: 1.1vw;
+  padding-left: 1.5vw;
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/icBack.svg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
 .body {
-  background-color: #eef1f5;
   height: calc(100vh - 7.2vw);
+  width: 100%;
+  background-color: #eef1f5;
 }
 .settingsHome {
-  padding: 0 1vw;
+  padding: 0.5vw 2vw;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
 }
 .settingsHome .eachTab {
   width: calc(50% - 4vw);
-  margin: 1vw;
+  margin: 0.8vw 1vw;
   padding: 1vw;
   background-color: white;
-  border-radius: 0.5vw;
+  border-radius: 0.8vw;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 .settingsHome .icon {
+  min-width: 4vw;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 0.6vw;
+  background-color: #c0e5f5;
+  background-size: 1.8vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/settings/userRoles.svg);
+  margin-right: 1vw;
 }
-.settingsHome .body {
+.settingsHome .tabBody {
+  width: 100%;
+}
+.settingsHome .title {
+  color: #575757;
+  font-size: 1vw;
+}
+.settingsHome .desc {
+  color: #414141c5;
+  font-size: 0.8vw;
 }
 .settingsHome .clickIcon {
+  width: 1vw;
+  height: 1vw;
+  background-size: 1.8vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/icRight.svg);
 }

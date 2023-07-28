@@ -1,10 +1,14 @@
-<div class="header">Settings</div>
-<div class="body">
+<div class="header" *ngIf="page === 'home'">Settings</div>
+<div class="body" *ngIf="page === 'home'">
   <div class="settingsHome">
-    <div class="eachTab">
+    <div class="eachTab" (click)="page = 'userList'">
       <div class="icon"></div>
-      <div class="body"></div>
+      <div class="tabBody">
+        <div class="title">Roles & Rights</div>
+        <div class="desc">Description</div>
+      </div>
       <div class="clickIcon"></div>
     </div>
   </div>
 </div>
+<app-users *ngIf="page === 'userList'" [backToHome]="backToHome" />

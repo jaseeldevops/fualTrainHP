@@ -70,9 +70,10 @@
   cursor: pointer;
 }
 .loginForm .logo {
-  height: 7.2vw;
+  height: 3.5vw;
+  margin-top: 3vw;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../../assets/hp.png);
+  background-image: url(../../assets/fualTrain.png);
 }
