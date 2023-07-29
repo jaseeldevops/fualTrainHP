@@ -74,32 +74,12 @@
         </div>
       </div>
     </div>
-    <div class="tablePaging">
-      <div class="pagingCounter">
-        SHOW
-        <input class="myInput" type="number" />
-        ENTRIES
-      </div>
-      Showing
-      {{
-        allUsers?.paging?.page * allUsers?.paging?.count -
-          (allUsers?.paging?.count - 1)
-      }}
-      to {{ allUsers?.paging?.page * allUsers?.paging?.count }} of
-      {{ allUsers?.paging?.total }}
-      entries
-      <div class="pagingPages">
-        <div>Previous</div>
-        <button
-          [ngClass]="allUsers?.paging?.page === k + 1 ? 'selected' : ''"
-          *ngFor="let it of allUsers?.paging?.counter; let k = index"
-          (click)="allUsers.paging.page = it"
-        >
-          {{ it }}
-        </button>
-        <div>Next</div>
-      </div>
-    </div>
+    <app-table-paging
+      [page]="allUsers?.paging?.page"
+      [count]="allUsers?.paging?.count"
+      [total]="allUsers?.paging?.total"
+      [onChange]="onChangeUserPage"
+    />
   </div>
   <div class="rolesBody" *ngIf="page === 'rolesList'">
     <div class="myTable">
@@ -136,32 +116,12 @@
         </div>
       </div>
     </div>
-    <div class="tablePaging">
-      <div class="pagingCounter">
-        SHOW
-        <input class="myInput" type="number" />
-        ENTRIES
-      </div>
-      Showing
-      {{
-        allRoles?.paging?.page * allRoles?.paging?.count -
-          (allRoles?.paging?.count - 1)
-      }}
-      to {{ allRoles?.paging?.page * allRoles?.paging?.count }} of
-      {{ allRoles?.paging?.total }}
-      entries
-      <div class="pagingPages">
-        <div>Previous</div>
-        <button
-          [ngClass]="allRoles?.paging?.page === k + 1 ? 'selected' : ''"
-          *ngFor="let it of allRoles?.paging?.counter; let k = index"
-          (click)="allRoles.paging.page = it"
-        >
-          {{ it }}
-        </button>
-        <div>Next</div>
-      </div>
-    </div>
+    <app-table-paging
+      [page]="allRoles?.paging?.page"
+      [count]="allRoles?.paging?.count"
+      [total]="allRoles?.paging?.total"
+      [onChange]="onChangeUserRolePage"
+    />
   </div>
   <div *ngIf="page === 'userForm'">
     <div class="userFormBody">

@@ -1,0 +1,23 @@
+<div class="tablePaging">
+  <div class="pagingCounter">
+    SHOW
+    <input class="myInput" type="number" />
+    ENTRIES
+  </div>
+  Showing
+  {{ page * count - (count - 1) }}
+  to {{ page * count }} of
+  {{ total }}
+  entries
+  <div class="pagingPages">
+    <div>Previous</div>
+    <button
+      [ngClass]="page === k + 1 ? 'selected' : ''"
+      *ngFor="let it of counter; let k = index"
+      (click)="onClickAny(it)"
+    >
+      {{ it }}
+    </button>
+    <div>Next</div>
+  </div>
+</div>
