@@ -1,1 +1,443 @@
-<p>dashboard works!</p>
+<div class="header">
+  <div style="width: 30%">Dashboard</div>
+  <div style="display: flex">
+    <div class="grayText">Server Time:</div>
+    25 May 2023 15:25
+  </div>
+  <div class="filterBody">
+    Filter&nbsp;
+    <select class="myInput">
+      <option>All Zone</option>
+    </select>
+    <select class="myInput">
+      <option>All Region</option>
+    </select>
+    <select class="myInput">
+      <option>All Sales Area</option>
+    </select>
+    <button class="myBtn">Submit</button>
+  </div>
+</div>
+<!-- //////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////// -->
+<div class="dashBoardBody" *ngIf="false">
+  <div class="dashBoardFrame">
+    <div class="graphFrame">
+      <div class="top">
+        <div class="title">Site Status</div>
+      </div>
+      <div class="body" style="height: 14vw">Iam body</div>
+    </div>
+    <div class="graphFrame">
+      <div class="top">
+        <div class="title">Tank & Ullage Status</div>
+      </div>
+      <div class="body" style="height: 14vw">Iam body</div>
+    </div>
+    <div class="graphFrame">
+      <div class="top">
+        <div class="title">DU & Nozzle Status</div>
+      </div>
+      <div class="body" style="height: 14vw">Iam body</div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <div style="width: 54%">
+      <div class="graphFrame" style="width: 100%">
+        <div class="top">
+          <div class="title">
+            Todays Sales & Inventory
+            <div class="graphIcon"></div>
+          </div>
+          <div class="subTitle">
+            25000/25000 23
+            <div class="timerIcon"></div>
+            05 2023 06:00
+          </div>
+        </div>
+        <div class="body" style="height: 14vw">Iam body</div>
+      </div>
+      <div class="graphFrame" style="width: 100%">
+        <div class="top">
+          <div class="title">
+            Nozzle Utilisation
+            <div class="graphIcon"></div>
+          </div>
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <div class="body" style="height: 14vw">Iam body</div>
+      </div>
+    </div>
+    <div class="graphFrame" style="width: 23%">
+      <div class="top">
+        <div class="title">
+          Inventory Forecate
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 32vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 23%">
+      <div class="top">
+        <div class="title">
+          Top 10 Sales
+          <div class="subTitle">
+            (Ltr)
+            <div class="graphIcon"></div>
+          </div>
+        </div>
+      </div>
+      <div class="body" style="height: 32vw">Iam body</div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <div class="graphFrame" style="width: 27%">
+      <div class="top">
+        <div class="title">
+          Critical Stock
+          <div class="subTitle">15% tank capacity</div>
+          <div class="graphIcon"></div>
+        </div>
+        <div class="subTitle">
+          <div class="timerIcon"></div>
+          23 05 2023 06:00
+        </div>
+      </div>
+      <div class="body" style="height: 17vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 27%">
+      <div class="top">
+        <div class="title">
+          Nano Status
+          <div class="subTitle">RO Count</div>
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 17vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 23%">
+      <div class="top">
+        <div class="title">
+          Stock Reconsilation
+          <div class="subTitle">RO Count</div>
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 17vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 23%">
+      <div class="top">
+        <div class="title">
+          Price Change & Exceptions
+          <div class="subTitle">RO Count</div>
+        </div>
+      </div>
+      <div class="body" style="height: 17vw">Iam body</div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <div style="width: 54%">
+      <div style="display: flex">
+        <div class="graphFrame" style="width: 50%">
+          <div class="top">
+            <div class="title">Nil Sales</div>
+          </div>
+          <div class="body" style="height: 14vw">Iam body</div>
+        </div>
+        <div class="graphFrame" style="width: 50%">
+          <div class="top">
+            <div class="title">ROMMS Complaint Status</div>
+          </div>
+          <div class="body" style="height: 14vw">Iam body</div>
+        </div>
+      </div>
+      <div class="graphFrame" style="width: 100%">
+        <div class="top">
+          <div class="title">
+            Sales & Inventory Trend
+            <div class="graphIcon"></div>
+          </div>
+        </div>
+        <div class="body" style="height: 14vw">Iam body</div>
+      </div>
+    </div>
+    <div class="graphFrame" style="width: 46%">
+      <div class="top">
+        <div class="title">
+          TAR (Trade Account Receivable)
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 32vw">Iam body</div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <div class="graphFrame" style="width: 100%">
+      <div class="top">
+        <div class="title">
+          TT Receipts SAP vs Actual and TT in top T ransit
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 16vw">Iam body</div>
+    </div>
+  </div>
+</div>
+<!-- ///////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////// -->
+<div class="dashBoardBody" *ngIf="false">
+  <div class="dashBoardFrame">
+    <div class="graphFrame">
+      <div class="top">
+        <div class="title">Site Status</div>
+      </div>
+      <div class="body" style="height: 14vw">Iam body</div>
+    </div>
+    <div class="graphFrame">
+      <div class="top">
+        <div class="title">Tank & Ullage Status</div>
+      </div>
+      <div class="body" style="height: 14vw">Iam body</div>
+    </div>
+    <div class="graphFrame">
+      <div class="top">
+        <div class="title">DU & Nozzle Status</div>
+      </div>
+      <div class="body" style="height: 14vw">Iam body</div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <div class="graphFrame" style="width: 50%">
+      <div class="top">
+        <div class="title">Nozzle & Tank Utilisation</div>
+        <div class="subTitle">
+          <div class="timerIcon"></div>
+          23 06 2022 06:00
+        </div>
+      </div>
+      <div class="body" style="height: 18vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 25%">
+      <div class="top">
+        <div class="title">
+          Nano Status
+          <div class="subTitle">RO Count</div>
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 18vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 25%">
+      <div class="top">
+        <div class="title">
+          RO Connectivity Status
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 18vw">Iam body</div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <div class="graphFrame" style="width: 50%">
+      <div class="top">
+        <div class="title">
+          Future Date Transactions & Alarms
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 18vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 25%">
+      <div class="top">
+        <div class="title">
+          Stock Reconsilation
+          <div class="subTitle">RO Count</div>
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 18vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 25%">
+      <div class="top">
+        <div class="title">
+          Price Change & Exceptions
+          <div class="subTitle">RO Count</div>
+        </div>
+      </div>
+      <div class="body" style="height: 18vw">Iam body</div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <div class="graphFrame" style="width: 50%">
+      <div class="top">
+        <div class="title">
+          Interlock parameters
+          <div class="subTitle">RO Count</div>
+          <div class="graphIcon"></div>
+        </div>
+        <div class="subTitle">
+          <div class="timerIcon"></div>
+          23 06 2022 06:00
+        </div>
+      </div>
+      <div class="body" style="height: 18vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 50%">
+      <div class="top">
+        <div class="title">
+          Control Record Status
+          <div class="subTitle">RO Count</div>
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 18vw">Iam body</div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <div class="graphFrame" style="width: 50%">
+      <div class="top">
+        <div class="title">
+          Nano & Connectivity trend
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 18vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 50%">
+      <div class="top">
+        <div class="title">
+          Software version update
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 18vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 100%">
+      <div class="top">
+        <div class="title">
+          ROMMS Complaint Status
+          <div class="graphIcon"></div>
+        </div>
+      </div>
+      <div class="body" style="height: 16vw">Iam body</div>
+    </div>
+  </div>
+</div>
+<!-- //////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////// -->
+<div class="dashBoardBody" *ngIf="true">
+  <div class="dashBoardFrame">
+    <div class="graphFrame">
+      <div class="top">
+        <div class="title">DU Status</div>
+      </div>
+      <div class="body" style="height: 10vw">Iam body</div>
+    </div>
+    <div class="graphFrame">
+      <div class="top">
+        <div class="title">Tank Status</div>
+      </div>
+      <div class="body" style="height: 10vw">Iam body</div>
+    </div>
+    <div class="graphFrame">
+      <div class="top">
+        <div class="title">Alarm Status</div>
+      </div>
+      <div class="body" style="height: 10vw">Iam body</div>
+    </div>
+    <!-- /////////////////////////////////////////////////////////// -->
+    <div style="width: 26%">
+      <div class="graphFrame" style="width: 100%">
+        <div class="top">
+          <div class="title">Today's Price</div>
+        </div>
+        <div class="body" style="height: 16vw">Iam body</div>
+      </div>
+      <div class="graphFrame" style="width: 100%">
+        <div class="top">
+          <div class="title">Sales Summery</div>
+        </div>
+        <div class="body" style="height: 16vw">Iam body</div>
+      </div>
+    </div>
+    <div style="width: 50%">
+      <div class="graphFrame" style="width: 100%">
+        <div class="top">
+          <div class="title">Sales & Inventory</div>
+        </div>
+        <div class="body" style="height: 16vw">Iam body</div>
+      </div>
+      <div class="graphFrame" style="width: 100%">
+        <div class="top">
+          <div class="title">Nozzle Utilisation</div>
+        </div>
+        <div class="body" style="height: 16vw">Iam body</div>
+      </div>
+    </div>
+    <div class="graphFrame" style="width: 24%">
+      <div class="top">
+        <div class="title">Nozzle Sales</div>
+      </div>
+      <div class="body" style="height: 36vw">Iam bod3y</div>
+    </div>
+    <!-- /////////////////////////////////////////////////////////// -->
+    <div class="graphFrame" style="width: 26%">
+      <div class="top">
+        <div class="title">Stock & Ullage</div>
+      </div>
+      <div class="body" style="height: 20vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 26%">
+      <div class="top">
+        <div class="title">MOP Sales</div>
+      </div>
+      <div class="body" style="height: 20vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 24%">
+      <div class="top">
+        <div class="title">Stock Reconsilation</div>
+      </div>
+      <div class="body" style="height: 20vw">Iam body</div>
+    </div>
+    <div class="graphFrame" style="width: 24%">
+      <div class="top">
+        <div class="title">Price Change & Exceptions</div>
+      </div>
+      <div class="body" style="height: 20vw">Iam body</div>
+    </div>
+    <!-- /////////////////////////////////////////////////////////// -->
+    <div style="width: 76%">
+      <div style="display: flex">
+        <div class="graphFrame" style="width: 68.4%">
+          <div class="top">
+            <div class="title">Sales / Inventory Trend</div>
+          </div>
+          <div class="body" style="height: 18vw">Iam body</div>
+        </div>
+        <div class="graphFrame" style="width: 31.6%">
+          <div class="top">
+            <div class="title">Indent Status</div>
+          </div>
+          <div class="body" style="height: 18vw">Iam body</div>
+        </div>
+      </div>
+      <div class="graphFrame" style="width: 100%">
+        <div class="top">
+          <div class="title">Transaction Bucket</div>
+        </div>
+        <div class="body" style="height: 16vw">Iam body</div>
+      </div>
+    </div>
+    <div class="graphFrame" style="width: 24%">
+      <div class="top">
+        <div class="title">Inventory Forecast</div>
+      </div>
+      <div class="body" style="height: 38vw">Iam body</div>
+    </div>
+  </div>
+</div>
+<!-- //////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////// -->

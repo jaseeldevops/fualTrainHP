@@ -36,6 +36,7 @@
   color: var(--myColor);
   font-weight: bold;
   background-color: white;
+  font-size: 1vw;
 }
 .tablePaging .pagingPages button.selected {
   background-color: var(--myColor);
