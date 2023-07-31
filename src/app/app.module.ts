@@ -10,9 +10,12 @@ import { DashboardComponent } from './home/dashboard/dashboard.component';
 import { SettingsComponent } from './home/settings/settings.component';
 import { UsersComponent } from './home/settings/users/users.component';
 import { TablePagingComponent } from './components/table-paging/table-paging.component';
+import { SalesDashboardComponent } from './home/dashboard/sales-dashboard/sales-dashboard.component';
+import { RetailEngineerDashboardComponent } from './home/dashboard/retail-engineer-dashboard/retail-engineer-dashboard.component';
+import { ComcoDashboardComponent } from './home/dashboard/comco-dashboard/comco-dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, DashboardComponent, SettingsComponent, UsersComponent, TablePagingComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, DashboardComponent, SettingsComponent, UsersComponent, TablePagingComponent, SalesDashboardComponent, RetailEngineerDashboardComponent, ComcoDashboardComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent {
-  onClickFilter = () => {
-    
-  };
+  userType = 'sales'; // sales, retailEngineering, comco
+
+  onClickFilter = () => {};
 }
