@@ -21,7 +21,7 @@
   align-items: center;
 }
 .graphFrame .title {
-  font-size: 1vw;
+  font-size: 1.1vw;
   color: #021c3ee8;
   padding: 0.2vw 0;
   display: flex;
@@ -60,3 +60,18 @@
 /* //////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////// */
+.frameHeader {
+  height: 1vw;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.8vw;
+  font-size: 0.9vw;
+}
+.frameHeader div {
+  color: #4242436b;
+  padding: 0 0.3vw;
+  cursor: pointer;
+}
+.frameHeader div.selected {
+  color: #406ca5;
+}
