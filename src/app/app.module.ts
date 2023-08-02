@@ -13,6 +13,8 @@ import { TablePagingComponent } from './components/table-paging/table-paging.com
 import { SalesDashboardComponent } from './home/dashboard/sales-dashboard/sales-dashboard.component';
 import { RetailEngineerDashboardComponent } from './home/dashboard/retail-engineer-dashboard/retail-engineer-dashboard.component';
 import { ComcoDashboardComponent } from './home/dashboard/comco-dashboard/comco-dashboard.component';
+import { GraphsComponent } from './home/dashboard/widget/graphs/graphs.component';
+import { WidgetsComponent } from './home/dashboard/widget/widgets/widgets.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ComcoDashboardComponent } from './home/dashboard/comco-dashboard/comco-
     SalesDashboardComponent,
     RetailEngineerDashboardComponent,
     ComcoDashboardComponent,
+    GraphsComponent,
+    WidgetsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

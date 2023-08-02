@@ -7,6 +7,5 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
   userType = 'sales'; // sales, retailEngineering, comco
-
   onClickFilter = () => {};
 }

@@ -1,0 +1,27 @@
+<div class="container" [ngStyle]="{width}">
+  <div
+    *ngIf="type === 'icon'"
+    class="icon"
+    [ngStyle]="{
+      backgroundImage: 'url(../../../../../assets/graphIcons/' + icon + ')'
+    }"
+  ></div>
+  <div *ngIf="type === 'graph'" class="percentage">
+    {{ percentage }}%
+    <div
+      class="graph"
+      *ngFor="let it of graphList; let i = index"
+      [ngStyle]="{ transform: 'rotate(' + i + 'deg)' }"
+    >
+      <div
+        class="graphBall"
+        [ngStyle]="{ background: it ? color : '#E1E7EE' }"
+      ></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="title">{{ title }}</div>
+    <div class="value" [ngStyle]="{ color }">{{ value }}</div>
+    <div class="subValue">{{ subValue }}</div>
+  </div>
+</div>
