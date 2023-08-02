@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.64" viewBox="0 0 24 22.64">
+  <g id="Icon_feather-download" data-name="Icon feather-download" transform="translate(1.5 1.5)">
+    <path id="Path_246" data-name="Path 246" d="M25.5,22.5v6c0,1.657-1.045,3-2.333,3H6.833c-1.289,0-2.333-1.343-2.333-3v-6" transform="translate(-4.5 -11.86)" fill="none" stroke="#114b77" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" opacity="0"/>
+    <path id="Path_247" data-name="Path 247" d="M10.5,15,15,22.5,19.5,15" transform="translate(-4.5 -9.091)" fill="none"/>
+    <path id="Path_248" data-name="Path 248" d="M18,16.269V4.5" transform="translate(-7.5 -4.5)" fill="none" stroke="#114b77" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" opacity="0"/>
+    <g id="Group_857" data-name="Group 857" transform="translate(-1 -1.36)">
+      <path id="Path_285" data-name="Path 285" d="M22,7H2" fill="none" stroke="#1c274c" stroke-linecap="round" stroke-width="1.5"/>
+      <path id="Path_286" data-name="Path 286" d="M19,12H5" fill="none" stroke="#1c274c" stroke-linecap="round" stroke-width="1.5"/>
+      <path id="Path_287" data-name="Path 287" d="M16,17H8" fill="none" stroke="#1c274c" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
