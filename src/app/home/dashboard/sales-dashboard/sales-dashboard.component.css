@@ -42,11 +42,11 @@
   margin: 0 0.3vw;
   background-size: contain;
   background-position: center;
-  background-image: url(../../../../assets/icBack.svg);
+  background-image: url(../../../../assets/icHistory.svg);
   background-repeat: no-repeat;
 }
 .graphFrame .graphIcon {
-  background-image: url(../../../../assets/icBack.svg);
+  background-image: url(../../../../assets/icFilter.svg);
 }
 .graphFrame .body {
   width: 100%;
@@ -63,7 +63,8 @@
 .frameHeader {
   height: 1vw;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   padding: 0.8vw;
   font-size: 0.9vw;
 }
@@ -74,4 +75,16 @@
 }
 .frameHeader div.selected {
   color: #406ca5;
+}
+.frameHeader div.selectedBtn {
+  color: white;
+  border-radius: 0.4vw;
+  padding: 0.3vw;
+  margin: -0.3vw 0;
+  background-color: #214998;
+}
+.frameHeader select {
+  font-size: 0.7vw;
+  border: 0.1vw solid #9fa3a99c;
+  border-radius: 0.2vw;
 }

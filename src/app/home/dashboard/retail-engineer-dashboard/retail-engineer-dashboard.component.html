@@ -1,22 +1,57 @@
-<div class="dashBoardBody" >
+<div class="dashBoardBody">
   <div class="dashBoardFrame">
     <div class="graphFrame">
       <div class="top">
         <div class="title">Site Status</div>
       </div>
-      <div class="body" style="height: 14vw">Iam body</div>
+      <div class="body" style="height: 14vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader"></div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame">
       <div class="top">
         <div class="title">Tank & Ullage Status</div>
       </div>
-      <div class="body" style="height: 14vw">Iam body</div>
+      <div class="body" style="height: 14vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="tankAndUllage.selected === it ? 'selected' : ''"
+              (click)="tankAndUllage.onChangeSelected(it)"
+              *ngFor="let it of tankAndUllage.navList"
+            >
+              {{ it }}
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame">
       <div class="top">
         <div class="title">DU & Nozzle Status</div>
       </div>
-      <div class="body" style="height: 14vw">Iam body</div>
+      <div class="body" style="height: 14vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="duAndNozzzle.selected === it ? 'selected' : ''"
+              (click)="duAndNozzzle.onChangeSelected(it)"
+              *ngFor="let it of duAndNozzzle.navList"
+            >
+              {{ it }}
+            </div>
+            <select (change)="duAndNozzzle.onChangeDropDown($event)">
+              <option *ngFor="let it of duAndNozzzle.dropList">{{ it }}</option>
+            </select>
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <!-- //////////////////////////////////////////////////////////////// -->
     <div class="graphFrame" style="width: 50%">

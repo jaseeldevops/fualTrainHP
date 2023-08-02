@@ -6,7 +6,9 @@
       </div>
       <div class="body" style="height: 14vw">
         <!------------------------------------------------------------------->
-        <div class="frameHeader"></div>
+        <div class="frameHeader">
+          
+        </div>
         <!------------------------------------------------------------------->
       </div>
     </div>
@@ -17,47 +19,14 @@
       <div class="body" style="height: 14vw">
         <!------------------------------------------------------------------->
         <div class="frameHeader">
-          <div
-            [ngClass]="tankAndUllage.selected === 0 ? 'selected' : ''"
-            (click)="tankAndUllage.onChangeSelected(0)"
-          >
-            TOTAL
-          </div>
-          <div
-            [ngClass]="tankAndUllage.selected === 1 ? 'selected' : ''"
-            (click)="tankAndUllage.onChangeSelected(1)"
-          >
-            HSD
-          </div>
-          <div
-            [ngClass]="tankAndUllage.selected === 2 ? 'selected' : ''"
-            (click)="tankAndUllage.onChangeSelected(2)"
-          >
-            MS
-          </div>
-          <div
-            [ngClass]="tankAndUllage.selected === 3 ? 'selected' : ''"
-            (click)="tankAndUllage.onChangeSelected(3)"
-          >
-            POWER
-          </div>
-          <div
-            [ngClass]="tankAndUllage.selected === 4 ? 'selected' : ''"
-            (click)="tankAndUllage.onChangeSelected(4)"
-          >
-            POWER99
-          </div>
-          <div
-            [ngClass]="tankAndUllage.selected === 5 ? 'selected' : ''"
-            (click)="tankAndUllage.onChangeSelected(5)"
-          >
-            POWER100
-          </div>
-          <div
-            [ngClass]="tankAndUllage.selected === 6 ? 'selected' : ''"
-            (click)="tankAndUllage.onChangeSelected(6)"
-          >
-            TURBOJET
+          <div style="display: flex">
+            <div
+              [ngClass]="tankAndUllage.selected === it ? 'selected' : ''"
+              (click)="tankAndUllage.onChangeSelected(it)"
+              *ngFor="let it of tankAndUllage.navList"
+            >
+              {{ it }}
+            </div>
           </div>
         </div>
         <!------------------------------------------------------------------->
@@ -70,34 +39,25 @@
       <div class="body" style="height: 14vw">
         <!------------------------------------------------------------------->
         <div class="frameHeader">
-          <div
-            [ngClass]="duAndNozzzle.selected === 0 ? 'selected' : ''"
-            (click)="duAndNozzzle.onChangeSelected(0)"
-          >
-            DU
+          <div style="display: flex">
+            <div
+              [ngClass]="duAndNozzzle.selected === it ? 'selected' : ''"
+              (click)="duAndNozzzle.onChangeSelected(it)"
+              *ngFor="let it of duAndNozzzle.navList"
+            >
+              {{ it }}
+            </div>
+            <select (change)="duAndNozzzle.onChangeDropDown($event)">
+              <option *ngFor="let it of duAndNozzzle.dropList">{{ it }}</option>
+            </select>
           </div>
-          <div
-            [ngClass]="duAndNozzzle.selected === 1 ? 'selected' : ''"
-            (click)="duAndNozzzle.onChangeSelected(1)"
-          >
-            NOZZLE
-          </div>
-          <select
-            style="font-size: 0.7vw; border: 0.1vw solid #9fa3a99c"
-            (change)="duAndNozzzle.onChangeDropDown($event)"
-          >
-            <option>Total</option>
-            <option>HSD</option>
-            <option>MS</option>
-            <option>POWER</option>
-            <option>POWER99</option>
-            <option>POWER100</option>
-            <option>TURBO JET</option>
-          </select>
         </div>
         <!------------------------------------------------------------------->
       </div>
     </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
     <!-- //////////////////////////////////////////////////////////////// -->
     <div style="width: 54%">
       <div class="graphFrame" style="width: 100%">
@@ -112,7 +72,23 @@
             05 2023 06:00
           </div>
         </div>
-        <div class="body" style="height: 14vw">Iam body</div>
+        <div class="body" style="height: 14vw">
+          <!------------------------------------------------------------------->
+          <div class="frameHeader">
+            <div style="display: flex">
+              <div
+                [ngClass]="
+                  todaySalesAndInventory.selected === it ? 'selectedBtn' : ''
+                "
+                (click)="todaySalesAndInventory.onChangeSelected(it)"
+                *ngFor="let it of todaySalesAndInventory.navList"
+              >
+                {{ it }}
+              </div>
+            </div>
+          </div>
+          <!------------------------------------------------------------------->
+        </div>
       </div>
       <div class="graphFrame" style="width: 100%">
         <div class="top">
@@ -135,7 +111,21 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 32vw">Iam body</div>
+      <div class="body" style="height: 32vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="inventoryForcate.selected === it ? 'selected' : ''"
+              (click)="inventoryForcate.onChangeSelected(it)"
+              *ngFor="let it of inventoryForcate.navList"
+            >
+              {{ it }}
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame" style="width: 23%">
       <div class="top">
@@ -147,8 +137,28 @@
           </div>
         </div>
       </div>
-      <div class="body" style="height: 32vw">Iam body</div>
+      <div class="body" style="height: 32vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="top10Sales.selected === it ? 'selected' : ''"
+              (click)="top10Sales.onChangeSelected(it)"
+              *ngFor="let it of top10Sales.navList"
+            >
+              {{ it }}
+            </div>
+            <select (change)="top10Sales.onChangeDropDown($event)">
+              <option *ngFor="let it of top10Sales.dropList">{{ it }}</option>
+            </select>
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
     <!-- //////////////////////////////////////////////////////////////// -->
     <div class="graphFrame" style="width: 27%">
       <div class="top">
@@ -162,7 +172,26 @@
           23 05 2023 06:00
         </div>
       </div>
-      <div class="body" style="height: 17vw">Iam body</div>
+      <div class="body" style="height: 17vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="criticalStock.selected === it ? 'selected' : ''"
+              (click)="criticalStock.onChangeSelected(it)"
+              *ngFor="let it of criticalStock.navList"
+            >
+              {{ it }}
+            </div>
+            <select (change)="criticalStock.onChangeDropDown($event)">
+              <option *ngFor="let it of criticalStock.dropList">
+                {{ it }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame" style="width: 27%">
       <div class="top">
@@ -172,7 +201,16 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 17vw">Iam body</div>
+      <div class="body" style="height: 17vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame" style="width: 23%">
       <div class="top">
@@ -182,7 +220,21 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 17vw">Iam body</div>
+      <div class="body" style="height: 17vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <select (change)="stockReconsilation.onChangeDropDown($event)">
+            <option *ngFor="let it of stockReconsilation.dropList">
+              {{ it }}
+            </option>
+          </select>
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame" style="width: 23%">
       <div class="top">
@@ -191,8 +243,25 @@
           <div class="subTitle">RO Count</div>
         </div>
       </div>
-      <div class="body" style="height: 17vw">Iam body</div>
+      <div class="body" style="height: 17vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <select (change)="priceChangeAndExceptions.onChangeDropDown($event)">
+            <option *ngFor="let it of priceChangeAndExceptions.dropList">
+              {{ it }}
+            </option>
+          </select>
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
     <!-- //////////////////////////////////////////////////////////////// -->
     <div style="width: 54%">
       <div style="display: flex">
@@ -200,13 +269,39 @@
           <div class="top">
             <div class="title">Nil Sales</div>
           </div>
-          <div class="body" style="height: 14vw">Iam body</div>
+          <div class="body" style="height: 14vw">
+            <!------------------------------------------------------------------->
+            <div class="frameHeader">
+              <select (change)="nilSales.onChangeDropDown($event)">
+                <option *ngFor="let it of nilSales.dropList">{{ it }}</option>
+              </select>
+              <div class="subTitle">
+                <div class="timerIcon"></div>
+                23 05 2023 06:00
+              </div>
+            </div>
+            <!------------------------------------------------------------------->
+          </div>
         </div>
         <div class="graphFrame" style="width: 50%">
           <div class="top">
             <div class="title">ROMMS Complaint Status</div>
           </div>
-          <div class="body" style="height: 14vw">Iam body</div>
+          <div class="body" style="height: 14vw">
+            <!------------------------------------------------------------------->
+            <div class="frameHeader">
+              <select (change)="rommsComplaint.onChangeDropDown($event)">
+                <option *ngFor="let it of rommsComplaint.dropList">
+                  {{ it }}
+                </option>
+              </select>
+              <div class="subTitle">
+                <div class="timerIcon"></div>
+                23 05 2023 06:00
+              </div>
+            </div>
+            <!------------------------------------------------------------------->
+          </div>
         </div>
       </div>
       <div class="graphFrame" style="width: 100%">
@@ -216,7 +311,28 @@
             <div class="graphIcon"></div>
           </div>
         </div>
-        <div class="body" style="height: 14vw">Iam body</div>
+        <div class="body" style="height: 14vw">
+          <!------------------------------------------------------------------->
+          <div class="frameHeader">
+            <select (change)="salesInventoryTrend.onChangeDropDown($event)">
+              <option *ngFor="let it of salesInventoryTrend.dropList">
+                {{ it }}
+              </option>
+            </select>
+            <div style="display: flex">
+              <div
+                [ngClass]="
+                  salesInventoryTrend.selected === it ? 'selected' : ''
+                "
+                (click)="salesInventoryTrend.onChangeSelected(it)"
+                *ngFor="let it of salesInventoryTrend.navList"
+              >
+                {{ it }}
+              </div>
+            </div>
+          </div>
+          <!------------------------------------------------------------------->
+        </div>
       </div>
     </div>
     <div class="graphFrame" style="width: 46%">
@@ -226,7 +342,20 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 32vw">Iam body</div>
+      <div class="body" style="height: 32vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <select (change)="tar.onChangeDropDown($event)">
+            <option *ngFor="let it of tar.dropList">{{ it }}</option>
+          </select>
+          <div class="subTitle">
+            Zone
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <!-- //////////////////////////////////////////////////////////////// -->
     <div class="graphFrame" style="width: 100%">
@@ -236,7 +365,21 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 16vw">Iam body</div>
+      <div class="body" style="height: 16vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="ttReceiptsSap.selected === it ? 'selectedBtn' : ''"
+              (click)="ttReceiptsSap.onChangeSelected(it)"
+              *ngFor="let it of ttReceiptsSap.navList"
+            >
+              {{ it }}
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
   </div>
 </div>

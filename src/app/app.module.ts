@@ -15,7 +15,18 @@ import { RetailEngineerDashboardComponent } from './home/dashboard/retail-engine
 import { ComcoDashboardComponent } from './home/dashboard/comco-dashboard/comco-dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, DashboardComponent, SettingsComponent, UsersComponent, TablePagingComponent, SalesDashboardComponent, RetailEngineerDashboardComponent, ComcoDashboardComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    DashboardComponent,
+    SettingsComponent,
+    UsersComponent,
+    TablePagingComponent,
+    SalesDashboardComponent,
+    RetailEngineerDashboardComponent,
+    ComcoDashboardComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
