@@ -1,0 +1,28 @@
+<div class="body">
+  <!-- ///////////////////// -->
+  <!-- name -->
+  <!-- color -->
+  <!-- code -->
+  <!-- value -->
+  <!-- total -->
+  <!-- graphLength -->
+  <div *ngFor="let it of values">
+    <div class="title">
+      {{ it.name }}
+      <div class="titleValue">{{ it.code }}</div>
+    </div>
+    <div class="graphContainer">
+      <div
+        class="graph"
+        [ngStyle]="{
+          width: it.graphLength * 0.13 + 'vw',
+          backgroundColor: it.color
+        }"
+      ></div>
+      <div class="graphValue">
+        {{ it.value }}
+        <div class="graphSubValue">( {{ it.value2 }})</div>
+      </div>
+    </div>
+  </div>
+</div>

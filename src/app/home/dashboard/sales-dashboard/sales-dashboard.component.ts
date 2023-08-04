@@ -157,6 +157,88 @@ export class SalesDashboardComponent {
     onChangeDropDown: (e: any) => {
       console.log(e.target.value);
     },
+    values: [
+      {
+        name: 'SAISH PETROLEUM',
+        color: '#288BE2',
+        code: '12598620',
+        value: '1234',
+        value2: '4321',
+        graphLength: '80', // in Persentage(%)
+      },
+      {
+        name: 'KARFULE PRIVATE LTD',
+        color: '#02CCB1',
+        code: '11010210',
+        value: '1234',
+        value2: '4321',
+        graphLength: '100', // in Persentage(%)
+      },
+      {
+        name: 'AUTOMOBILE CENTER',
+        color: '#E84F6E',
+        code: '11010210',
+        value: '1234',
+        value2: '4321',
+        graphLength: '40', // in Persentage(%)
+      },
+      {
+        name: 'SUPER SERVICE STATION',
+        color: '#F8872B',
+        code: '12119411',
+        value: '1234',
+        value2: '4321',
+        graphLength: '50', // in Persentage(%)
+      },
+      {
+        name: 'NATIONAL AUTOMOBILES',
+        color: '#FEBB20',
+        code: '12119411',
+        value: '1234',
+        value2: '4321',
+        graphLength: '60', // in Persentage(%)
+      },
+      {
+        name: 'SUPER FUEL STATION',
+        color: '#8674FE',
+        code: '11008120',
+        value: '1234',
+        value2: '4321',
+        graphLength: '80', // in Persentage(%)
+      },
+      {
+        name: 'MARUTHI GOLDEN',
+        color: '#C14233',
+        code: '13119010',
+        value: '1234',
+        value2: '4321',
+        graphLength: '20', // in Persentage(%)
+      },
+      {
+        name: 'FUEL WIND',
+        color: '#C14233',
+        code: '11058020',
+        value: '1234',
+        value2: '4321',
+        graphLength: '30', // in Persentage(%)
+      },
+      {
+        name: 'NEW ENERGEY',
+        color: '#74C5A0',
+        code: '12119411',
+        value: '1234',
+        value2: '4321',
+        graphLength: '90', // in Persentage(%)
+      },
+      {
+        name: 'FORCE FUEL',
+        color: '#67C2E8',
+        code: '12119411',
+        value: '1234',
+        value2: '4321',
+        graphLength: '30', // in Persentage(%)
+      },
+    ],
   };
   // <END-> Top 10 Sales
   //

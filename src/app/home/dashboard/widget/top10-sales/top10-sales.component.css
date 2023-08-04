@@ -1,0 +1,41 @@
+.body {
+  padding: 0 1vw;
+  overflow: auto;
+}
+.title {
+  display: flex;
+  font-size: 0.75vw;
+  color: #2d5390;
+  padding-top: 0.4vw;
+}
+.title .titleValue {
+  color: #2f3a4d97;
+  padding-left: 0.3vw;
+  font-size: 0.7vw;
+  font-weight: 500;
+}
+.graphContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 0.1vw;
+}
+.graph {
+  height: 1.4vw;
+  border-radius: 0.9vw;
+  background-color: #288be2;
+  background-image: url(../../../../../assets/dashboard/drop.svg);
+  background-size: 0.7vw;
+  background-position: calc(100% - 0.3vw);
+  background-repeat: no-repeat;
+}
+.graphValue {
+  font-size: 1vw;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0.3vw;
+}
+.graphSubValue {
+  font-size: 0.8vw;
+  color: #2f3a4d97;
+  padding: 0.1vw 0.2vw;
+}

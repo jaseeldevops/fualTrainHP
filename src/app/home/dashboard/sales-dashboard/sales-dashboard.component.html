@@ -24,14 +24,14 @@
             [title]="siteStatus.datas[1].title"
             [value]="siteStatus.datas[1].value"
             [type]="'graph'"
-            [percentage]="siteStatus.datas[1]?.percentage || 0"
+            [percentage]="siteStatus.datas[1].percentage || 0"
             [color]="'#56A052'"
           />
           <dashboardWidgets
             [title]="siteStatus.datas[2].title"
             [value]="siteStatus.datas[2].value"
             [type]="'graph'"
-            [percentage]="siteStatus.datas[2]?.percentage || 0"
+            [percentage]="siteStatus.datas[2].percentage || 0"
             [color]="'#F55A5A'"
           />
           <dashboardWidgets
@@ -89,7 +89,7 @@
             [value]="tankAndUllage.datas[1].value"
             [subValue]="tankAndUllage.datas[1].subValue"
             [type]="'graph'"
-            [percentage]="tankAndUllage.datas[1]?.percentage || 0"
+            [percentage]="tankAndUllage.datas[1].percentage || 0"
             [color]="'#56A052'"
           />
           <dashboardWidgets
@@ -97,7 +97,7 @@
             [value]="tankAndUllage.datas[2].value"
             [subValue]="tankAndUllage.datas[2].subValue"
             [type]="'graph'"
-            [percentage]="tankAndUllage.datas[2]?.percentage || 0"
+            [percentage]="tankAndUllage.datas[2].percentage || 0"
             [color]="'#F55A5A'"
           />
           <dashboardWidgets
@@ -251,6 +251,19 @@
             </div>
           </div>
         </div>
+        <div style="padding: 1vw">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              font-size: 0.8vw;
+            "
+          >
+            <div>Status</div>
+            <div>Tanks</div>
+          </div>
+          <!-- <DashBoardraph /> -->
+        </div>
         <!------------------------------------------------------------------->
       </div>
     </div>
@@ -281,6 +294,7 @@
           </div>
         </div>
         <!------------------------------------------------------------------->
+        <Top10SalesGraph [values]="top10Sales.values" />
       </div>
     </div>
     <!-- //////////////////////////////////////////////////////////////// -->
