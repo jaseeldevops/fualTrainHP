@@ -17,6 +17,7 @@ import { WidgetsComponent } from './home/dashboard/widget/widgets/widgets.compon
 import { Top10SalesComponent } from './home/dashboard/widget/top10-sales/top10-sales.component';
 import { NozzleUtilisationComponent } from './home/dashboard/widget/nozzle-utilisation/nozzle-utilisation.component';
 import { TarComponent } from './home/dashboard/widget/tar/tar.component';
+import { NillSalesComponent } from './home/dashboard/widget/nill-sales/nill-sales.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TarComponent } from './home/dashboard/widget/tar/tar.component';
     Top10SalesComponent,
     NozzleUtilisationComponent,
     TarComponent,
+    NillSalesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

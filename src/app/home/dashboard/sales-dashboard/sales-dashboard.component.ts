@@ -422,14 +422,14 @@ export class SalesDashboardComponent {
         title: 'East',
         value: '4125',
         subValue: '( Critical Stock 10 )',
-        valuePersentage: 20,
+        valuePersentage: 100,
       },
       {
         color: '#FFCA41',
         title: 'East Central',
         value: '3824',
         subValue: '',
-        valuePersentage: 20,
+        valuePersentage: 100,
       },
       {
         color: '#42CC7D',

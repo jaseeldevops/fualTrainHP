@@ -4,10 +4,16 @@
     *ngFor="let it of datas"
     [ngClass]="{ backgroundColor: it?.color }"
   >
-    <div class="" [ngStyle]="{ width: it?.valuePersentage * 0.14 + 'vw' }">
+    <div
+      class="graph"
+      [ngStyle]="{
+        width: it?.valuePersentage * 0.3 + 'vw',
+        backgroundColor: it?.color
+      }"
+    >
       {{ it?.title }}
     </div>
-    <div class="">{{ it?.value }}</div>
-    <div class="">{{ it?.subValue }}</div>
+    <div class="title">{{ it?.value }}</div>
+    <div class="SubTitle">{{ it?.subValue }}</div>
   </div>
 </div>
