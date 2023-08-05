@@ -126,6 +126,44 @@ export class SalesDashboardComponent {
   // <END-> Todays Sales & Inventory
   //
   // <-START-> Nozzle Utilisation
+  nozzleUtilisation = {
+    total: '12879',
+    totalUnit: 'Txn',
+    average: '42.23',
+    averageUnit: 'Ltr',
+    items: [
+      {
+        item: 'HSD',
+        color: '#4149E1',
+        nozzleCount: '2000',
+        notInUse: '212',
+        total: '2572',
+        totalUnit: 'Txn',
+        average: '103',
+        averageUnit: 'Ltr',
+      },
+      {
+        item: 'MS',
+        color: '#49A149',
+        nozzleCount: '1000',
+        notInUse: '145',
+        total: '2572',
+        totalUnit: 'Txn',
+        average: '103',
+        averageUnit: 'Ltr',
+      },
+      {
+        item: 'POWER',
+        color: '#DF5041',
+        nozzleCount: '1500',
+        notInUse: '247',
+        total: '2572',
+        totalUnit: 'Txn',
+        average: '103',
+        averageUnit: 'Ltr',
+      },
+    ],
+  };
   // <END-> Nozzle Utilisation
   //
   // <-START-> Inventory Forecate
@@ -371,6 +409,71 @@ export class SalesDashboardComponent {
     onChangeDropDown: (e: any) => {
       console.log(e.target.value);
     },
+    values: [
+      {
+        color: '#8674FE',
+        title: 'Central',
+        value: 'RO 5412 ( 102.2 Cr)',
+        subValue: '',
+        valuePersentage: 20,
+      },
+      {
+        color: '#FF9066',
+        title: 'East',
+        value: '4125',
+        subValue: '( Critical Stock 10 )',
+        valuePersentage: 20,
+      },
+      {
+        color: '#FFCA41',
+        title: 'East Central',
+        value: '3824',
+        subValue: '',
+        valuePersentage: 20,
+      },
+      {
+        color: '#42CC7D',
+        title: 'North',
+        value: '3452',
+        subValue: '',
+        valuePersentage: 20,
+      },
+      {
+        color: '#67C2E8',
+        title: 'North Central',
+        value: '3324',
+        subValue: '( Critical Stock 02 )',
+        valuePersentage: 20,
+      },
+      {
+        color: '#FE9074',
+        title: 'North Frontier',
+        value: '3014',
+        subValue: '',
+        valuePersentage: 20,
+      },
+      {
+        color: '#8674FE',
+        title: 'Central',
+        value: 'RO 5412 ( 102.2 Cr)',
+        subValue: '',
+        valuePersentage: 20,
+      },
+      {
+        color: '#8674FE',
+        title: 'Central',
+        value: 'RO 5412 ( 102.2 Cr)',
+        subValue: '',
+        valuePersentage: 20,
+      },
+      {
+        color: '#FE9074',
+        title: 'North Frontier',
+        value: '3014',
+        subValue: '',
+        valuePersentage: 20,
+      },
+    ],
   };
   // <END-> TAR (Trade Account Receivable)
   //

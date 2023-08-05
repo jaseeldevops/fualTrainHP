@@ -1,0 +1,13 @@
+<div class="body">
+  <div
+    class="item"
+    *ngFor="let it of datas"
+    [ngClass]="{ backgroundColor: it?.color }"
+  >
+    <div class="" [ngStyle]="{ width: it?.valuePersentage * 0.14 + 'vw' }">
+      {{ it?.title }}
+    </div>
+    <div class="">{{ it?.value }}</div>
+    <div class="">{{ it?.subValue }}</div>
+  </div>
+</div>

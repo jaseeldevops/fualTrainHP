@@ -1,6 +1,7 @@
 .body {
   padding: 0 1vw;
   overflow: auto;
+  height: calc(100% - 3.5vw);
 }
 .title {
   display: flex;

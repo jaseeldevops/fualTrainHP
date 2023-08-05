@@ -15,6 +15,8 @@ import { RetailEngineerDashboardComponent } from './home/dashboard/retail-engine
 import { ComcoDashboardComponent } from './home/dashboard/comco-dashboard/comco-dashboard.component';
 import { WidgetsComponent } from './home/dashboard/widget/widgets/widgets.component';
 import { Top10SalesComponent } from './home/dashboard/widget/top10-sales/top10-sales.component';
+import { NozzleUtilisationComponent } from './home/dashboard/widget/nozzle-utilisation/nozzle-utilisation.component';
+import { TarComponent } from './home/dashboard/widget/tar/tar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { Top10SalesComponent } from './home/dashboard/widget/top10-sales/top10-s
     ComcoDashboardComponent,
     WidgetsComponent,
     Top10SalesComponent,
+    NozzleUtilisationComponent,
+    TarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

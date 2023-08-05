@@ -228,7 +228,9 @@
             23 05 2023 06:00
           </div>
         </div>
-        <div class="body" style="height: 14vw">Iam body</div>
+        <div class="body" style="height: 14vw">
+          <NozzleUtilisation [datas]="nozzleUtilisation" />
+        </div>
       </div>
     </div>
     <div class="graphFrame" style="width: 23%">
@@ -496,6 +498,7 @@
           </div>
         </div>
         <!------------------------------------------------------------------->
+        <AppTAR [datas]="tar.values" />
       </div>
     </div>
     <!-- //////////////////////////////////////////////////////////////// -->
