@@ -18,6 +18,12 @@ import { Top10SalesComponent } from './home/dashboard/widget/top10-sales/top10-s
 import { NozzleUtilisationComponent } from './home/dashboard/widget/nozzle-utilisation/nozzle-utilisation.component';
 import { TarComponent } from './home/dashboard/widget/tar/tar.component';
 import { NillSalesComponent } from './home/dashboard/widget/nill-sales/nill-sales.component';
+import { SapVsTransitComponent } from './home/dashboard/widget/sap-vs-transit/sap-vs-transit.component';
+import { TodaySalesComponent } from './home/dashboard/widget/today-sales/today-sales.component';
+import { PieChartComponent } from './home/dashboard/widget/pie-chart/pie-chart.component';
+import { LineGraphComponent } from './home/dashboard/widget/line-graph/line-graph.component';
+import { NgChartsModule } from 'ng2-charts';
+import { InventoryForecastComponent } from './home/dashboard/widget/inventory-forecast/inventory-forecast.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +42,13 @@ import { NillSalesComponent } from './home/dashboard/widget/nill-sales/nill-sale
     NozzleUtilisationComponent,
     TarComponent,
     NillSalesComponent,
+    SapVsTransitComponent,
+    TodaySalesComponent,
+    PieChartComponent,
+    LineGraphComponent,
+    InventoryForecastComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgChartsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

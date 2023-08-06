@@ -1,14 +1,11 @@
 .body {
-  padding: 1vw;
-  padding-top: 0.5vw;
-  display: flex;
+  padding: 0.5vw;
   position: relative;
-  height: 11vw;
 }
 .verticalTitle {
   font-size: 0.7vw;
   color: #0000007b;
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
   height: 1vw;
   position: absolute;
   top: 5vw;
@@ -17,7 +14,7 @@
 }
 .graph {
   margin-left: 2vw;
-  height: 10.5vw;
+  height: 9vw;
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
@@ -28,17 +25,19 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  color: #7a86a1;
 }
 .hrLine {
   margin-left: 0.3vw;
-  width: 16vw;
-  border-bottom: 0.1vw dashed #8080804d;
+  margin-right: 1.5vw;
+  width: 85vw;
+  border-bottom: 0.1vw solid #80808025;
 }
 .bars {
   right: 2vw;
   top: 1vw;
   bottom: 0;
-  width: 18vw;
+  width: 85vw;
   position: absolute;
   display: flex;
   justify-content: space-evenly;
@@ -58,11 +57,30 @@
   background-color: aqua;
   border-top-left-radius: 0.3vw;
   border-top-right-radius: 0.3vw;
+  margin: 0 0.2vw;
 }
 .name {
   padding-top: 0.2vw;
-  height: 2vw;
-  font-size: 0.7vw;
+  height: 1vw;
+  font-size: 0.8vw;
   text-align: center;
   box-sizing: border-box;
+}
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1vw;
+  font-size: 0.8vw;
+}
+.indicatorEach {
+  display: flex;
+  align-items: center;
+}
+.indicatorColor {
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 50%;
+  margin-left: 1.5vw;
+  margin-right: 0.3vw;
 }

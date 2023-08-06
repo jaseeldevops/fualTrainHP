@@ -1,0 +1,36 @@
+<div class="body">
+  <div class="verticalTitle">{{ datas.verticalTitle }}</div>
+  <div class="graph">
+    <div class="eachRow" *ngFor="let it of datas.verticalValues">
+      <div class="vrValue">
+        {{ it }}
+        <div class="hrLine"></div>
+      </div>
+    </div>
+  </div>
+  <div class="bars">
+    <div class="barFrame" *ngFor="let it of datas.horizontalValues">
+      <div style="display: flex; align-items: flex-end">
+        <div
+          class="bar"
+          *ngFor="let it1 of it?.values"
+          [ngStyle]="{
+            height: it1.percentage * 0.07 + 'vw',
+            backgroundColor: it1.color
+          }"
+        ></div>
+      </div>
+      <div class="name">{{ it.title }}</div>
+    </div>
+  </div>
+</div>
+<div class="indicator">
+  <div class="indicatorEach" *ngFor="let it of datas?.titles">
+    <div
+      class="indicatorColor"
+      [ngStyle]="{ backgroundColor: it?.color }"
+    ></div>
+    {{ it.title }}
+  </div>
+</div>
+<!-- <div class="graphTitle"></div> -->

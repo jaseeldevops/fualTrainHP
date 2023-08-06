@@ -1,0 +1,29 @@
+<div [ngStyle]="hrLabel ? {} : { display: 'flex' }">
+  <div class="body">
+    <div class="title">{{ datas.title1 }}</div>
+    <div>{{ datas.title2 }}</div>
+    <div class="subTitle">{{ datas.title3 }}</div>
+    <div
+      class="chart"
+      *ngFor="let it of values; let k = index"
+      [ngStyle]="{ transform: 'rotate(' + k + 'deg)' }"
+    >
+      <div
+        class="chartBall"
+        [ngStyle]="{ backgroundColor: it, width: width }"
+      ></div>
+    </div>
+  </div>
+  <div class="label" *ngIf="!hrLabel">
+    <div class="each" *ngFor="let it of datas?.list">
+      {{ it?.title }}
+      <div class="colorCode" [ngStyle]="{ backgroundColor: it?.color }"></div>
+    </div>
+  </div>
+  <div class="label2" *ngIf="hrLabel">
+    <div class="each" *ngFor="let it of datas?.list">
+      {{ it?.title }}
+      <div class="colorCode" [ngStyle]="{ backgroundColor: it?.color }"></div>
+    </div>
+  </div>
+</div>

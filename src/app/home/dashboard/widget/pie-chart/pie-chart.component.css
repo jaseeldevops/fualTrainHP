@@ -1,0 +1,70 @@
+.body {
+  width: 11vw;
+  height: 11vw;
+  margin-top: 1vw;
+  margin-left: 4vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+}
+.title {
+  font-weight: 500;
+}
+.subTitle {
+  font-size: 0.9vw;
+}
+.chart {
+  position: absolute;
+  top: 5vw;
+  width: 11vw;
+  height: 0.14vw;
+  transform: rotate(10deg);
+}
+.chartBall {
+  width: 1vw;
+  height: 100%;
+  background-color: rgb(47, 61, 61);
+}
+.label {
+  width: 8vw;
+  height: 14vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.label .each {
+  font-size: 0.7vw;
+  display: flex;
+  align-items: center;
+  padding-top: 0.2vw;
+}
+.label .colorCode {
+  width: 0.6vw;
+  height: 0.6vw;
+  background-color: aqua;
+  margin-left: 0.3vw;
+}
+.label2 {
+  height: 2.5vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 0 1vw;
+}
+.label2 .each {
+  font-size: 0.7vw;
+  display: flex;
+  align-items: center;
+  padding: 0.2vw 0.3vw;
+}
+.label2 .colorCode {
+  width: 0.6vw;
+  height: 0.6vw;
+  background-color: aqua;
+  margin-left: 0.3vw;
+}

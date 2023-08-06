@@ -122,6 +122,58 @@ export class SalesDashboardComponent {
     onChangeSelected: (v: any) => {
       this.todaySalesAndInventory.selected = v;
     },
+    values: {
+      verticalTitle: 'Volume (KL)',
+      verticalValues: ['0', '2000', '4000', '6000'],
+      horizontalValues: [
+        {
+          title: 'HSD',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+          ],
+        },
+        {
+          title: 'MS',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+          ],
+        },
+        {
+          title: 'POWER',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+          ],
+        },
+        {
+          title: 'POWER 99',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+          ],
+        },
+        {
+          title: 'POWER 100',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+          ],
+        },
+        {
+          title: 'TURBOJET',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+          ],
+        },
+      ],
+      titles: [
+        { title: 'Indents placed', color: '#4149E1' },
+        { title: 'Indents executed', color: '#49A149' },
+      ],
+    },
   };
   // <END-> Todays Sales & Inventory
   //
@@ -299,10 +351,35 @@ export class SalesDashboardComponent {
     onChangeDropDown: (e: any) => {
       console.log(e.target.value);
     },
+    values: {
+      title1: 'HSD',
+      title2: '102 Tanks',
+      title3: '36 RO',
+      list: [
+        { title: 'HSD', color: '#5470C6', value: 20 }, //Value in pecentage
+        { title: 'MS', color: '#49A149', value: 30 }, //Value in pecentage
+        { title: 'POWER', color: '#DF5041', value: 10 }, //Value in pecentage
+        { title: 'POWER 99', color: '#9B3F37', value: 20 }, //Value in pecentage
+        { title: 'POWER 100', color: '#ECBB38', value: 10 }, //Value in pecentage
+        { title: 'TURBO JET', color: '#443C6B', value: 10 }, //Value in pecentage
+      ],
+    },
   };
   // <END-> Critical Stock
   //
   // <-START-> Nano Status
+  nanaStatus = {
+    values: {
+      title1: 'HSD',
+      title2: '102 Tanks',
+      title3: '36 RO',
+      list: [
+        { title: 'HSD', color: '#97CBB3', value: 70 }, //Value in pecentage
+        { title: 'MS', color: '#67C2E8', value: 20 }, //Value in pecentage
+        { title: 'POWER', color: '#4087A5', value: 10 }, //Value in pecentage
+      ],
+    },
+  };
   // <END-> Nano Status
   //
   // <-START-> Stock Reconsilation
@@ -318,6 +395,15 @@ export class SalesDashboardComponent {
     ],
     onChangeDropDown: (e: any) => {
       console.log(e.target.value);
+    },
+    values: {
+      title1: 'HSD',
+      title2: '102 Tanks',
+      title3: '36 RO',
+      list: [
+        { title: 'HSD', color: '#74C5A0', value: 80 }, //Value in pecentage
+        { title: 'MS', color: '#F0534A', value: 20 }, //Value in pecentage
+      ],
     },
   };
   // <END-> Stock Reconsilation
@@ -336,6 +422,19 @@ export class SalesDashboardComponent {
     onChangeDropDown: (e: any) => {
       console.log(e.target.value);
     },
+    values: {
+      title1: 'HSD',
+      title2: '102 Tanks',
+      title3: '36 RO',
+      list: [
+        { title: 'HSD', color: '#5470C6', value: 20 }, //Value in pecentage
+        { title: 'MS', color: '#49A149', value: 30 }, //Value in pecentage
+        { title: 'POWER', color: '#DF5041', value: 10 }, //Value in pecentage
+        { title: 'POWER 99', color: '#9B3F37', value: 20 }, //Value in pecentage
+        { title: 'POWER 100', color: '#ECBB38', value: 10 }, //Value in pecentage
+        { title: 'TURBO JET', color: '#443C6B', value: 10 }, //Value in pecentage
+      ],
+    },
   };
   // <END-> Price Change & Exceptions
   //
@@ -353,6 +452,15 @@ export class SalesDashboardComponent {
     onChangeDropDown: (e: any) => {
       console.log(e.target.value);
     },
+    values: {
+      verticalTitle: 'RO COUNT',
+      verticalValues: ['0', '2,000', '4,000', '6,000', '8,000', '10,000'],
+      horizontalValues: [
+        { title: 'Total nil sale', color: '#8554C6', value: '90' }, // value In Persentage(%)
+        { title: 'No transaction Last 7 Days', color: '#FF9066', value: '30' }, // value In Persentage(%)
+        { title: 'No transaction Last 2 Days', color: '#FFCA41', value: '80' }, // value In Persentage(%)
+      ],
+    },
   };
   // <END-> Nil Sales
   //
@@ -369,6 +477,15 @@ export class SalesDashboardComponent {
     ],
     onChangeDropDown: (e: any) => {
       console.log(e.target.value);
+    },
+    values: {
+      verticalTitle: 'RO COUNT',
+      verticalValues: ['0', '2,000', '4,000', '6,000', '8,000', '10,000'],
+      horizontalValues: [
+        { title: 'Total complants', color: '#8554C6', value: '90' }, // value In Persentage(%)
+        { title: 'Resolved', color: '#FF9066', value: '30' }, // value In Persentage(%)
+        { title: 'Pending', color: '#FFCA41', value: '80' }, // value In Persentage(%)
+      ],
     },
   };
   // <END-> ROMMS Complaint Status
@@ -391,6 +508,45 @@ export class SalesDashboardComponent {
     ],
     onChangeDropDown: (e: any) => {
       console.log(e.target.value);
+    },
+    values: {
+      labels: [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+      ],
+      datasets: [
+        {
+          data: [
+            65, 59, 80, 81, 56, 55, 40, 65, 55, 40, 65, 59, 80, 81, 56, 55, 40,
+          ],
+          label: '',
+          borderWidth: 1,
+          tension: 0.5,
+          borderColor: '#406CA5',
+          backgroundColor: 'rgba(255,0,0,0)',
+        },
+        {
+          data: [
+            80, 81, 56, 55, 40, 65, 59, 80, 40, 65, 59, 80, 81, 56, 55, 40, 65,
+          ],
+          label: '',
+          borderWidth: 1,
+          tension: 0.5,
+          borderColor: 'black',
+          backgroundColor: 'rgba(255,0,0,0)',
+        },
+        {
+          data: [
+            80, 55, 40, 65, 59, 80, 40, 65, 59, 80, 81, 56, 55, 40, 65, 81, 56,
+            55, 40, 65, 59, 80, 40, 65, 59, 80, 81, 56, 55, 40, 65,
+          ],
+          label: '',
+          borderWidth: 1,
+          tension: 0.5,
+          borderColor: 'black',
+          backgroundColor: 'rgba(255,0,0,0)',
+        },
+      ],
     },
   };
   // <END-> Sales & Inventory Trend
@@ -483,6 +639,86 @@ export class SalesDashboardComponent {
     navList: ['By Volume', 'By Receipts'],
     onChangeSelected: (v: any) => {
       this.ttReceiptsSap.selected = v;
+    },
+    values: {
+      verticalTitle: 'Number of receipts',
+      verticalValues: ['0', '50', '100', '150', '200', '250'],
+      horizontalValues: [
+        {
+          title: 'HSD',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+            { value: '67', percentage: 20, color: '#D43A2A' },
+            { value: '56', percentage: 50, color: '#9B3F37' },
+            { value: '234', percentage: 60, color: '#ECBB38' },
+            { value: '457', percentage: 30, color: '#FF9066' },
+          ],
+        },
+        {
+          title: 'MS',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+            { value: '67', percentage: 20, color: '#D43A2A' },
+            { value: '56', percentage: 50, color: '#9B3F37' },
+            { value: '234', percentage: 60, color: '#ECBB38' },
+            { value: '457', percentage: 30, color: '#FF9066' },
+          ],
+        },
+        {
+          title: 'POWER',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+            { value: '67', percentage: 20, color: '#D43A2A' },
+            { value: '56', percentage: 50, color: '#9B3F37' },
+            { value: '234', percentage: 60, color: '#ECBB38' },
+            { value: '457', percentage: 30, color: '#FF9066' },
+          ],
+        },
+        {
+          title: 'POWER 99',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+            { value: '67', percentage: 20, color: '#D43A2A' },
+            { value: '56', percentage: 50, color: '#9B3F37' },
+            { value: '234', percentage: 60, color: '#ECBB38' },
+            { value: '457', percentage: 30, color: '#FF9066' },
+          ],
+        },
+        {
+          title: 'POWER 100',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+            { value: '67', percentage: 20, color: '#D43A2A' },
+            { value: '56', percentage: 50, color: '#9B3F37' },
+            { value: '234', percentage: 60, color: '#ECBB38' },
+            { value: '457', percentage: 30, color: '#FF9066' },
+          ],
+        },
+        {
+          title: 'TURBOJET',
+          values: [
+            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '45', percentage: 100, color: '#49A149' },
+            { value: '67', percentage: 20, color: '#D43A2A' },
+            { value: '56', percentage: 50, color: '#9B3F37' },
+            { value: '234', percentage: 60, color: '#ECBB38' },
+            { value: '457', percentage: 30, color: '#FF9066' },
+          ],
+        },
+      ],
+      titles: [
+        { title: 'Indents placed', color: '#4149E1' },
+        { title: 'Indents executed', color: '#49A149' },
+        { title: 'Idents on hold', color: '#D43A2A' },
+        { title: 'Pending indents', color: '#9B3F37' },
+        { title: 'Indents received', color: '#ECBB38' },
+        { title: 'In Transit', color: '#FF9066' },
+      ],
     },
   };
   // <END-> TT Receipts SAP vs Actual and TT in top T ransit
