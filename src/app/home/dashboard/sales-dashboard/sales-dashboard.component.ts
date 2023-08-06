@@ -225,6 +225,66 @@ export class SalesDashboardComponent {
     onChangeSelected: (v: any) => {
       this.inventoryForcate.selected = v;
     },
+    values: [
+      {
+        title: 'DRY OUT',
+        color: '#F0534A',
+        value: '15',
+        graph: 30, // In Percentage
+        indentStatus: {
+          verticalTitle: 'RO COUNT',
+          verticalValues: ['0', '2,000', '4,000', '6,000', '8,000', '10,000'],
+          horizontalValues: [
+            { title: 'Total nil sale', color: '#8554C6', value: '90' }, // value In Persentage(%)
+            {
+              title: 'No transaction Last 7 Days',
+              color: '#FF9066',
+              value: '30',
+            }, // value In Persentage(%)
+            {
+              title: 'No transaction Last 2 Days',
+              color: '#FFCA41',
+              value: '80',
+            }, // value In Persentage(%)
+          ],
+        },
+      },
+      {
+        title: 'INTRADAY DRY OUT',
+        color: '#4A5BF0',
+        value: '5',
+        graph: 30, // In Percentage
+      },
+      {
+        title: '1-3 Days',
+        color: '#F0A04A',
+        value: '12475',
+        graph: 30, // In Percentage
+      },
+      {
+        title: '3-6 Days',
+        color: '#A09452',
+        value: '48',
+        graph: 80, // In Percentage
+        indentStatus: {
+          verticalTitle: 'RO COUNT',
+          verticalValues: ['0', '2,000', '4,000', '6,000', '8,000', '10,000'],
+          horizontalValues: [
+            { title: 'Total nil sale', color: '#8554C6', value: '90' }, // value In Persentage(%)
+            {
+              title: 'No transaction Last 7 Days',
+              color: '#FF9066',
+              value: '30',
+            }, // value In Persentage(%)
+            {
+              title: 'No transaction Last 2 Days',
+              color: '#FFCA41',
+              value: '80',
+            }, // value In Persentage(%)
+          ],
+        },
+      },
+    ],
   };
   // <END-> Inventory Forecate
   //

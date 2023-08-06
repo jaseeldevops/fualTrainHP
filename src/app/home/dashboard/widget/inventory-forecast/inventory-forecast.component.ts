@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-inventory-forecast',
+  selector: 'InventoryForecast',
   templateUrl: './inventory-forecast.component.html',
-  styleUrls: ['./inventory-forecast.component.css']
+  styleUrls: ['./inventory-forecast.component.css'],
 })
 export class InventoryForecastComponent {
-
+  @Input() datas: any = [];
+  selected: any = null;
 }

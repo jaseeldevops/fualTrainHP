@@ -10,7 +10,7 @@
   position: absolute;
   top: 4vw;
   bottom: 0vw;
-  left: -1.5vw;
+  left: 0;
 }
 .graph {
   margin-left: 2vw;
@@ -30,14 +30,14 @@
 .hrLine {
   margin-left: 0.3vw;
   margin-right: 1.5vw;
-  width: 45vw;
+  width: 43vw;
   border-bottom: 0.1vw solid #80808025;
 }
 .bars {
   right: 2vw;
   top: 1vw;
   bottom: 0;
-  width: 45vw;
+  width: 43vw;
   position: absolute;
   display: flex;
   justify-content: space-evenly;
@@ -52,11 +52,11 @@
   justify-content: flex-end;
 }
 .bar {
-  width: 1.2vw;
+  width: 1vw;
   height: 9.5vw;
   background-color: aqua;
-  border-top-left-radius: 0.3vw;
-  border-top-right-radius: 0.3vw;
+  border-top-left-radius: 0.2vw;
+  border-top-right-radius: 0.2vw;
   margin: 0 0.1vw;
 }
 .name {

@@ -1,1 +1,44 @@
-<p>inventory-forecast works!</p>
+<div class="body" *ngIf="selected === null">
+  <div class="eachGraph" *ngFor="let it of datas">
+    <div
+      class="colorArea"
+      [ngStyle]="{ width: it.graph * 0.2 + 'vw', backgroundColor: it.color }"
+    >
+      {{ it.title }}
+      <div
+        class="whiteBack"
+        *ngIf="it.indentStatus !== undefined"
+        (click)="selected = it.indentStatus"
+      ></div>
+    </div>
+  </div>
+</div>
+<div class="body2" *ngIf="selected !== null">
+  <div class="header">
+    <div class="back" (click)="selected = null"></div>
+    Indent status
+  </div>
+  <div class="body3">
+    <div class="verticalTitle">{{ selected.verticalTitle }}</div>
+    <div class="graph">
+      <div class="eachRow" *ngFor="let it of selected.verticalValues">
+        <div class="vrValue">
+          {{ it }}
+          <div class="hrLine"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bars">
+      <div class="barFrame" *ngFor="let it of selected.horizontalValues">
+        <div
+          class="bar"
+          [ngStyle]="{
+            height: it.value * 0.19 + 'vw',
+            backgroundColor: it.color
+          }"
+        ></div>
+        <div class="name">{{ it.title }}</div>
+      </div>
+    </div>
+  </div>
+</div>

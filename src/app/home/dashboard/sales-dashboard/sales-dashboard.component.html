@@ -72,7 +72,7 @@
             </div>
           </div>
         </div>
-        <div style="padding: 1vw">
+        <div style="padding: 0.8vw 1.4vw">
           <div
             style="
               display: flex;
@@ -81,9 +81,10 @@
             "
           >
             <div>Status</div>
-            <div>Tanks</div>
+            <div>{{ inventoryForcate.selected }}</div>
           </div>
         </div>
+        <InventoryForecast [datas]="inventoryForcate.values" />
         <!------------------------------------------------------------------->
       </div>
     </div>
