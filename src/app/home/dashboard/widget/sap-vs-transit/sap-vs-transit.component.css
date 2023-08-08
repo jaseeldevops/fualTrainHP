@@ -58,6 +58,15 @@
   border-top-left-radius: 0.3vw;
   border-top-right-radius: 0.3vw;
   margin: 0 0.2vw;
+  position: relative;
+}
+.graphTest {
+  position: absolute;
+  bottom: -0.8vw;
+  left: 0.2vw;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  font-size: 0.9vw;
 }
 .name {
   padding-top: 0.2vw;

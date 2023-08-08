@@ -19,7 +19,17 @@
 }
 .title {
   font-size: 1vw;
-  padding-left: 0.3vw;
+  background-repeat: no-repeat;
+  background-size: 0.8vw;
+  background-position: left;
+  padding-left: 1vw;
+  margin-left: 0.3vw;
+}
+.title.up {
+  background-image: url(../../../../../assets/dashboard/graphUp.svg);
+}
+.title.down {
+  background-image: url(../../../../../assets/dashboard/graphDown.svg);
 }
 .SubTitle {
   font-size: 0.8vw;

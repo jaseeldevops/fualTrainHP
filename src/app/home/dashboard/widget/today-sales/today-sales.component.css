@@ -2,6 +2,19 @@
   padding: 0.5vw;
   position: relative;
 }
+.graphIcon {
+  background-image: url(../../../../../assets/dashboard/graphDown.svg);
+  background-repeat: no-repeat;
+  background-size: 1vw;
+  background-position: left;
+  padding-left: 1.2vw;
+  margin-left: 0.8vw;
+  color: #b40000;
+}
+.graphIcon.up {
+  color: #00b430;
+  background-image: url(../../../../../assets/dashboard/graphUp.svg);
+}
 .verticalTitle {
   font-size: 0.7vw;
   color: #0000007b;
@@ -58,6 +71,15 @@
   border-top-left-radius: 0.2vw;
   border-top-right-radius: 0.2vw;
   margin: 0 0.1vw;
+  position: relative;
+}
+.graphTest {
+  position: absolute;
+  bottom: -0.5vw;
+  left: 0.1vw;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  font-size: 0.7vw;
 }
 .name {
   padding-top: 0.2vw;

@@ -1,4 +1,30 @@
 <div class="body">
+  <div
+    style="
+      color: #315481;
+      font-weight: 500;
+      display: flex;
+      align-items: flex-end;
+      font-size: 1.1vw;
+      position: absolute;
+      top: -1.5vw;
+      left: 1vw;
+    "
+  >
+    Total inventory&nbsp;<b>{{ datas?.totalInventory }}</b>
+    <span style="font-size: 0.7vw; color: #bbb; padding: 0.1vw">KL</span>
+    &nbsp;Ullage&nbsp;<b>
+      {{ datas?.ullage }}
+    </b>
+    <span style="font-size: 0.7vw; color: #bbb; padding: 0.1vw">KL</span>
+    <div
+      [ngClass]="'graphIcon ' + datas?.graphUpDown"
+      *ngIf="datas?.graphUpAndDown?.length > 0"
+    >
+      {{ datas?.graphUpAndDown }}
+      <span style="color: #999">%</span>
+    </div>
+  </div>
   <div class="verticalTitle">{{ datas.verticalTitle }}</div>
   <div class="graph">
     <div class="eachRow" *ngFor="let it of datas.verticalValues">
@@ -18,7 +44,9 @@
             height: it1.percentage * 0.07 + 'vw',
             backgroundColor: it1.color
           }"
-        ></div>
+        >
+          <div class="graphTest">{{ it1.value }}</div>
+        </div>
       </div>
       <div class="name">{{ it.title }}</div>
     </div>

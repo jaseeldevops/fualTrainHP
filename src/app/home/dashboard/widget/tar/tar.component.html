@@ -13,7 +13,7 @@
     >
       {{ it?.title }}
     </div>
-    <div class="title">{{ it?.value }}</div>
+    <div [ngClass]="'title ' + it?.graphUpDown">{{ it?.value }}</div>
     <div class="SubTitle">{{ it?.subValue }}</div>
   </div>
 </div>

@@ -123,54 +123,58 @@ export class SalesDashboardComponent {
       this.todaySalesAndInventory.selected = v;
     },
     values: {
+      totalInventory: '14238.41',
+      ullage: '7123.18',
+      graphUpAndDown: '1.32',
+      graphUpDown: 'up', // up, down
       verticalTitle: 'Volume (KL)',
       verticalValues: ['0', '2000', '4000', '6000'],
       horizontalValues: [
         {
           title: 'HSD',
           values: [
-            { value: '234', percentage: 10, color: '#4149E1' },
-            { value: '45', percentage: 100, color: '#49A149' },
+            { value: '234', percentage: 10, color: '#5470C6' },
+            { value: '45', percentage: 30, color: '#49A149' },
           ],
         },
         {
           title: 'MS',
           values: [
-            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '234', percentage: 10, color: '#5470C6' },
             { value: '45', percentage: 100, color: '#49A149' },
           ],
         },
         {
           title: 'POWER',
           values: [
-            { value: '234', percentage: 10, color: '#4149E1' },
-            { value: '45', percentage: 100, color: '#49A149' },
+            { value: '234', percentage: 50, color: '#5470C6' },
+            { value: '45', percentage: 40, color: '#49A149' },
           ],
         },
         {
           title: 'POWER 99',
           values: [
-            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '234', percentage: 80, color: '#5470C6' },
             { value: '45', percentage: 100, color: '#49A149' },
           ],
         },
         {
           title: 'POWER 100',
           values: [
-            { value: '234', percentage: 10, color: '#4149E1' },
+            { value: '234', percentage: 10, color: '#5470C6' },
             { value: '45', percentage: 100, color: '#49A149' },
           ],
         },
         {
           title: 'TURBOJET',
           values: [
-            { value: '234', percentage: 10, color: '#4149E1' },
-            { value: '45', percentage: 100, color: '#49A149' },
+            { value: '234', percentage: 20, color: '#5470C6' },
+            { value: '45', percentage: 90, color: '#49A149' },
           ],
         },
       ],
       titles: [
-        { title: 'Indents placed', color: '#4149E1' },
+        { title: 'Indents placed', color: '#5470C6' },
         { title: 'Indents executed', color: '#49A149' },
       ],
     },
@@ -631,6 +635,7 @@ export class SalesDashboardComponent {
         title: 'Central',
         value: 'RO 5412 ( 102.2 Cr)',
         subValue: '',
+        graphUpDown: 'up', // up, down
         valuePersentage: 20,
       },
       {
@@ -638,6 +643,7 @@ export class SalesDashboardComponent {
         title: 'East',
         value: '4125',
         subValue: '( Critical Stock 10 )',
+        graphUpDown: 'up', // up, down
         valuePersentage: 100,
       },
       {
@@ -645,6 +651,7 @@ export class SalesDashboardComponent {
         title: 'East Central',
         value: '3824',
         subValue: '',
+        graphUpDown: 'down', // up, down
         valuePersentage: 100,
       },
       {
@@ -652,6 +659,7 @@ export class SalesDashboardComponent {
         title: 'North',
         value: '3452',
         subValue: '',
+        graphUpDown: 'up', // up, down
         valuePersentage: 20,
       },
       {
@@ -659,6 +667,7 @@ export class SalesDashboardComponent {
         title: 'North Central',
         value: '3324',
         subValue: '( Critical Stock 02 )',
+        graphUpDown: 'up', // up, down
         valuePersentage: 20,
       },
       {
@@ -666,6 +675,7 @@ export class SalesDashboardComponent {
         title: 'North Frontier',
         value: '3014',
         subValue: '',
+        graphUpDown: 'down', // up, down
         valuePersentage: 20,
       },
       {
@@ -673,6 +683,7 @@ export class SalesDashboardComponent {
         title: 'Central',
         value: 'RO 5412 ( 102.2 Cr)',
         subValue: '',
+        graphUpDown: 'up', // up, down
         valuePersentage: 20,
       },
       {
@@ -680,6 +691,7 @@ export class SalesDashboardComponent {
         title: 'Central',
         value: 'RO 5412 ( 102.2 Cr)',
         subValue: '',
+        graphUpDown: 'up', // up, down
         valuePersentage: 20,
       },
       {
@@ -687,6 +699,7 @@ export class SalesDashboardComponent {
         title: 'North Frontier',
         value: '3014',
         subValue: '',
+        graphUpDown: 'up', // up, down
         valuePersentage: 20,
       },
     ],
