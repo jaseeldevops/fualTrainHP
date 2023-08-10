@@ -2,7 +2,7 @@
   <div class="gAbA">Volume (KL)</div>
   <canvas
     baseChart
-    style="height: 8.5vw; width: 100%"
+    [style]="'height: ' + height + '; width: 100%'"
     [type]="'line'"
     [data]="lineChartData"
     [options]="lineChartOptions"

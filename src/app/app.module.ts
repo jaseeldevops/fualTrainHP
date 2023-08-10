@@ -24,6 +24,9 @@ import { PieChartComponent } from './home/dashboard/widget/pie-chart/pie-chart.c
 import { LineGraphComponent } from './home/dashboard/widget/line-graph/line-graph.component';
 import { NgChartsModule } from 'ng2-charts';
 import { InventoryForecastComponent } from './home/dashboard/widget/inventory-forecast/inventory-forecast.component';
+import { BarGraphComponent } from './home/dashboard/widget/bar-graph/bar-graph.component';
+import { InterlockComponent } from './home/dashboard/widget/interlock/interlock.component';
+import { NozzleTankComponent } from './home/dashboard/widget/nozzle-tank/nozzle-tank.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { InventoryForecastComponent } from './home/dashboard/widget/inventory-fo
     PieChartComponent,
     LineGraphComponent,
     InventoryForecastComponent,
+    BarGraphComponent,
+    InterlockComponent,
+    NozzleTankComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgChartsModule],
   providers: [],

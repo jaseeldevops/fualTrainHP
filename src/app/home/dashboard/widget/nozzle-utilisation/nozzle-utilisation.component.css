@@ -57,7 +57,7 @@
 .itemsContainer {
   width: 31vw;
   height: 12.5vw;
-  overflow: scroll;
+  overflow: auto;
 }
 .item {
   width: 100%;

@@ -24,14 +24,14 @@
             [title]="siteStatus.datas[1].title"
             [value]="siteStatus.datas[1].value"
             [type]="'graph'"
-            [percentage]="siteStatus.datas[1]?.percentage || 0"
+            [percentage]="siteStatus.datas[1].percentage || 0"
             [color]="'#56A052'"
           />
           <dashboardWidgets
             [title]="siteStatus.datas[2].title"
             [value]="siteStatus.datas[2].value"
             [type]="'graph'"
-            [percentage]="siteStatus.datas[2]?.percentage || 0"
+            [percentage]="siteStatus.datas[2].percentage || 0"
             [color]="'#F55A5A'"
           />
           <dashboardWidgets
@@ -44,11 +44,7 @@
             [value]="siteStatus.datas[4].value"
             [icon]="siteStatus.datas[4].icon || ''"
           />
-          <dashboardWidgets
-            [title]="siteStatus.datas[5].title"
-            [value]="siteStatus.datas[5].value"
-            [icon]="siteStatus.datas[5].icon || ''"
-          />
+          <div style="width: 8vw"></div>
         </div>
         <!------------------------------------------------------------------->
       </div>
@@ -89,7 +85,7 @@
             [value]="tankAndUllage.datas[1].value"
             [subValue]="tankAndUllage.datas[1].subValue"
             [type]="'graph'"
-            [percentage]="tankAndUllage.datas[1]?.percentage || 0"
+            [percentage]="tankAndUllage.datas[1].percentage || 0"
             [color]="'#56A052'"
           />
           <dashboardWidgets
@@ -97,7 +93,7 @@
             [value]="tankAndUllage.datas[2].value"
             [subValue]="tankAndUllage.datas[2].subValue"
             [type]="'graph'"
-            [percentage]="tankAndUllage.datas[2]?.percentage || 0"
+            [percentage]="tankAndUllage.datas[2].percentage || 0"
             [color]="'#F55A5A'"
           />
           <dashboardWidgets
@@ -183,6 +179,10 @@
       </div>
     </div>
     <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
     <div class="graphFrame" style="width: 50%">
       <div class="top">
         <div class="title">Nozzle & Tank Utilisation</div>
@@ -191,9 +191,31 @@
           23 06 2022 06:00
         </div>
       </div>
-      <div class="body" style="height: 18vw">Iam body</div>
+      <div class="body" style="height: 18.5vw">
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="nozzleTank.selected === it ? 'selectedBtn' : ''"
+              (click)="nozzleTank.onChangeSelected(it)"
+              *ngFor="let it of nozzleTank.navList"
+            >
+              {{ it }}
+            </div>
+          </div>
+          <div style="display: flex">
+            <div
+              [ngClass]="nozzleTank.selected2 === it ? 'selected' : ''"
+              (click)="nozzleTank.onChangeSelected2(it)"
+              *ngFor="let it of nozzleTank.navList2"
+            >
+              {{ it }}
+            </div>
+          </div>
+        </div>
+        <NozzleTankUtilisation [datas]="nozzleTank.values" />
+      </div>
     </div>
-    <div class="graphFrame" style="width: 25%">
+    <div class="graphFrame" style="width: 26.5%">
       <div class="top">
         <div class="title">
           Nano Status
@@ -201,17 +223,49 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 18vw">Iam body</div>
+      <div class="body" style="height: 18.5vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+        <PieChart [datas]="nanoStatus" />
+      </div>
     </div>
-    <div class="graphFrame" style="width: 25%">
+    <div class="graphFrame" style="width: 23.5%">
       <div class="top">
         <div class="title">
           RO Connectivity Status
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 18vw">Iam body</div>
+      <div class="body" style="height: 18.5vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <select (change)="roConnectivityStatus.onChangeDropDown($event)">
+            <option *ngFor="let it of roConnectivityStatus.dropList">
+              {{ it }}
+            </option>
+          </select>
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+        <PieChart
+          [datas]="roConnectivityStatus.values"
+          [width]="'1.8vw'"
+          [hrLabel]="true"
+        />
+      </div>
     </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
     <!-- //////////////////////////////////////////////////////////////// -->
     <div class="graphFrame" style="width: 50%">
       <div class="top">
@@ -220,9 +274,24 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 18vw">Iam body</div>
+      <div class="body" style="height: 18vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="futureDataTransfer.selected === it ? 'selected' : ''"
+              (click)="futureDataTransfer.onChangeSelected(it)"
+              *ngFor="let it of futureDataTransfer.navList"
+            >
+              {{ it }}
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+        <MyBarGraph [datas]="futureDataTransfer.values" />
+      </div>
     </div>
-    <div class="graphFrame" style="width: 25%">
+    <div class="graphFrame" style="width: 26.5%">
       <div class="top">
         <div class="title">
           Stock Reconsilation
@@ -230,17 +299,54 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 18vw">Iam body</div>
+      <div class="body" style="height: 18vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <select (change)="stockReconsilation.onChangeDropDown($event)">
+            <option *ngFor="let it of stockReconsilation.dropList">
+              {{ it }}
+            </option>
+          </select>
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+        <PieChart [datas]="stockReconsilation.values" />
+      </div>
     </div>
-    <div class="graphFrame" style="width: 25%">
+    <div class="graphFrame" style="width: 23.5%">
       <div class="top">
         <div class="title">
           Price Change & Exceptions
           <div class="subTitle">RO Count</div>
         </div>
       </div>
-      <div class="body" style="height: 18vw">Iam body</div>
+      <div class="body" style="height: 18vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <select (change)="priceChangeExceptions.onChangeDropDown($event)">
+            <option *ngFor="let it of priceChangeExceptions.dropList">
+              {{ it }}
+            </option>
+          </select>
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+        <PieChart
+          [datas]="priceChangeExceptions.values"
+          [width]="'1.8vw'"
+          [hrLabel]="true"
+        />
+      </div>
     </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
     <!-- //////////////////////////////////////////////////////////////// -->
     <div class="graphFrame" style="width: 50%">
       <div class="top">
@@ -254,7 +360,24 @@
           23 06 2022 06:00
         </div>
       </div>
-      <div class="body" style="height: 18vw">Iam body</div>
+      <div class="body" style="height: 18vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="
+                interlockParameters.selected === it ? 'selectedBtn' : ''
+              "
+              (click)="interlockParameters.onChangeSelected(it)"
+              *ngFor="let it of interlockParameters.navList"
+            >
+              {{ it }}
+            </div>
+          </div>
+        </div>
+        <InterlockParameters [datas]="interlockParameters.values" />
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame" style="width: 50%">
       <div class="top">
@@ -264,8 +387,14 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 18vw">Iam body</div>
+      <div class="body" style="height: 18vw; padding-top: 2vw">
+        <MyBarGraph [datas]="controlRecordStatus.values" />
+      </div>
     </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
     <!-- //////////////////////////////////////////////////////////////// -->
     <div class="graphFrame" style="width: 50%">
       <div class="top">
@@ -274,7 +403,22 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 18vw">Iam body</div>
+      <div class="body" style="height: 18vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="nanoConnectivity.selected === it ? 'selectedBtn' : ''"
+              (click)="nanoConnectivity.onChangeSelected(it)"
+              *ngFor="let it of nanoConnectivity.navList"
+            >
+              {{ it }}
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+        <MyLineGraph [datas]="nanoConnectivity.values" height="12vw" />
+      </div>
     </div>
     <div class="graphFrame" style="width: 50%">
       <div class="top">
@@ -283,8 +427,28 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 18vw">Iam body</div>
+      <div class="body" style="height: 18vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="softwareVersion.selected === it ? 'selected' : ''"
+              (click)="softwareVersion.onChangeSelected(it)"
+              *ngFor="let it of softwareVersion.navList"
+            >
+              {{ it }}
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+        <MyBarGraph [datas]="softwareVersion.values" />
+      </div>
     </div>
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////// -->
     <div class="graphFrame" style="width: 100%">
       <div class="top">
         <div class="title">
@@ -292,7 +456,9 @@
           <div class="graphIcon"></div>
         </div>
       </div>
-      <div class="body" style="height: 16vw">Iam body</div>
+      <div class="body" style="height: 16vw; padding-top: 2vw">
+        <SapVsTransit [datas]="romms.values" />
+      </div>
     </div>
   </div>
 </div>

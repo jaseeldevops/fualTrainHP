@@ -1,7 +1,7 @@
 .body {
   padding: 0 1.2vw;
   height: calc(100% - 6vw);
-  overflow: scroll;
+  overflow: auto;
 }
 .eachGraph {
   background-color: #88898b59;
