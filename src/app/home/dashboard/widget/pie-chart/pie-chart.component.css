@@ -19,14 +19,17 @@
 .chart {
   position: absolute;
   top: 5vw;
-  width: 11vw;
+  width: 5.5vw;
   height: 0.14vw;
   transform: rotate(10deg);
+  transform-origin: right;
+  margin-right: 5.5vw;
 }
 .chartBall {
   width: 1vw;
   height: 100%;
   background-color: rgb(47, 61, 61);
+  z-index: 1;
 }
 .label {
   width: 8vw;

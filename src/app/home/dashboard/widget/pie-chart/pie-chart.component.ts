@@ -9,6 +9,8 @@ export class PieChartComponent {
   @Input() datas: any = {};
   @Input() width: any = '';
   @Input() hrLabel: any = false;
+
+  highlighted: any = null;
   values: any = [];
   ngOnInit() {
     let j = 0;
@@ -18,8 +20,11 @@ export class PieChartComponent {
         total += this.datas?.list[j].value;
         j++;
       }
-      console.log(this.datas?.list[j].color);
-      this.values.push(this.datas?.list[j]?.color);
+      this.values.push(this.datas?.list[j]);
     }
   }
+
+  onHover = () => {
+    console.log(';;;;;;;;;');
+  };
 }

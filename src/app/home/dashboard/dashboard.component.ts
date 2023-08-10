@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent {
-  userType = 'sales'; // sales, retailEngineering, comco
+  userType = window.localStorage.getItem('userType') || 'sales'; // sales, retailEngineering, comco
   onClickFilter = () => {};
 }

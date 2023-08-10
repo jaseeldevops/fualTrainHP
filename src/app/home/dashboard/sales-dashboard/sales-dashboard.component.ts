@@ -491,12 +491,12 @@ export class SalesDashboardComponent {
       title2: '102 Tanks',
       title3: '36 RO',
       list: [
-        { title: 'HSD', color: '#5470C6', value: 20 }, //Value in pecentage
-        { title: 'MS', color: '#49A149', value: 30 }, //Value in pecentage
-        { title: 'POWER', color: '#DF5041', value: 10 }, //Value in pecentage
-        { title: 'POWER 99', color: '#9B3F37', value: 20 }, //Value in pecentage
-        { title: 'POWER 100', color: '#ECBB38', value: 10 }, //Value in pecentage
-        { title: 'TURBO JET', color: '#443C6B', value: 10 }, //Value in pecentage
+        { title: 'HSD', color: '#5470C6', value: 20, total: 100 }, //Value in pecentage
+        { title: 'MS', color: '#49A149', value: 30, total: 100 }, //Value in pecentage
+        { title: 'POWER', color: '#DF5041', value: 10, total: 100 }, //Value in pecentage
+        { title: 'POWER 99', color: '#9B3F37', value: 20, total: 100 }, //Value in pecentage
+        { title: 'POWER 100', color: '#ECBB38', value: 10, total: 100 }, //Value in pecentage
+        { title: 'TURBO JET', color: '#443C6B', value: 10, total: 100 }, //Value in pecentage
       ],
     },
   };

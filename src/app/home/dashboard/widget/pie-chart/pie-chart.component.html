@@ -1,16 +1,24 @@
 <div [ngStyle]="hrLabel ? {} : { display: 'flex' }">
   <div class="body">
-    <div class="title">{{ datas.title1 }}</div>
-    <div>{{ datas.title2 }}</div>
-    <div class="subTitle">{{ datas.title3 }}</div>
+    <div style="text-align: center" *ngIf="highlighted === null">
+      <div class="title">{{ datas.title1 }}</div>
+      <div>{{ datas.title2 }}</div>
+      <div class="subTitle">{{ datas.title3 }}</div>
+    </div>
+    <div style="text-align: center" *ngIf="highlighted !== null">
+      <div class="title">{{ highlighted?.total }}</div>
+      <div>{{ highlighted?.title }}</div>
+    </div>
     <div
       class="chart"
       *ngFor="let it of values; let k = index"
-      [ngStyle]="{ transform: 'rotate(' + k + 'deg)' }"
+        [ngStyle]="{ transform: 'rotate(' + k + 'deg)' }"
     >
       <div
         class="chartBall"
-        [ngStyle]="{ backgroundColor: it, width: width }"
+        [ngStyle]="{ backgroundColor: it.color, width: width }"
+        (mouseenter)="highlighted = it"
+        (mouseleave)="highlighted = null"
       ></div>
     </div>
   </div>
