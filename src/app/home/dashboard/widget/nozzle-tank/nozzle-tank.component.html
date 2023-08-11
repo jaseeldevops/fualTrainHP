@@ -1,59 +1,90 @@
 <div class="body">
-    <div class="totalAvgContainer">
-      <div class="totalContainer">
-        <div class="icon"></div>
-        <div style="width: 8vw">
-          <div class="title">Total Footfall</div>
-          <div class="value">
-            {{ datas?.total }}&nbsp;
-            <div style="font-size: 0.8vw">{{ datas?.totalUnit }}</div>
-          </div>
+  <div class="totalAvgContainer">
+    <div class="totalContainer">
+      <div class="icon"></div>
+      <div class="percentage">
+        {{ datas?.nozzlePercentage }}%
+        <div
+          class="graph"
+          *ngFor="let it of graphList; let i = index"
+          [ngStyle]="{ transform: 'rotate(' + i + 'deg)' }"
+        >
+          <div
+            class="graphBall"
+            [ngStyle]="{ background: it ? '#F55A5A' : '#B4A8D5' }"
+          ></div>
         </div>
       </div>
-      <div class="avgContainer">
-        <div class="icon_blue"></div>
-        <div style="width: 8vw">
-          <div class="title">Average Fill</div>
-          <div class="value">
-            {{ datas?.average }}&nbsp;
-            <div style="font-size: 0.8vw">{{ datas?.averageUnit }}</div>
-          </div>
+      <div>
+        <div class="title">Total Nozzle</div>
+        <div class="value">
+          {{ datas?.totalNozzle }}
+        </div>
+        <div class="title">No Sale</div>
+        <div class="value">
+          {{ datas?.noSale }}
         </div>
       </div>
     </div>
-    <div class="itemsContainer">
-      <div class="item" *ngFor="let it of datas.items">
-        <div class="name" [ngStyle]="{ color: it?.color }">{{ it?.item }}</div>
-        <div style="width: 5vw">
-          <div class="title">No of Nozzle</div>
-          <div class="value">{{ it?.nozzleCount }}</div>
+    <div class="avgContainer">
+      <div class="icon_blue"></div>
+      <div class="percentage">
+        {{ datas?.tankPercentage }}%
+        <div
+          class="graph"
+          *ngFor="let it of graphList1; let i = index"
+          [ngStyle]="{ transform: 'rotate(' + i + 'deg)' }"
+        >
+          <div
+            class="graphBall"
+            [ngStyle]="{ background: it ? '#F55A5A' : '#8BBDDB' }"
+          ></div>
         </div>
-        <div style="width: 7vw">
-          <div class="title">
-            Not in use
-            <div style="font-size: 0.6vw">(1 Week)</div>
+      </div>
+      <div>
+        <div class="title">Total Tank</div>
+        <div class="value">
+          {{ datas?.totalTank }}
+        </div>
+        <div class="title">No Receipt</div>
+        <div class="value">
+          {{ datas?.noReceipt }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="itemsContainer">
+    <div class="item" *ngFor="let it of datas.items">
+      <div class="name" [ngStyle]="{ color: it?.color }">{{ it?.item }}</div>
+      <div style="width: 5vw">
+        <div class="title">No of Nozzle</div>
+        <div class="value">{{ it?.nozzleCount }}</div>
+      </div>
+      <div style="width: 7vw">
+        <div class="title">
+          Not in use
+          <div style="font-size: 0.6vw">(1 Week)</div>
+        </div>
+        <div class="value">{{ it?.notInUse }}</div>
+      </div>
+      <div style="width: 5vw">
+        <div class="title">Total</div>
+        <div class="value">
+          {{ it?.total }}&nbsp;
+          <div style="font-size: 0.7vw; color: #759dd3">
+            {{ it?.averageUnit }}
           </div>
-          <div class="value">{{ it?.notInUse }}</div>
         </div>
-        <div style="width: 5vw">
-          <div class="title">Total</div>
-          <div class="value">
-            {{ it?.total }}&nbsp;
-            <div style="font-size: 0.7vw; color: #759dd3">
-              {{ it?.averageUnit }}
-            </div>
-          </div>
-        </div>
-        <div style="width: 5vw">
-          <div class="title">Average</div>
-          <div class="value">
-            {{ it?.average }}&nbsp;
-            <div style="font-size: 0.7vw; color: #759dd3">
-              {{ it?.averageUnit }}
-            </div>
+      </div>
+      <div style="width: 5vw">
+        <div class="title">Average</div>
+        <div class="value">
+          {{ it?.average }}&nbsp;
+          <div style="font-size: 0.7vw; color: #759dd3">
+            {{ it?.averageUnit }}
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

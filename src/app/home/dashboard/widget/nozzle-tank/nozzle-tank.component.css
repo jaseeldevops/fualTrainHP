@@ -1,92 +1,119 @@
 .body {
-    padding: 0.8vw 1.5vw;
-    display: flex;
-  }
-  .totalAvgContainer {
-    width: 15vw;
-    padding-right: 1vw;
-  }
-  .totalContainer {
-    width: 100%;
-    height: 5.3vw;
-    background-color: #ebe7f6;
-    border-radius: 0.3vw;
-    padding: 0.8vw 1.2vw;
-    box-sizing: border-box;
-    display: flex;
-  }
-  .icon,
-  .icon_blue {
-    width: 3.7vw;
-    height: 3.7vw;
-    border-radius: 1vw;
-    background-color: #dbd0f4;
-    background-image: url(../../../../../assets/dashboard/dropPurple.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 1.1vw;
-  }
-  .icon_blue {
-    background-color: #97cbea;
-    background-image: url(../../../../../assets/dashboard/dropBlue.png);
-  }
-  .totalAvgContainer .title {
-    font-size: 1vw;
-    color: #315481;
-    text-align: right;
-    padding-top: 0.3vw;
-  }
-  .totalAvgContainer .value {
-    font-size: 1.2vw;
-    padding-top: 0.3vw;
-    display: flex;
-    font-weight: 500;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
-  .avgContainer {
-    width: 100%;
-    height: 5.3vw;
-    background-color: #d4efff;
-    border-radius: 0.3vw;
-    margin-top: 1.4vw;
-    padding: 0.8vw 1.2vw;
-    box-sizing: border-box;
-    display: flex;
-  }
-  .itemsContainer {
-    width: 31vw;
-    height: 12.5vw;
-    overflow: auto;
-  }
-  .item {
-    width: 100%;
-    height: 4vw;
-    background-color: #dae9fc;
-    border-radius: 0.3vw;
-    margin-bottom: 0.4vw;
-    font-weight: 500;
-    padding: 0.5vw 1vw;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-  }
-  .item .name {
-    font-size: 1vw;
-    width: 5vw;
-  }
-  .item .title {
-    font-size: 0.8vw;
-    color: #2f334681;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  .item .value {
-    font-size: 1vw;
-    padding-top: 0.3vw;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  
+  padding: 0.8vw 1.5vw;
+  display: flex;
+}
+.totalAvgContainer {
+  width: 15vw;
+  padding-right: 1vw;
+}
+.totalContainer {
+  width: 100%;
+  height: 5.3vw;
+  background-color: #ebe7f6;
+  border-radius: 0.3vw;
+  padding: 0.8vw 1vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon,
+.icon_blue {
+  width: 2.6vw;
+  height: 2.6vw;
+  background-image: url(../../../../../assets/dashboard/nozzlePurple.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.icon_blue {
+  background-image: url(../../../../../assets/dashboard/tankBlue.svg);
+}
+.totalAvgContainer .title {
+  font-size: 0.7vw;
+  color: #315481;
+  text-align: right;
+  padding-top: 0.2vw;
+}
+.totalAvgContainer .value {
+  font-size: 0.9vw;
+  display: flex;
+  font-weight: 500;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.avgContainer {
+  width: 100%;
+  height: 5.3vw;
+  background-color: #d4efff;
+  border-radius: 0.3vw;
+  margin-top: 1.4vw;
+  padding: 0.8vw 1vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.itemsContainer {
+  width: 31vw;
+  height: 12.5vw;
+  overflow: auto;
+}
+.item {
+  width: 100%;
+  height: 4vw;
+  background-color: #dae9fc;
+  border-radius: 0.3vw;
+  margin-bottom: 0.4vw;
+  font-weight: 500;
+  padding: 0.5vw 1vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.item .name {
+  font-size: 1vw;
+  width: 5vw;
+}
+.item .title {
+  font-size: 0.8vw;
+  color: #2f334681;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.item .value {
+  font-size: 1vw;
+  padding-top: 0.3vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+/* /////////////// */
+.percentage {
+  min-width: 3vw;
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  font-weight: bold;
+  position: relative;
+  margin-right: -0.5vw;
+}
+.graph {
+  top: 1.35vw;
+  left: 0;
+  width: 100%;
+  height: 0.25vw;
+  position: absolute;
+  transform: rotate(10deg);
+  display: flex;
+  justify-content: flex-end;
+}
+.graphBall {
+  height: 0.4vw;
+  width: 0.4vw;
+  border-radius: 50%;
+}

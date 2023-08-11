@@ -128,10 +128,12 @@ export class RetailEngineerDashboardComponent {
       this.nozzleTank.selected2 = v;
     },
     values: {
-      total: '12879',
-      totalUnit: 'Txn',
-      average: '42.23',
-      averageUnit: 'Ltr',
+      totalNozzle: '12,879',
+      noSale: '1346',
+      totalTank: '13,359',
+      noReceipt: '1,234',
+      nozzlePercentage: 50,
+      tankPercentage: 20,
       items: [
         {
           item: 'HSD',
@@ -139,9 +141,7 @@ export class RetailEngineerDashboardComponent {
           nozzleCount: '2000',
           notInUse: '212',
           total: '2572',
-          totalUnit: 'Txn',
           average: '103',
-          averageUnit: 'Ltr',
         },
         {
           item: 'MS',
@@ -149,9 +149,7 @@ export class RetailEngineerDashboardComponent {
           nozzleCount: '1000',
           notInUse: '145',
           total: '2572',
-          totalUnit: 'Txn',
           average: '103',
-          averageUnit: 'Ltr',
         },
         {
           item: 'POWER',
@@ -159,9 +157,7 @@ export class RetailEngineerDashboardComponent {
           nozzleCount: '1500',
           notInUse: '247',
           total: '2572',
-          totalUnit: 'Txn',
           average: '103',
-          averageUnit: 'Ltr',
         },
       ],
     },
