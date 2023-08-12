@@ -4,33 +4,163 @@
       <div class="top">
         <div class="title">DU Status</div>
       </div>
-      <div class="body" style="height: 10vw">Iam body</div>
+      <div class="body" style="height: 10vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader"></div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+          "
+        >
+          <dashboardWidgets
+            [title]="duStatus.datas[0].title"
+            [value]="duStatus.datas[0].value"
+            [icon]="duStatus.datas[0].icon || ''"
+          />
+          <dashboardWidgets
+            [title]="duStatus.datas[1].title"
+            [value]="duStatus.datas[1].value"
+            [type]="'graph'"
+            [percentage]="duStatus.datas[1].percentage || 0"
+            [color]="'#56A052'"
+          />
+          <dashboardWidgets
+            [title]="duStatus.datas[2].title"
+            [value]="duStatus.datas[2].value"
+            [type]="'graph'"
+            [percentage]="duStatus.datas[2].percentage || 0"
+            [color]="'#F55A5A'"
+          />
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame">
       <div class="top">
         <div class="title">Tank Status</div>
       </div>
-      <div class="body" style="height: 10vw">Iam body</div>
+      <div class="body" style="height: 10vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="tankStatus.selected === it ? 'selected' : ''"
+              (click)="tankStatus.onChangeSelected(it)"
+              *ngFor="let it of tankStatus.navList"
+            >
+              {{ it }}
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+          "
+        >
+          <dashboardWidgets
+            [title]="tankStatus.datas[0].title"
+            [value]="tankStatus.datas[0].value"
+            [icon]="tankStatus.datas[0].icon || ''"
+          />
+          <dashboardWidgets
+            [title]="tankStatus.datas[1].title"
+            [value]="tankStatus.datas[1].value"
+            [type]="'graph'"
+            [percentage]="tankStatus.datas[1].percentage || 0"
+            [color]="'#56A052'"
+          />
+          <dashboardWidgets
+            [title]="tankStatus.datas[2].title"
+            [value]="tankStatus.datas[2].value"
+            [type]="'graph'"
+            [percentage]="tankStatus.datas[2].percentage || 0"
+            [color]="'#F55A5A'"
+          />
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame">
       <div class="top">
         <div class="title">Alarm Status</div>
       </div>
-      <div class="body" style="height: 10vw">Iam body</div>
+      <div class="body" style="height: 10vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader"></div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+          "
+        >
+          <dashboardWidgets
+            [title]="alarmStatus.datas[0].title"
+            [value]="alarmStatus.datas[0].value"
+            [icon]="alarmStatus.datas[0].icon || ''"
+            width="6vw"
+          />
+          <dashboardWidgets
+            [title]="alarmStatus.datas[1].title"
+            [value]="alarmStatus.datas[1].value"
+            [icon]="alarmStatus.datas[1].icon || ''"
+            width="6vw"
+          />
+          <dashboardWidgets
+            [title]="alarmStatus.datas[2].title"
+            [value]="alarmStatus.datas[2].value"
+            [icon]="alarmStatus.datas[2].icon || ''"
+            width="6vw"
+          />
+          <dashboardWidgets
+            [title]="alarmStatus.datas[3].title"
+            [value]="alarmStatus.datas[3].value"
+            [icon]="alarmStatus.datas[3].icon || ''"
+            width="6vw"
+          />
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
     <!-- /////////////////////////////////////////////////////////// -->
     <div style="width: 26%">
       <div class="graphFrame" style="width: 100%">
         <div class="top">
           <div class="title">Today's Price</div>
         </div>
-        <div class="body" style="height: 16vw">Iam body</div>
+        <div class="body" style="height: 16vw; overflow: auto">
+          <div *ngFor="let it of todaysPrice" class="todaysPrice">
+            <div [ngStyle]="{ color: it.color }">{{ it.title }}</div>
+            <div>{{ it.value }}</div>
+          </div>
+        </div>
       </div>
       <div class="graphFrame" style="width: 100%">
         <div class="top">
           <div class="title">Sales Summery</div>
         </div>
-        <div class="body" style="height: 16vw">Iam body</div>
+        <div class="body" style="height: 16vw; overflow: auto">
+          <div *ngFor="let it of salesSummery" class="salesSummery">
+            <div [ngStyle]="{ color: it.color }">{{ it.title }}</div>
+            <div>
+              <span style="color: #0000007c; font-size: 0.8vw"
+                >RS&nbsp;&nbsp;</span
+              >
+              {{ it.value }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div style="width: 50%">
@@ -38,21 +168,62 @@
         <div class="top">
           <div class="title">Sales & Inventory</div>
         </div>
-        <div class="body" style="height: 16vw">Iam body</div>
+        <div class="body" style="height: 16vw">
+          <!------------------------------------------------------------------->
+          <div class="frameHeader">
+            <div style="display: flex">
+              <div
+                [ngClass]="
+                  salesAndInventory.selected === it ? 'selectedBtn' : ''
+                "
+                (click)="salesAndInventory.onChangeSelected(it)"
+                *ngFor="let it of salesAndInventory.navList"
+              >
+                {{ it }}
+              </div>
+            </div>
+          </div>
+          <!------------------------------------------------------------------->
+          <TodaySalesGraph [datas]="salesAndInventory.values" />
+        </div>
       </div>
       <div class="graphFrame" style="width: 100%">
         <div class="top">
-          <div class="title">Nozzle Utilisation</div>
+          <div class="title">
+            Nozzle Utilisation
+            <div class="graphIcon"></div>
+          </div>
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
         </div>
-        <div class="body" style="height: 16vw">Iam body</div>
+        <div class="body" style="height: 16vw">
+          <NozzleUtilisation2 [datas]="nozzleUtilisation" />
+        </div>
       </div>
     </div>
     <div class="graphFrame" style="width: 24%">
       <div class="top">
         <div class="title">Nozzle Sales</div>
       </div>
-      <div class="body" style="height: 36vw">Iam bod3y</div>
+      <div class="body" style="height: 36vw; overflow: auto">
+        <div class="nozzleSales" *ngFor="let it of nozzleSales; let k = index">
+          <div>
+            <div>{{ k + 1 }}</div>
+            <div [ngStyle]="{ color: it.color }">{{ it.title }}</div>
+          </div>
+          <div class="iconDrop">{{ it.value }}Ltr</div>
+          <div class="iconRs">{{ it.price }}</div>
+        </div>
+      </div>
     </div>
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
     <!-- /////////////////////////////////////////////////////////// -->
     <div class="graphFrame" style="width: 26%">
       <div class="top">
@@ -105,7 +276,29 @@
       <div class="top">
         <div class="title">Inventory Forecast</div>
       </div>
-      <div class="body" style="height: 38vw">Iam body</div>
+      <div class="body" style="height: 38vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <div style="padding: 0.8vw 1.4vw">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              font-size: 0.8vw;
+            "
+          >
+            <div>Product</div>
+            <div>Days</div>
+          </div>
+        </div>
+        <InventoryForecast [datas]="inventoryForcate" />
+        <!------------------------------------------------------------------->
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,62 @@
+<div class="body">
+    <div class="totalAvgContainer">
+      <div class="totalContainer">
+        <div class="icon"></div>
+        <div style="width: 8vw">
+          <div class="title">Total Footfall</div>
+          <div class="value">
+            {{ datas?.total }}&nbsp;
+            <div style="font-size: 0.8vw">{{ datas?.totalUnit }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="amountContainer">
+        <div class="icon_green"></div>
+        <div style="width: 8vw">
+          <div class="title">Average Fill</div>
+          <div class="value">
+            {{ datas?.average }}&nbsp;
+            <div style="font-size: 0.8vw">{{ datas?.averageUnit }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="avgContainer">
+        <div class="icon_blue"></div>
+        <div style="width: 8vw">
+          <div class="title">Average Fill</div>
+          <div class="value">
+            {{ datas?.average }}&nbsp;
+            <div style="font-size: 0.8vw">{{ datas?.averageUnit }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="itemsContainer">
+      <div class="item" *ngFor="let it of datas.items">
+        <div class="name" [ngStyle]="{ color: it?.color }">{{ it?.item }}</div>
+        <div style="width: 5vw">
+          <div class="title">No of Nozzle</div>
+          <div class="value">{{ it?.nozzleCount }}</div>
+        </div>
+        <div style="width: 5vw">
+          <div class="title">Total</div>
+          <div class="value">
+            {{ it?.total }}&nbsp;
+            <div style="font-size: 0.7vw; color: #759dd3">
+              {{ it?.averageUnit }}
+            </div>
+          </div>
+        </div>
+        <div style="width: 5vw">
+          <div class="title">Average</div>
+          <div class="value">
+            {{ it?.average }}&nbsp;
+            <div style="font-size: 0.7vw; color: #759dd3">
+              {{ it?.averageUnit }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

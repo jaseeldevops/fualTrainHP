@@ -27,6 +27,7 @@ import { InventoryForecastComponent } from './home/dashboard/widget/inventory-fo
 import { BarGraphComponent } from './home/dashboard/widget/bar-graph/bar-graph.component';
 import { InterlockComponent } from './home/dashboard/widget/interlock/interlock.component';
 import { NozzleTankComponent } from './home/dashboard/widget/nozzle-tank/nozzle-tank.component';
+import { NozzleUtilisation2Component } from './home/dashboard/widget/nozzle-utilisation2/nozzle-utilisation2.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { NozzleTankComponent } from './home/dashboard/widget/nozzle-tank/nozzle-
     BarGraphComponent,
     InterlockComponent,
     NozzleTankComponent,
+    NozzleUtilisation2Component,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgChartsModule],
   providers: [],
