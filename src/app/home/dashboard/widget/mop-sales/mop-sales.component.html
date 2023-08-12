@@ -1,0 +1,24 @@
+<div class="body" >
+    <div class="verticalTitle">{{ datas.verticalTitle }}</div>
+    <div class="graph">
+      <div class="eachRow" *ngFor="let it of datas.verticalValues">
+        <div class="vrValue">
+          {{ it }}
+          <div class="hrLine"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bars">
+      <div class="barFrame" *ngFor="let it of datas.horizontalValues">
+        <div
+          class="bar"
+          [ngStyle]="{
+            height: it.value * 0.095 + 'vw',
+            backgroundColor: it.color
+          }"
+        ></div>
+        <div class="name">{{ it.title }}</div>
+      </div>
+    </div>
+  </div>
+  

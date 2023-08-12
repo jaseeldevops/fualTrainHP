@@ -178,7 +178,7 @@ export class ComcoDashboardComponent {
   // <END-> Nozzle Utilisation
   //
   //
-  // <-START-> Today's Price
+  // <-START-> Nozzle Sales
   nozzleSales = [
     { title: 'HSD', color: '#5470C6', value: '90.23', price: '90.23' },
     { title: 'MS', color: '#03B271', value: '106.46', price: '106.46' },
@@ -190,8 +190,223 @@ export class ComcoDashboardComponent {
     { title: 'POWER 100', color: '#ECBB38', value: '129.35', price: '129.35' },
     { title: 'TURBO JET', color: '#443C6B', value: '129.35', price: '129.35' },
   ];
-  // <END-> Today's Price
+  // <END-> Nozzle Sales
   //
+  // <-START-> Stock & Ullage
+  stockUllage = {
+    dropList: [
+      'Total',
+      'HSD',
+      'MS',
+      'POWER',
+      'POWER99',
+      'POWER100',
+      'TURBO JET',
+    ],
+    onChangeDropDown: (e: any) => {
+      console.log(e.target.value);
+    },
+    values: {
+      title1: 'Stock',
+      title2: '102 Tanks',
+      title3: '36 RO',
+      list: [
+        { title: 'HSD', color: '#5470C6', value: 80 }, //Value in pecentage
+        { title: 'MS', color: '#91CC75', value: 20 }, //Value in pecentage
+      ],
+    },
+  };
+  // <END-> Stock & Ullage
+  //
+  //
+  // <-START-> MOP Sales
+  mopSales = {
+    selected: 'Amount',
+    navList: ['Amount', 'Transaction'],
+    onChangeSelected: (v: any) => {
+      this.mopSales.selected = v;
+    },
+    values: {
+      verticalTitle: 'RO COUNT',
+      verticalValues: ['0', '2,000', '4,000', '6,000', '8,000', '10,000'],
+      horizontalValues: [
+        { title: 'Cash', color: '#8674FE', value: '90' }, // value In Persentage(%)
+        { title: 'Digital', color: '#FF9066', value: '30' }, // value In Persentage(%)
+        { title: 'Credit', color: '#FFCA41', value: '80' }, // value In Persentage(%)
+      ],
+    },
+  };
+  // <END-> MOP Sales
+  //
+  //
+  //
+  // <-START-> Stock Reconsilation
+  stockReconsilation = {
+    dropList: [
+      'Total',
+      'HSD',
+      'MS',
+      'POWER',
+      'POWER99',
+      'POWER100',
+      'TURBO JET',
+    ],
+    onChangeDropDown: (e: any) => {
+      console.log(e.target.value);
+    },
+    values: {
+      evpLimitP1: '98.63',
+      evpLimitP2: '98.63',
+      tankVariation: '512.92',
+      permissibleLimit: '512.92',
+    },
+  };
+  // <END-> Stock Reconsilation
+  //
+  //
+  // <-START-> Price Change & Exceptions
+  priceChangeExceptions = {
+    dropList: [
+      'Total',
+      'HSD',
+      'MS',
+      'POWER',
+      'POWER99',
+      'POWER100',
+      'TURBO JET',
+    ],
+    onChangeDropDown: (e: any) => {
+      console.log(e.target.value);
+    },
+    values: {
+      title1: 'Stock',
+      title2: '102 Tanks',
+      title3: '36 RO',
+      list: [
+        { title: 'HSD', color: '#67C2E8', value: 20 }, //Value in pecentage
+        { title: 'Total Exception', color: '#DC8ABB', value: 20 }, //Value in pecentage
+        { title: 'Total Exception', color: '#DC8ABB', value: 40 }, //Value in pecentage
+        { title: 'Total Exception', color: '#EE6666', value: 20 }, //Value in pecentage
+        { title: 'Total Exception', color: '#4087A5', value: 20 }, //Value in pecentage
+      ],
+    },
+  };
+  // <END-> Price Change & Exceptions
+  //
+  //
+  // <-START-> Sales /  Inventory Trend
+  salesInventoryTrend = {
+    selected: 'Today',
+    navList: ['Today', 'Yesterday', 'Past 7 Days', 'Month'],
+    onChangeSelected: (v: any) => {
+      this.salesInventoryTrend.selected = v;
+    },
+    dropList: [
+      'Total',
+      'HSD',
+      'MS',
+      'POWER',
+      'POWER99',
+      'POWER100',
+      'TURBO JET',
+    ],
+    onChangeDropDown: (e: any) => {
+      console.log(e.target.value);
+    },
+    values: {
+      labels: [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+      ],
+      datasets: [
+        {
+          data: [
+            65, 59, 80, 81, 56, 55, 40, 65, 55, 40, 65, 59, 80, 81, 56, 55, 40,
+          ],
+          label: '',
+          borderWidth: 1,
+          tension: 0.5,
+          borderColor: '#406CA5',
+          backgroundColor: 'rgba(255,0,0,0)',
+        },
+        {
+          data: [
+            80, 81, 56, 55, 40, 65, 59, 80, 40, 65, 59, 80, 81, 56, 55, 40, 65,
+          ],
+          label: '',
+          borderWidth: 1,
+          tension: 0.5,
+          borderColor: 'black',
+          backgroundColor: 'rgba(255,0,0,0)',
+        },
+        {
+          data: [
+            80, 55, 40, 65, 59, 80, 40, 65, 59, 80, 81, 56, 55, 40, 65, 81, 56,
+            55, 40, 65, 59, 80, 40, 65, 59, 80, 81, 56, 55, 40, 65,
+          ],
+          label: '',
+          borderWidth: 1,
+          tension: 0.5,
+          borderColor: 'black',
+          backgroundColor: 'rgba(255,0,0,0)',
+        },
+      ],
+    },
+  };
+  // <END-> Sales / Inventory Trend
+  //
+  // <-START-> Transaction Bucket
+  indentStatus = {
+    tarBalance: '4,25,314.00',
+    values: {
+      verticalTitle: 'Number of receipts',
+      verticalValues: ['0', '2', '4', '6', '8', '10'],
+      horizontalValues: [
+        { title: 'Indents placed', color: '#8554C6', value: '90' }, // value In Persentage(%)
+        { title: 'Indents executed', color: '#FF9066', value: '30' }, // value In Persentage(%)
+        { title: 'Idents on hold', color: '#FFCA41', value: '100' }, // value In Persentage(%)
+        { title: 'Pending indents', color: '#42CC7D', value: '90' }, // value In Persentage(%)
+        { title: 'Indents received', color: '#67C2E8', value: '80' }, // value In Persentage(%)
+        { title: 'In Transit', color: '#686B3C', value: '30' }, // value In Persentage(%)
+      ],
+    },
+  };
+  // <END-> Transaction Bucket
+  //
+  //
+  // <-START-> Transaction Bucket
+  transactionBucket = {
+    selected: 'Today',
+    navList: ['Today', 'Yesterday', 'Past 7 Days', 'Month'],
+    onChangeSelected: (v: any) => {
+      this.salesInventoryTrend.selected = v;
+    },
+    dropList: [
+      'Total',
+      'HSD',
+      'MS',
+      'POWER',
+      'POWER99',
+      'POWER100',
+      'TURBO JET',
+    ],
+    onChangeDropDown: (e: any) => {
+      console.log(e.target.value);
+    },
+    values: {
+      verticalTitle: 'Quantity(KL)',
+      verticalValues: ['0', '2,000', '4,000', '6,000', '8,000', '10,000'],
+      horizontalValues: [
+        { title: '<1 ltr', color: '#8554C6', value: '90' }, // value In Persentage(%)
+        { title: '>=1 ltr - <5 ltr', color: '#FF9066', value: '30' }, // value In Persentage(%)
+        { title: '>=5 ltr - <10 ltr', color: '#FFCA41', value: '100' }, // value In Persentage(%)
+        { title: '>=10 ltr - <25 ltr', color: '#42CC7D', value: '90' }, // value In Persentage(%)
+        { title: '>=25 ltr - <35 ltr', color: '#67C2E8', value: '80' }, // value In Persentage(%)
+        { title: '>=25 ltr - <35 ltr', color: '#686B3C', value: '30' }, // value In Persentage(%)
+      ],
+    },
+  };
+  // <END-> Transaction Bucket
   //
   // <-START-> Inventory Forecate
   inventoryForcate = [

@@ -229,26 +229,123 @@
       <div class="top">
         <div class="title">Stock & Ullage</div>
       </div>
-      <div class="body" style="height: 20vw">Iam body</div>
+      <div class="body" style="height: 20vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <select (change)="stockUllage.onChangeDropDown($event)">
+            <option *ngFor="let it of stockUllage.dropList">{{ it }}</option>
+          </select>
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <PieChart [datas]="stockUllage.values" [width]="'1.8vw'" />
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame" style="width: 26%">
       <div class="top">
         <div class="title">MOP Sales</div>
       </div>
-      <div class="body" style="height: 20vw">Iam body</div>
+      <div class="body" style="height: 20vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <div style="display: flex">
+            <div
+              [ngClass]="mopSales.selected === it ? 'selectedBtn' : ''"
+              (click)="mopSales.onChangeSelected(it)"
+              *ngFor="let it of mopSales.navList"
+            >
+              {{ it }}
+            </div>
+          </div>
+        </div>
+        <MOPSales [datas]="mopSales.values" />
+        <!------------------------------------------------------------------->
+      </div>
     </div>
+    <!-- ////////////////////////////////////////////////////////////////// -->
     <div class="graphFrame" style="width: 24%">
       <div class="top">
         <div class="title">Stock Reconsilation</div>
       </div>
-      <div class="body" style="height: 20vw">Iam body</div>
+      <div class="body" style="height: 20vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <select (change)="stockReconsilation.onChangeDropDown($event)">
+            <option *ngFor="let it of stockReconsilation.dropList">
+              {{ it }}
+            </option>
+          </select>
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <div class="stockReconsilation">
+          <div class="each">
+            <div style="color: #315481">EVP Limit P1</div>
+            <div style="font-size: 1.4vw">
+              {{ stockReconsilation.values.evpLimitP1 }}
+            </div>
+          </div>
+          <div class="each">
+            <div style="color: #315481">EVP Limit P1</div>
+            <div style="font-size: 1.4vw">
+              {{ stockReconsilation.values.evpLimitP2 }}
+            </div>
+          </div>
+          <div class="each">
+            <div style="color: #315481">Tank variation</div>
+            <div style="color: #315481; font-size: 0.7vw">4%stock( Ltrs.)</div>
+            <div style="font-size: 1.4vw">
+              {{ stockReconsilation.values.tankVariation }}
+            </div>
+          </div>
+          <div class="each">
+            <div style="color: #315481">Permissible Limit</div>
+            <div style="color: #315481; font-size: 0.7vw">4%( Ltrs.) PV</div>
+            <div style="font-size: 1.4vw">
+              {{ stockReconsilation.values.permissibleLimit }}
+            </div>
+          </div>
+          <div style="padding: 2vw 0.5vw; font-size: 0.8vw">
+            Stock Variation is within Permissible Limits
+          </div>
+        </div>
+        <!------------------------------------------------------------------->
+      </div>
     </div>
     <div class="graphFrame" style="width: 24%">
       <div class="top">
         <div class="title">Price Change & Exceptions</div>
       </div>
-      <div class="body" style="height: 20vw">Iam body</div>
+      <div class="body" style="height: 20vw">
+        <!------------------------------------------------------------------->
+        <div class="frameHeader">
+          <select (change)="priceChangeExceptions.onChangeDropDown($event)">
+            <option *ngFor="let it of priceChangeExceptions.dropList">
+              {{ it }}
+            </option>
+          </select>
+          <div class="subTitle">
+            <div class="timerIcon"></div>
+            23 05 2023 06:00
+          </div>
+        </div>
+        <PieChart
+          [datas]="priceChangeExceptions.values"
+          width="1.8vw"
+          hrLabel="true"
+        />
+        <!------------------------------------------------------------------->
+      </div>
     </div>
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////// -->
     <!-- /////////////////////////////////////////////////////////// -->
     <div style="width: 76%">
       <div style="display: flex">
@@ -256,20 +353,72 @@
           <div class="top">
             <div class="title">Sales / Inventory Trend</div>
           </div>
-          <div class="body" style="height: 18vw">Iam body</div>
+          <div class="body" style="height: 18vw">
+            <!------------------------------------------------------------------->
+            <div class="frameHeader">
+              <select (change)="salesInventoryTrend.onChangeDropDown($event)">
+                <option *ngFor="let it of salesInventoryTrend.dropList">
+                  {{ it }}
+                </option>
+              </select>
+              <div style="display: flex">
+                <div
+                  [ngClass]="
+                    salesInventoryTrend.selected === it ? 'selected' : ''
+                  "
+                  (click)="salesInventoryTrend.onChangeSelected(it)"
+                  *ngFor="let it of salesInventoryTrend.navList"
+                >
+                  {{ it }}
+                </div>
+              </div>
+            </div>
+            <!------------------------------------------------------------------->
+            <MyLineGraph [datas]="salesInventoryTrend.values" height="11vw" />
+          </div>
         </div>
         <div class="graphFrame" style="width: 31.6%">
           <div class="top">
             <div class="title">Indent Status</div>
           </div>
-          <div class="body" style="height: 18vw">Iam body</div>
+          <div class="body" style="height: 18vw">
+            <!------------------------------------------------------------------->
+            <div class="frameHeader">
+              TAR Balance: ${{ indentStatus.tarBalance }}
+            </div>
+            <Indent-status [datas]="indentStatus.values" />
+            <!------------------------------------------------------------------->
+          </div>
         </div>
       </div>
       <div class="graphFrame" style="width: 100%">
         <div class="top">
           <div class="title">Transaction Bucket</div>
         </div>
-        <div class="body" style="height: 16vw">Iam body</div>
+        <div class="body" style="height: 16vw">
+          <!------------------------------------------------------------------->
+          <div class="frameHeader">
+            <div style="display: flex">
+              <div
+                [ngClass]="
+                  transactionBucket.selected === it ? 'selectedBtn' : ''
+                "
+                (click)="transactionBucket.onChangeSelected(it)"
+                *ngFor="let it of transactionBucket.navList"
+              >
+                {{ it }}
+              </div>
+              &nbsp;&nbsp;&nbsp;
+              <select (change)="transactionBucket.onChangeDropDown($event)">
+                <option *ngFor="let it of transactionBucket.dropList">
+                  {{ it }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <!------------------------------------------------------------------->
+          <Transaction-bucket [datas]="transactionBucket.values" height="8vw" />
+        </div>
       </div>
     </div>
     <div class="graphFrame" style="width: 24%">

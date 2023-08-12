@@ -28,6 +28,9 @@ import { BarGraphComponent } from './home/dashboard/widget/bar-graph/bar-graph.c
 import { InterlockComponent } from './home/dashboard/widget/interlock/interlock.component';
 import { NozzleTankComponent } from './home/dashboard/widget/nozzle-tank/nozzle-tank.component';
 import { NozzleUtilisation2Component } from './home/dashboard/widget/nozzle-utilisation2/nozzle-utilisation2.component';
+import { MopSalesComponent } from './home/dashboard/widget/mop-sales/mop-sales.component';
+import { TransactionBucketComponent } from './home/dashboard/widget/transaction-bucket/transaction-bucket.component';
+import { IndentStatusComponent } from './home/dashboard/widget/indent-status/indent-status.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,9 @@ import { NozzleUtilisation2Component } from './home/dashboard/widget/nozzle-util
     InterlockComponent,
     NozzleTankComponent,
     NozzleUtilisation2Component,
+    MopSalesComponent,
+    TransactionBucketComponent,
+    IndentStatusComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgChartsModule],
   providers: [],
