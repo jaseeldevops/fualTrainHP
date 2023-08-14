@@ -1,7 +1,13 @@
 <div class="tablePaging">
   <div class="pagingCounter">
     SHOW
-    <input class="myInput" type="number" />
+    <input
+      class="myInput"
+      [defaultValue]="count"
+      type="number"
+      [(ngModel)]="totalCOunt"
+      (ngModelChange)="onSubmitTotal()"
+    />
     ENTRIES
   </div>
   Showing
@@ -10,14 +16,14 @@
   {{ total }}
   entries
   <div class="pagingPages">
-    <div>Previous</div>
+    <div (click)="onClickPrev()">Previous</div>
     <button
-      [ngClass]="page === k + 1 ? 'selected' : ''"
+      [ngClass]="page === it ? 'selected' : ''"
       *ngFor="let it of counter; let k = index"
       (click)="onClickAny(it)"
     >
       {{ it }}
     </button>
-    <div>Next</div>
+    <div (click)="onClickNext()">Next</div>
   </div>
 </div>

@@ -45,8 +45,9 @@ export class UsersComponent {
     this.page = 'home';
   };
 
-  onChangeUserPage = (k: any) => {
-    console.log(k);
+  onChangeUserPage = (page: any, count: any) => {
+    console.log(page);
+    console.log(count);
   };
 
   onChangeUserRolePage = (k: any) => {

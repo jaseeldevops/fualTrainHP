@@ -2,7 +2,7 @@ export const dummyUsers = {
   paging: {
     page: 1,
     count: 10,
-    total: 1515,
+    total: 72,
   },
   data: [
     {
