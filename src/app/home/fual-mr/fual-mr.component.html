@@ -1,0 +1,265 @@
+<div *ngIf="page === 'listPumpMR'">
+  <div class="header">
+    <div style="width: 30%">Pump M&R</div>
+    <div style="display: flex">
+      <div class="grayText">Server Time:</div>
+      25 May 2023 15:25
+    </div>
+    <div class="filterBody">
+      Filter&nbsp;
+      <select class="myInput">
+        <option>All Zone</option>
+      </select>
+      <select class="myInput">
+        <option>All Region</option>
+      </select>
+      <!-- <select class="myInput">
+      <option>All Sales Area</option>
+    </select> -->
+      <button
+        class="myBtn"
+        style="width: 10vw; height: 1.8vw"
+        (click)="onClickCreatePupmMR()"
+      >
+        + CREATE PUMP M&R
+      </button>
+    </div>
+  </div>
+  <div class="tableHeader">
+    <div class="countDiv">
+      <div class="eachBox">
+        <div>All Request</div>
+        <div>{{ totalCounts.allRequest }}</div>
+      </div>
+      <div class="eachBox" style="background: #02ccb1">
+        <div>In Fresh Status</div>
+        <div>{{ totalCounts.inFreshStatus }}</div>
+      </div>
+      <div class="eachBox" style="background: #f8872b">
+        <div>Pending for Approval</div>
+        <div>{{ totalCounts.pendingforApproval }}</div>
+      </div>
+      <div class="eachBox" style="background: #2baf63">
+        <div>Approved Request</div>
+        <div>{{ totalCounts.approvedRequest }}</div>
+      </div>
+      <div class="eachBox" style="background: #dc3535">
+        <div>Rejected Request</div>
+        <div>{{ totalCounts.rejectedRequest }}</div>
+      </div>
+      <div class="eachBox" style="background: #a54055">
+        <div>Cancelled Request</div>
+        <div>{{ totalCounts.cancelledRequest }}</div>
+      </div>
+      <div class="eachBox" style="background: #8f7e0a">
+        <div>Overdue Request</div>
+        <div>{{ totalCounts.overdueRequest }}</div>
+      </div>
+    </div>
+    <div class="tableFilters">
+      <select class="myInput">
+        <option>RO Code</option>
+      </select>
+      <div>From Date</div>
+      <input type="date" placeholder="Select date" class="myInput" />
+      <div>To Date</div>
+      <input type="date" placeholder="Select date" class="myInput" />
+      <div>Status</div>
+      <select class="myInput">
+        <option>All Status</option>
+      </select>
+      <button class="myBtn">SUBMIT</button>
+    </div>
+  </div>
+  <div class="tableSpace">
+    <div class="table">
+      <div class="tableTitle">
+        <div style="width: 7vw">PUMP M&R REQUEST NO</div>
+        <div style="width: 6vw">RP CODE</div>
+        <div style="width: 4vw">DU NUMBER</div>
+        <div style="width: 8vw">DU SERIAL NO</div>
+        <div style="width: 7vw">DU MODEL</div>
+        <div style="width: 3vw">PUMP NO</div>
+        <div style="width: 6vw">NOZZLE</div>
+        <div style="width: 13vw">DATE</div>
+        <div style="width: 6vw">DEALER REMARKS</div>
+        <div style="width: 5vw">ROMMS INC.NO</div>
+        <div style="width: 5vw">M&R REQ DATE</div>
+        <div style="width: 7vw">STATUS</div>
+        <div style="width: 10vw">ENGINEER OFFICER</div>
+        <div style="width: 12vw">ENGINEER OFFICER REMARKS</div>
+        <div style="width: 14vw">ENGINEER APPROVED DATE & TIME</div>
+        <div style="width: 12vw">ZONAL OFFICER</div>
+        <div style="width: 14vw">ENGINEER OFFICER REMARKS</div>
+        <div style="width: 15vw">ZONAL OFFICER APPROVED DATE & TIME</div>
+        <div style="width: 12vw">REJECT REASONS</div>
+        <div style="width: 15vw">REJECT DATE</div>
+      </div>
+      <div
+        class="tableRow"
+        *ngFor="let it of allPump?.data"
+        (click)="onClickTableItem(it)"
+      >
+        <div style="width: 7vw; color: #406ca5">{{ it?.pumpRequestNo }}</div>
+        <div style="width: 6vw">{{ it?.rpCode }}</div>
+        <div style="width: 4vw">{{ it?.duNumber }}</div>
+        <div style="width: 8vw">{{ it?.duSerialNo }}</div>
+        <div style="width: 7vw">{{ it?.duModel }}</div>
+        <div style="width: 3vw">{{ it?.pumpNo }}</div>
+        <div style="width: 6vw">{{ it?.nozzle }}</div>
+        <div style="width: 13vw; color: #406ca5">{{ it?.date }}</div>
+        <div style="width: 6vw">{{ it?.dealerRemarks }}</div>
+        <div style="width: 5vw">{{ it?.rommsIncNo }}</div>
+        <div style="width: 5vw; color: #406ca5">{{ it?.mandRReqDate }}</div>
+        <div
+          style="width: 7vw"
+          [ngStyle]="{
+            color:
+              it?.status === 'Pending'
+                ? '#CC6715'
+                : it?.status === 'Approved'
+                ? '#1C9850'
+                : '#DC3535'
+          }"
+        >
+          {{ it?.status }}
+        </div>
+        <div style="width: 10vw">{{ it?.engineerOfficer }}</div>
+        <div style="width: 12vw">{{ it?.engineerOfficerRemarks }}</div>
+        <div style="width: 14vw; color: #406ca5">
+          {{ it?.engineerApprovedDateTime }}
+        </div>
+        <div style="width: 12vw">{{ it?.zonalOfficer }}</div>
+        <div style="width: 14vw">{{ it?.engineerOfficerRemarks2 }}</div>
+        <div style="width: 15vw">{{ it?.zonalOfficerApprovedDateTime }}</div>
+        <div style="width: 12vw">{{ it?.rejectReasons }}</div>
+        <div style="width: 15vw; color: #406ca5">{{ it?.rejectDate }}</div>
+      </div>
+    </div>
+    <app-table-paging
+      [page]="allPump?.paging?.page || 1"
+      [count]="allPump?.paging?.count || 1"
+      [total]="allPump?.paging?.total || 1"
+      [onChange]="onChangePage"
+    />
+  </div>
+</div>
+<!-- ////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////////// -->
+<div class="header" *ngIf="page === 'addPumpMRFrom'">
+  <div class="backBtn" (click)="page = 'listPumpMR'">
+    {{ isEdit ? "Edit" : "Create" }} Pump M&R
+  </div>
+</div>
+<div *ngIf="page === 'addPumpMRFrom'" style="background-color: #eef1f5">
+  <div class="userFormBody">
+    <div class="userForm">
+      <div class="userformEachEl">
+        RO
+        <input class="myInput" placeholder="Enter data" />
+      </div>
+      <div class="userformEachEl">
+        Zone
+        <input class="myInput" placeholder="Enter data" />
+      </div>
+      <div class="userformEachEl">
+        Region
+        <input class="myInput" placeholder="Enter data" />
+      </div>
+      <div class="userformEachEl">
+        Sales Area
+        <input class="myInput" placeholder="Enter data" />
+      </div>
+      <div class="userformEachEl">
+        Pump M&R Req No
+        <input class="myInput" placeholder="Enter data" />
+      </div>
+      <div class="userformEachEl">
+        Raised on Date
+        <input class="myInput" type="date" />
+      </div>
+      <div class="userformEachEl">
+        ROMMS Inc.no
+        <input class="myInput" placeholder="Enter data" />
+      </div>
+      <div class="userformEachEl">
+        Status
+        <input class="myInput" placeholder="Enter data" />
+      </div>
+      <div class="userformEachEl">
+        DU No
+        <select class="myInput">
+          <option>Select DU</option>
+        </select>
+      </div>
+      <div class="userformEachEl">
+        DU Serial
+        <input class="myInput" placeholder="Enter data" />
+      </div>
+      <div class="userformEachEl">
+        DU Model
+        <input class="myInput" placeholder="Enter data" />
+      </div>
+      <div class="userformEachEl">
+        Pump No
+        <select class="myInput">
+          <option>Select pump</option>
+        </select>
+      </div>
+      <div class="userformEachEl">
+        Nozzle
+        <select class="myInput">
+          <option>Select nozzle</option>
+        </select>
+      </div>
+      <div class="userformEachEl">
+        Req From Date
+        <input class="myInput" type="date" />
+      </div>
+      <div class="userformEachEl">
+        Req From Date
+        <input class="myInput" type="date" />
+      </div>
+      <div class="userformEachEl">
+        Remarks
+        <input class="myInput" placeholder="Enter data" />
+      </div>
+      <div class="userformEachEl" style="width: 42vw">
+        Remarks
+        <input class="myInput" style="width: 33vw" placeholder="Enter Data" />
+      </div>
+      <div class="userformEachEl">
+        Engnieer Approver
+        <select class="myInput">
+          <option>Select engnieer</option>
+        </select>
+      </div>
+      <div class="userformEachEl">
+        Zonal Approver
+        <select class="myInput">
+          <option>Select zonal</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="userFormFooter">
+    <button class="myBtn delete" *ngIf="isEdit">DELETE</button>
+    <div></div>
+    <div style="display: flex">
+      <button class="myBtn bordered" (click)="onClickCloseForm()">
+        CANCEL
+      </button>
+      <button class="myBtn blueText" (click)="onClickSaveForm()">SAVE</button>
+      <button class="myBtn" (click)="onClickSubmitForm()">SUBMIT</button>
+    </div>
+  </div>
+  <div class="userFormDetils">
+    <div>Created by</div>
+    <div>Created on</div>
+    <div>Modified by</div>
+    <div>Modified on</div>
+  </div>
+</div>

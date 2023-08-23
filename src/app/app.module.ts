@@ -31,6 +31,7 @@ import { NozzleUtilisation2Component } from './home/dashboard/widget/nozzle-util
 import { MopSalesComponent } from './home/dashboard/widget/mop-sales/mop-sales.component';
 import { TransactionBucketComponent } from './home/dashboard/widget/transaction-bucket/transaction-bucket.component';
 import { IndentStatusComponent } from './home/dashboard/widget/indent-status/indent-status.component';
+import { FualMRComponent } from './home/fual-mr/fual-mr.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { IndentStatusComponent } from './home/dashboard/widget/indent-status/ind
     MopSalesComponent,
     TransactionBucketComponent,
     IndentStatusComponent,
+    FualMRComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgChartsModule],
   providers: [],

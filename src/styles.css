@@ -5,6 +5,11 @@
 }
 @font-face {
   font-family: FiraSansCondensed;
+  src: url(./assets/font/FiraSansCondensed-Light.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: FiraSansCondensed;
   src: url(./assets/font/FiraSansCondensed-Regular.ttf);
   font-weight: 400;
 }
@@ -41,6 +46,7 @@ textarea {
 }
 input::placeholder {
   font-size: 0.88vw;
+  color: #a9a9a9;
 }
 select {
   font-size: 0.88vw;
@@ -53,15 +59,15 @@ button.myBtn {
   border: none;
   padding: 0.35vw;
   text-align: center;
-  border: 0.12vw solid var(--myColor);
+  border: 0.1vw solid var(--myColor);
   background-color: var(--myColor);
   border-radius: 0.3vw;
-  font-size: 1vw;
+  font-size: 0.9vw;
   color: white;
   width: 9vw;
   cursor: pointer;
   margin: 0 0.5vw;
-  font-weight: 500;
+  font-weight: 600;
 }
 button.myBtn.delete {
   color: #c52b2b;
@@ -76,12 +82,16 @@ button.myBtn.bordered {
   color: var(--myColor);
   background-color: white;
 }
+button.myBtn.blueText {
+  color: var(--myColor);
+  background-color: #8da9ce;
+}
 input.myInput,
 select.myInput {
-  border: 0.1vw solid #9fa3a99c;
+  border: 0.1vw solid #bbc0c650;
   padding: 0.4vw 0.6vw;
   box-sizing: border-box;
-  border-radius: 0.2vw;
+  border-radius: 0.3vw;
 }
 /* .isLoading {
   position: fixed;

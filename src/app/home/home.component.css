@@ -110,11 +110,17 @@
 .sidebar .dashboard {
   background-image: url(../../assets/dashboard/dashboard.svg);
 }
-.sidebar .settings {
-  background-image: url(../../assets/dashboard/settings.svg);
-}
 .sidebar .dashboard_ {
   background-image: url(../../assets/dashboard/dashboard_.svg);
+}
+.sidebar .pumpMR {
+  background-image: url(../../assets/dashboard/pump.svg);
+}
+.sidebar .pumpMR_ {
+  background-image: url(../../assets/dashboard/pump_.svg);
+}
+.sidebar .settings {
+  background-image: url(../../assets/dashboard/settings.svg);
 }
 .sidebar .settings_ {
   background-image: url(../../assets/dashboard/settings_.svg);
@@ -123,9 +129,11 @@
 .sidebar .title_ {
   padding-left: 1.1vw;
   font-size: 1.1vw;
-  font-weight: 500;
+  font-weight: 400;
   color: #a0b6d2;
+  white-space: nowrap;
 }
 .sidebar .title_ {
   color: #eff7fd;
+  font-weight: 500;
 }

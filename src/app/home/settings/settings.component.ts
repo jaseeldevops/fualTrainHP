@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./settings.component.css'],
 })
 export class SettingsComponent {
-  page: string = 'userList'; //home, userList
+  page: string = 'home'; //home, userList
 
   backToHome = () => {
     this.page = 'home';

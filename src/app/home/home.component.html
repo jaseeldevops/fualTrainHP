@@ -20,33 +20,20 @@
 </div>
 <div class="body">
   <app-dashboard *ngIf="selectedTab === 'dashboard'" />
+  <Home-fual-mr *ngIf="selectedTab === 'pumpMR'" />
   <app-settings *ngIf="selectedTab === 'settings'" />
 </div>
 <div class="sidebar">
   <div
-    (click)="selectedTab = 'dashboard'"
-    [className]="selectedTab == 'dashboard' ? 'tab_' : 'tab'"
+    (click)="selectedTab = it.value"
+    [className]="selectedTab === it.value ? 'tab_' : 'tab'"
+    *ngFor="let it of dashbordRouts"
   >
     <div
-      [className]="
-        selectedTab == 'dashboard' ? 'icon dashboard_' : 'icon dashboard'
-      "
+      [className]="'icon ' + it.value + (selectedTab === it.value ? '_' : '')"
     ></div>
-    <div [className]="selectedTab == 'dashboard' ? 'title_' : 'title'">
-      Dashboard
-    </div>
-  </div>
-  <div
-    (click)="selectedTab = 'settings'"
-    [className]="selectedTab == 'settings' ? 'tab_' : 'tab'"
-  >
-    <div
-      [className]="
-        selectedTab == 'settings' ? 'icon settings_' : 'icon settings'
-      "
-    ></div>
-    <div [className]="selectedTab == 'settings' ? 'title_' : 'title'">
-      Settings
+    <div [className]="selectedTab === it.value ? 'title_' : 'title'">
+      {{ it.title }}
     </div>
   </div>
 </div>
