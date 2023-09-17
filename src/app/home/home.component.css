@@ -119,6 +119,18 @@
 .sidebar .pumpMR_ {
   background-image: url(../../assets/dashboard/pump_.svg);
 }
+.sidebar .roMaster {
+  background-image: url(../../assets/dashboard/roMaster.svg);
+}
+.sidebar .roMaster_ {
+  background-image: url(../../assets/dashboard/roMaster_.svg);
+}
+.sidebar .ritMaster {
+  background-image: url(../../assets/dashboard/ritMaster.svg);
+}
+.sidebar .ritMaster_ {
+  background-image: url(../../assets/dashboard/ritMaster_.svg);
+}
 .sidebar .settings {
   background-image: url(../../assets/dashboard/settings.svg);
 }

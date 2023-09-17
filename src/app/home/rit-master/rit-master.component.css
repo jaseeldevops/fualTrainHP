@@ -1,0 +1,218 @@
+.pageHeader {
+  height: 3vw;
+  border-bottom: 0.15vw solid #a0b6d281;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5vw;
+  font-weight: 500;
+  font-size: 1.2vw;
+  background-color: white;
+}
+.pageHeader .backBtn {
+  height: 1.1vw;
+  padding-left: 1.5vw;
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/icBack.svg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+/* ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////// */
+.ritListPage {
+  background-color: #f1f5f7;
+  height: calc(100vh - 4vw);
+}
+.ritListPage .statusDiv {
+  margin: 0.6vw 1vw;
+  background-color: white;
+  border-radius: 0.8vw;
+  padding: 0.8vw 0.4vw;
+  display: flex;
+}
+.ritListPage .eachStatus {
+  width: 25%;
+  border: 0.08vw solid #9a9a9a70;
+  border-radius: 0.5vw;
+  margin: 0.8vw;
+  padding: 0.7vw 0.8vw;
+  padding-left: 3.4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #515151;
+  font-size: 0.9vw;
+  font-weight: 500;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/rit/scheduled.svg);
+  background-size: 1.6vw;
+  background-position: 1vw;
+  cursor: pointer;
+}
+.ritListPage .eachStatus:nth-child(2) {
+  background-image: url(../../../assets/rit/completed.svg);
+}
+.ritListPage .eachStatus:nth-child(3) {
+  background-image: url(../../../assets/rit/inProgress.svg);
+}
+.ritListPage .eachStatus:nth-child(4) {
+  background-image: url(../../../assets/rit/pending.svg);
+}
+.ritListPage .eachStatus:nth-child(5) {
+  background-image: url(../../../assets/rit/overdue.svg);
+}
+.ritListPage .filterHeader {
+  margin: 0.6vw 1vw;
+  background-color: white;
+  border-radius: 0.8vw;
+  padding: 0.5vw 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4vw;
+  font-weight: 500;
+  color: #03b271;
+}
+.ritListPage .filterCol {
+  font-size: 0.8vw;
+  display: flex;
+  align-items: center;
+  color: #484848;
+  font-weight: 400;
+}
+.ritListPage .filterCol span {
+  margin: 0.8vw;
+}
+.ritListPage .arrowNext {
+  height: 1vw;
+  background-size: 1vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/icBack.svg);
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+/* ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////// */
+.ritFormPage {
+  background-color: #f1f5f7;
+  height: calc(100vh - 4vw);
+}
+.ritFormPage .headDetails {
+  margin: 0.6vw 1vw;
+  background-color: white;
+  border-radius: 0.8vw;
+  padding: 0.6vw 3vw;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  font-size: 0.8vw;
+  font-weight: 500;
+}
+.ritFormPage .headDetails div {
+  display: flex;
+  padding: 0.15vw 0;
+}
+.ritFormPage .categoryArea {
+  height: calc(100vh - 16.5vw);
+  margin-left: 1vw;
+  margin-right: 0.6vw;
+  background-color: white;
+  border-radius: 0.8vw;
+  padding: 0.6vw;
+  min-width: 22%;
+  overflow: auto;
+  font-size: 0.75vw;
+}
+.ritFormPage .categoryEach {
+  padding: 0.6vw 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.1vw 0;
+  border-radius: 0.3vw;
+}
+.ritFormPage .categoryEach:hover {
+  background-color: #e0e8f2;
+}
+.ritFormPage .categoryEach.selected {
+  background-color: #010269;
+  color: white;
+}
+.ritFormPage .formArea {
+  height: calc(100vh - 16.5vw);
+  margin-right: 1vw;
+  width: 100%;
+  background-color: white;
+  border-radius: 0.8vw;
+  padding: 1.5vw 0.8vw;
+  overflow: auto;
+}
+.ritFormPage .formMainTitle {
+  font-size: 1.4vw;
+}
+/* ////////////////////////////////////////////////////////////////// */
+.ritFormPage .div1 {
+  padding: 1vw;
+}
+.ritFormPage .div1 .header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75vw;
+  padding: 0.2vw 0.5vw;
+}
+.ritFormPage .div1 .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8vw;
+  padding: 0.3vw 0.5vw;
+  background-color: #edf6fd;
+  margin: 0.1vw 0;
+  font-weight: 500;
+}
+.ritFormPage .div1 .row:nth-child(even) {
+  background-color: #dcdcdc81;
+}
+/* ///////////////////////////////////////////////////////////////// */
+.ritFormPage .div2 {
+  padding: 1vw;
+  display: flex;
+  font-size: 0.75vw;
+}
+.ritFormPage .containerEach {
+  width: 16vw;
+  margin-right: 1vw;
+}
+.ritFormPage .titles {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2vw 1vw;
+}
+.ritFormPage .values {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9vw 1vw;
+  background-color: #f1f1f1;
+}
+/* /////////////////////////////////////////////// */
+.ritFormPage .plusIcon,
+.ritFormPage .binIcon {
+  height: 2.4vw;
+  width: 2.4vw;
+  background-image: url(../../../assets/rit/bin.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  margin: 0 1vw;
+}
+.ritFormPage .plusIcon {
+  background-image: url(../../../assets/rit/plus.svg);
+}

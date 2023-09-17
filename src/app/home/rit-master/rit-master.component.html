@@ -1,0 +1,216 @@
+<div class="ritListPage" *ngIf="page === 'ritListPage'">
+  <div class="pageHeader">RIT</div>
+  <div class="statusDiv">
+    <div class="eachStatus">
+      <div>
+        <div style="padding-bottom: 0.3vw">Scheduled</div>
+        <div style="font-size: 0.65vw">No of scheduled inspection</div>
+      </div>
+      <div style="display: flex; align-items: center">
+        <span style="font-size: 2vw; color: #603abb">02</span>&nbsp;&nbsp;&nbsp;
+        <span style="color: #9a9a9a70">></span>
+      </div>
+    </div>
+    <div class="eachStatus">
+      <div>
+        <div style="padding-bottom: 0.3vw">Completed</div>
+        <div style="font-size: 0.65vw">No of scheduled inspection</div>
+      </div>
+      <div style="display: flex; align-items: center">
+        <span style="font-size: 2vw; color: #088e5c">01</span>&nbsp;&nbsp;&nbsp;
+        <span style="color: #9a9a9a70">></span>
+      </div>
+    </div>
+    <div class="eachStatus">
+      <div>
+        <div style="padding-bottom: 0.3vw">In Progress</div>
+        <div style="font-size: 0.65vw">No of scheduled inspection</div>
+      </div>
+      <div style="display: flex; align-items: center">
+        <span style="font-size: 2vw; color: #cf8c10">02</span>&nbsp;&nbsp;&nbsp;
+        <span style="color: #9a9a9a70">></span>
+      </div>
+    </div>
+    <div class="eachStatus">
+      <div>
+        <div style="padding-bottom: 0.3vw">Pending</div>
+        <div style="font-size: 0.65vw">No of scheduled inspection</div>
+      </div>
+      <div style="display: flex; align-items: center">
+        <span style="font-size: 2vw; color: #2287bf">30</span>&nbsp;&nbsp;&nbsp;
+        <span style="color: #9a9a9a70">></span>
+      </div>
+    </div>
+    <div class="eachStatus">
+      <div>
+        <div style="padding-bottom: 0.3vw">Overdue</div>
+        <div style="font-size: 0.65vw">No of scheduled inspection</div>
+      </div>
+      <div style="display: flex; align-items: center">
+        <span style="font-size: 2vw; color: #c1243e">01</span>&nbsp;&nbsp;&nbsp;
+        <span style="color: #9a9a9a70">></span>
+      </div>
+    </div>
+  </div>
+  <div class="filterHeader">
+    Completed RO List
+    <div class="filterCol">
+      <input class="myInput" placeholder="RO name or code" />
+      <span>Overdue In</span>
+      <input class="myInput" type="date" />
+      <button class="myBtn">SUBMIT</button>
+    </div>
+  </div>
+  <div style="padding: 0 1vw">
+    <div class="myTable">
+      <div class="myTableHeader">
+        <div style="width: 20%">DATE</div>
+        <div style="width: 10%">RO CODE</div>
+        <div style="width: 20%">RO NAME</div>
+        <div style="width: 25%">ADDRESS</div>
+        <div style="width: 15%">DUE DATE</div>
+        <div style="width: 5%"></div>
+      </div>
+      <div class="myTableBody" style="height: calc(100vh - 28vw)">
+        <div
+          class="myTableRow"
+          style="border: none"
+          *ngFor="let it of allRIT?.content"
+          (click)="onClickRITRow(it)"
+        >
+          <div style="width: 20%; color: var(--myColor)">{{ it.date }}</div>
+          <div style="width: 10%">{{ it.roCode }}</div>
+          <div style="width: 20%">{{ it.roName }}</div>
+          <div style="width: 25%">{{ it.address }}</div>
+          <div style="width: 15%">{{ it.dueDate }}</div>
+          <div style="width: 5%" class="arrowNext"></div>
+        </div>
+      </div>
+    </div>
+    <app-table-paging
+      [page]="allRIT?.paging?.page"
+      [count]="allRIT?.paging?.count"
+      [total]="allRIT?.paging?.total"
+      [onChange]="onChangePage"
+    />
+  </div>
+</div>
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+<div class="ritFormPage" *ngIf="page === 'ritFormPage'">
+  <div class="pageHeader">
+    <div class="backBtn" (click)="page = 'ritListPage'">RIT</div>
+  </div>
+  <div class="headDetails">
+    <div *ngFor="let it of slectedRIT?.details">
+      <div style="width: 10vw">{{ it?.title }}</div>
+      :
+      <div style="padding-left: 0.2vw">{{ it?.value }}</div>
+    </div>
+  </div>
+  <div style="display: flex">
+    <div class="categoryArea">
+      <!-- ////////////////////////////////////////////////////////// -->
+      <div
+        class="categoryEach"
+        [ngClass]="ritSelectedCategory === it?.value ? 'selected' : ''"
+        *ngFor="let it of slectedRIT?.categories"
+        (click)="onClickRITCategory(it)"
+      >
+        <div>
+          <div style="font-weight: 500">{{ it?.title }}</div>
+          <div style="color: #fcb73f">{{ it?.status }}</div>
+        </div>
+        <div style="color: #848484">></div>
+      </div>
+    </div>
+    <div class="formArea" *ngIf="ritSelectedCategory === 'salesAndStock'">
+      <div class="formMainTitle">1. Totalizer Reading</div>
+      <div class="div1">
+        <div class="header">
+          <div style="width: 8%">DU no</div>
+          <div style="width: 8%">Nozzle no</div>
+          <div style="width: 8%">Product</div>
+          <div style="width: 8%">Reading on Previous Visit</div>
+          <div style="width: 8%">Reading on Date Of Inspection</div>
+          <div style="width: 8%">Meter Completed Rotation</div>
+          <div style="width: 8%">No. of Times Meter Rotated</div>
+          <div style="width: 8%">Oil Reading 0n previous Visit</div>
+          <div style="width: 8%">Oil Reading on Date of Inspection</div>
+          <div style="width: 8%">
+            Oil Meter QTY
+            <span style="color: #c80d00d8"
+              >(To be manually calculated & punched)</span
+            >span>
+          </div>
+          <div style="width: 8%">Total Sales as per Reading</div>
+        </div>
+        <div class="row" *ngFor="let it of [1, 1, 1, 1]">
+          <div style="width: 8%">178H083dKMS</div>
+          <div style="width: 8%">MS-1</div>
+          <div style="width: 8%">MS</div>
+          <div style="width: 8%">15390</div>
+          <input class="myInput" style="width: 8%" />
+          <input class="myInput" style="width: 8%" />
+          <input class="myInput" style="width: 8%" />
+          <div style="width: 8%">-</div>
+          <div style="width: 8%">-</div>
+          <input class="myInput" style="width: 8%" />
+          <div style="width: 8%">7698</div>
+        </div>
+        <div class="header" style="padding: 0.5vw 0; padding-top: 1.5vw">
+          <div></div>
+          <div style="width: 12%">DU no</div>
+          <div style="width: 12%">Nozzle no</div>
+          <div style="width: 12%">Product</div>
+          <div style="width: 12%">Reading on Previous Visit</div>
+          <div style="width: 45%">&nbsp;</div>
+        </div>
+        <div class="row" style="padding: 0" *ngFor="let it of [1, 1, 1, 1]">
+          <div></div>
+          <input class="myInput" style="width: 12%" />
+          <input class="myInput" style="width: 12%" />
+          <input class="myInput" style="width: 12%" />
+          <input class="myInput" style="width: 12%" />
+          <div style="width: 45%; height: 2.5vw; background: white">
+            <div class="plusIcon"></div>
+            <!-- <div class="binIcon"></div> -->
+          </div>
+        </div>
+      </div>
+      <div class="formMainTitle">2. Summary of Sales(prodect wise)</div>
+      <!-- /////////////////////////////////////////////////////////////// -->
+      <div class="div2">
+        <div class="containerEach">
+          <div class="titles">
+            <div>Product</div>
+            <div>Total Sale</div>
+          </div>
+          <div class="values">
+            <div style="color: #e68a11">MS</div>
+            <div>21486 ltrs</div>
+          </div>
+        </div>
+        <div style="width: 16vw">
+          <div class="titles">
+            <div></div>
+            <div>Total Sale</div>
+          </div>
+          <div class="values">
+            <div style="color: #4a99ff">MSD</div>
+            <div>21486 ltrs</div>
+          </div>
+        </div>
+      </div>
+      <div class="formMainTitle">3. Stock in Tank</div>
+      <!-- /////////////////////////////////////////////////////////////// -->
+    </div>
+    <div
+      class="formArea"
+      *ngIf="ritSelectedCategory === 'performanceReview'"
+    ></div>
+  </div>
+</div>

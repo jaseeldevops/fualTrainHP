@@ -1,0 +1,556 @@
+    <div *ngIf="page === 'listPage'">
+    <div class="pageHeader">RO Details</div>
+  <div class="pageBody">
+    <div class="filterContainer">
+      <input class="myInput" placeholder="Search ID" />
+      <span>Filter</span>
+      <select class="myInput">
+        <option>All Zone</option>
+      </select>
+      <select class="myInput">
+        <option>All Region</option>
+      </select>
+      <select class="myInput">
+        <option>All Sales Area</option>
+      </select>
+      <select class="myInput">
+        <option>All Vendor</option>
+      </select>
+      <select class="myInput">
+        <option>All RO</option>
+      </select>
+      <select class="myInput">
+        <option>All Type</option>
+      </select>
+      <select class="myInput">
+        <option>All Caregory</option>
+      </select>
+      <button
+        class="myBtn"
+        style="
+          width: 5vw;
+          font-weight: 400;
+          font-size: 0.8vw;
+          background-color: #0a4573;
+        "
+      >
+        SUBMIT
+      </button>
+      <button class="myBtn" style="width: 12vw" (click)="onClickNewRO()">
+        + CREATE NEW RO
+      </button>
+    </div>
+    <div class="tableArea">
+      <div class="body">
+        <div class="header">
+          <div style="width: 6vw">RO CODE</div>
+          <div style="width: 10vw">RO NAME</div>
+          <div style="width: 7vw">PROJECT PHASE</div>
+          <div style="width: 8vw">AUTOMATIC VENDOR</div>
+          <div style="width: 12vw; text-align: center">
+            TEMP CLOSE/RO MODERNISATION
+          </div>
+          <div style="width: 6vw">RO TYPE</div>
+          <div style="width: 7vw">VALID LEASE DATE</div>
+          <div style="width: 7vw">RO CATEGORY</div>
+          <div style="width: 7vw">SALES AREA</div>
+          <div style="width: 7vw">REGION</div>
+          <div style="width: 6vw">ZONE</div>
+          <div style="width: 7vw">HEAD OFFICE</div>
+          <div style="width: 18vw">ADDRESS</div>
+          <div style="width: 10vw">CITY</div>
+          <div style="width: 8vw">DISTRICT</div>
+          <div style="width: 8vw">STATE</div>
+          <div style="width: 6vw">PINCODE</div>
+          <div style="width: 12vw">DEALER NAME</div>
+          <div style="width: 12vw">DELEAR PHONE NUMBER</div>
+          <div style="width: 12vw">DELEAR MOBILE NUMBER</div>
+          <div style="width: 18vw">HPCL EMAIL ID</div>
+          <div style="width: 15vw">WMN VALIDITY DATE</div>
+          <div style="width: 15vw">TIN NUMBER</div>
+          <div style="width: 15vw">IP ADDREDD</div>
+          <div style="width: 18vw">VSAT/BRODMBAND/SDVAN/SIM - ID</div>
+          <div style="width: 18vw">VSAT/BRODMBAND/SDVAN/SIM - ID</div>
+          <div style="width: 18vw">LAST RO COMMUNICATED DATE</div>
+          <div style="width: 8vw">RO STATUS</div>
+          <div style="width: 8vw">FZD STATSU</div>
+          <div style="width: 8vw">LOCATION TYPE</div>
+          <div style="width: 8vw">HIGHWAY NUMBER</div>
+          <div style="width: 8vw">HIGHWAY STATE</div>
+          <div style="width: 10vw">PESO LIENSE NUMBER</div>
+          <div style="width: 10vw">PESO VALIDITY TILL DATE</div>
+          <div style="width: 10vw">NHAI DOCUMENT NUMBER</div>
+          <div style="width: 15vw">NHAD DOCUMENT VALIDITY TILL DATE</div>
+          <div style="width: 10vw">CANOPY</div>
+          <div style="width: 10vw">RVI(RETAIL VISUAL IDENTITY)(Y/N)</div>
+          <div style="width: 10vw">DRIVEVAY</div>
+          <div style="width: 10vw">APPRAOCH ROAD</div>
+          <div style="width: 10vw">ID SIGNAGES</div>
+          <div style="width: 18vw">ID SIGNAGES INTEGRATED WITH AUTOMATION</div>
+          <div style="width: 12vw">HIGH MAS T(Y/N)</div>
+          <div style="width: 6vw">HOARDING AVIALABLE(Y/N)</div>
+          <div style="width: 8vw">IF Y,NOS</div>
+          <div style="width: 8vw">IF Y,HOARDING SIZE</div>
+          <div style="width: 8vw">SALES BUILDING</div>
+          <div style="width: 8vw">CCTV(Y/N)</div>
+          <div style="width: 8vw">PUC(Y/N)</div>
+          <div style="width: 8vw">ESD(Y/N)</div>
+          <div style="width: 8vw">IF Y,NOS</div>
+          <div style="width: 8vw">ALDS(Y/N)</div>
+          <div style="width: 15vw">AUTOMATION WITH INTEGRATION(Y/N)</div>
+          <div style="width: 8vw">CNG(Y/N)</div>
+          <div style="width: 15vw">AUTOMATION WITH INTEGRATION(Y/N)</div>
+          <div style="width: 15vw">IF CNG "Y" DU SERIAL NUMBER</div>
+          <div style="width: 15vw">IF CNG "Y" DU MAKE</div>
+          <div style="width: 15vw">IF CNG "Y" DU TYPE</div>
+          <div style="width: 15vw">IF CNG "Y" NO OF NOZZLES</div>
+          <div style="width: 15vw">IF CNG "Y" W&M VALIDITY TILL DATE</div>
+          <div style="width: 15vw">VRS (VAPOUR RECOVERY STYSTEM) - (Y/N)</div>
+          <div style="width: 15vw">AUTOMATIC WITH INTEGRATION (Y/N)</div>
+          <div style="width: 15vw">IF "Y", VENDOR NAME</div>
+          <div style="width: 15vw">TYPE OF VRS SYSTEM</div>
+          <div style="width: 15vw">EV CHARGING (Y/N)</div>
+          <div style="width: 15vw">AUTOMATION WITH INTEGRATION(Y/N)</div>
+          <div style="width: 15vw">IF "Y", SLOW CHARGER CAPACITY</div>
+          <div style="width: 15vw">IF "Y", FAST CHARGER CAPACITY</div>
+          <div style="width: 15vw">DDD (DOOR DELIVERY OF DIESEL) - (Y/N)</div>
+          <div style="width: 15vw">INTEGRATION WITH AUTOMATION(Y/N)</div>
+          <div style="width: 15vw">SOLAR - (Y/N)</div>
+          <div style="width: 15vw">IF SOLAR "Y" CAPACITY</div>
+          <div style="width: 15vw">
+            IF CAPACITY "Y", CONNECTED TO GRID (Y/N)
+          </div>
+          <div style="width: 15vw">DIGITEL AIR TOWER (Y/N)</div>
+          <div style="width: 15vw">AIR COMPRESSOR (Y/N)</div>
+          <div style="width: 15vw">ECO FRIENDLY DIESEL GENERATOR SET (Y/N)</div>
+          <div style="width: 15vw">RAIN WATER HARVESTING (Y/N)</div>
+          <div style="width: 12vw">ITPS (Y/N)</div>
+          <div style="width: 12vw">EDC (Y/N)</div>
+          <div style="width: 15vw">IF EDC "Y", BANK NAME</div>
+          <div style="width: 15vw">IF EDC "Y", EDC MIC NUMBER</div>
+          <div style="width: 15vw">IF EDC "Y", EDC TID NUMBER</div>
+          <div style="width: 15vw">NUMBER OF EARTH PITS</div>
+          <div style="width: 15vw">UPDATED BY</div>
+          <div style="width: 15vw">UPDATED DATE</div>
+        </div>
+        <div class="rowBody">
+          <div class="row" *ngFor="let it of allRODerails?.content">
+            <div style="width: 6vw; color: var(--myColor)">
+              R{{ it?.roCode }}
+            </div>
+            <div style="width: 10vw; font-weight: 500">R{{ it?.roName }}</div>
+            <div style="width: 7vw">P{{ it?.projectPhase }}</div>
+            <div style="width: 8vw">A{{ it?.automaticVendor }}</div>
+            <div style="width: 12vw; text-align: center">
+              {{ it?.tempCloseROModernisation }}
+            </div>
+            <div style="width: 6vw">R{{ it?.roType }}</div>
+            <div style="width: 7vw">V{{ it?.validLeaseDate }}</div>
+            <div style="width: 7vw">R{{ it?.roCategory }}</div>
+            <div style="width: 7vw">S{{ it?.salesArea }}</div>
+            <div style="width: 7vw">R{{ it?.region }}</div>
+            <div style="width: 6vw">Z{{ it?.zone }}</div>
+            <div style="width: 7vw">H{{ it?.headOffice }}</div>
+            <div style="width: 18vw">{{ it?.address }}</div>
+            <div style="width: 10vw">{{ it?.city }}</div>
+            <div style="width: 8vw">D{{ it?.district }}</div>
+            <div style="width: 8vw">S{{ it?.state }}</div>
+            <div style="width: 6vw">P{{ it?.pincode }}</div>
+            <div style="width: 12vw">{{ it?.dealerName }}</div>
+            <div style="width: 12vw">{{ it?.delearPhoneNumber }}</div>
+            <div style="width: 12vw">{{ it?.delearMobileNumber }}</div>
+            <div style="width: 18vw">{{ it?.hpclEmailId }}</div>
+            <div style="width: 15vw">{{ it?.wmnValidityDate }}</div>
+            <div style="width: 15vw">{{ it?.tinNumber }}</div>
+            <div style="width: 15vw">{{ it?.ipAddredd }}</div>
+            <div style="width: 18vw; color: var(--myColor)">
+              {{ it?.vsatBrodmbandSdvanSimId }}
+            </div>
+            <div style="width: 18vw; color: var(--myColor)">
+              {{ it?.vsatBrodmbandSdvanSimId2 }}
+            </div>
+            <div style="width: 18vw; color: var(--myColor)">
+              {{ it?.lastRoCommunicatedDate }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">
+              R{{ it?.roStatus }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">
+              F{{ it?.fzdStatsu }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">
+              L{{ it?.locationType }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">
+              H{{ it?.highwayNumber }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">
+              H{{ it?.highwayState }}
+            </div>
+            <div style="width: 10vw; color: var(--myColor)">
+              {{ it?.pesoLienseNumber }}
+            </div>
+            <div style="width: 10vw; color: var(--myColor)">
+              {{ it?.pesoValidityTillDate }}
+            </div>
+            <div style="width: 10vw; color: var(--myColor)">
+              {{ it?.nhaiDocumentNumber }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.nhadDocumentValidityTillDate }}
+            </div>
+            <div style="width: 10vw; color: var(--myColor)">
+              {{ it?.conopy }}
+            </div>
+            <div style="width: 10vw; color: var(--myColor)">{{ it?.rvi }}</div>
+            <div style="width: 10vw; color: var(--myColor)">
+              {{ it?.drivevay }}
+            </div>
+            <div style="width: 10vw; color: var(--myColor)">
+              {{ it?.appraochRoad }}
+            </div>
+            <div style="width: 10vw; color: var(--myColor)">
+              {{ it?.idSignages }}
+            </div>
+            <div style="width: 18vw; color: var(--myColor)">
+              {{ it?.idSignagesIntegratedWithAutomation }}
+            </div>
+            <div style="width: 12vw; color: var(--myColor)">
+              {{ it?.highMasT }}
+            </div>
+            <div style="width: 6vw; color: var(--myColor)">
+              H{{ it?.hoardingAvialable }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">
+              I{{ it?.hoardingAvialableNos }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">
+              I{{ it?.hoardingAvialableSize }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">
+              S{{ it?.salesBuilding }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">C{{ it?.cctv }}</div>
+            <div style="width: 8vw; color: var(--myColor)">P{{ it?.puc }}</div>
+            <div style="width: 8vw; color: var(--myColor)">E{{ it?.esd }}</div>
+            <div style="width: 8vw; color: var(--myColor)">
+              I{{ it?.ESDNos }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">A{{ it?.ALDS }}</div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.ALDSAutomationWithIntegration }}
+            </div>
+            <div style="width: 8vw; color: var(--myColor)">C{{ it?.CNG }}</div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.CNGAutomationWithIntegration }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.CNGDUSerialNumber }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.CNGDUMake }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.CNGDUType }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.CNGNozzles }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.CNGWMalidityTillDate }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">{{ it?.VRS }}</div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.BRSAutomaticWithIntegration }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.VRSVendorName }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.typeVRSSystem }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.EVCharging }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.EVAutomationWithIntegration }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.EVSlowChargerCapacity }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.EVFastChargerCapacity }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">{{ it?.ddd }}</div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.DDDIntegrationWithAutomation }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.solar }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.solarCapacity }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.solarCapacityConnectedToGrid }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.digitelAirTower }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.airCompressor }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.ecoFriendlyDieseGeneratorSet }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.rainWaterHarvesting }}
+            </div>
+            <div style="width: 12vw; color: var(--myColor)">{{ it?.itps }}</div>
+            <div style="width: 12vw; color: var(--myColor)">{{ it?.edc }}</div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.EDCBankName }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.EDCMicNumber }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.EDCTIDNumber }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.noOfEarthPits }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.updatedBy }}
+            </div>
+            <div style="width: 15vw; color: var(--myColor)">
+              {{ it?.updatedDate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 1vw">
+      <app-table-paging
+        [page]="allRODerails?.paging?.page"
+        [count]="allRODerails?.paging?.count"
+        [total]="allRODerails?.paging?.total"
+        [onChange]="onChangePage"
+      />
+    </div>
+  </div>
+</div>
+<div *ngIf="page === 'addPage'" class="addform">
+  <div class="pageHeader">
+    <div class="backBtn" (click)="page = 'listPage'">CREATE NEW RO</div>
+  </div>
+  <div class="formTabChanger">
+    <div
+      [ngClass]="
+        formSelectedTab === 0 ? 'eachFormChangerTab_' : 'eachFormChangerTab'
+      "
+    >
+      <div>1</div>
+      RO Mapping
+    </div>
+    <div
+      [ngClass]="
+        formSelectedTab === 1 ? 'eachFormChangerTab_' : 'eachFormChangerTab'
+      "
+    >
+      <div>2</div>
+      Dealer Details
+    </div>
+    <div
+      [ngClass]="
+        formSelectedTab === 2 ? 'eachFormChangerTab_' : 'eachFormChangerTab'
+      "
+    >
+      <div>3</div>
+      Automatoion Details
+    </div>
+    <div
+      [ngClass]="
+        formSelectedTab === 3 ? 'eachFormChangerTab_' : 'eachFormChangerTab'
+      "
+    >
+      <div>4</div>
+      RO Infrastructure
+    </div>
+    <div
+      [ngClass]="
+        formSelectedTab === 4 ? 'eachFormChangerTab_' : 'eachFormChangerTab'
+      "
+    >
+      <div>5</div>
+      ITPS Details
+    </div>
+  </div>
+  <div class="formBody">
+    <div class="form" *ngIf="formSelectedTab === 0">
+      <div class="formEachEl">
+        RO Number
+        <div style="display: flex">
+          <input class="myInput" placeholder="Enter RO Number" />
+          <button class="myBtn searchBtn"></button>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="formEachEl">
+        Zone
+        <input class="myInput" placeholder="Zone name" />
+      </div>
+      <div class="formEachEl">
+        Region
+        <input class="myInput" placeholder="Sales region" />
+      </div>
+      <div class="formEachEl">
+        Sales Area
+        <input class="myInput" placeholder="Sales area" />
+      </div>
+      <div class="formEachEl">
+        RO Name
+        <input class="myInput" placeholder="RO name here" />
+      </div>
+      <div class="formEachEl">
+        Temp Close/RO Modernisation
+        <select class="myInput">
+          <option>No</option>
+        </select>
+      </div>
+      <div class="formEachEl">
+        RO Type
+        <select class="myInput">
+          <option>COCO</option>
+        </select>
+      </div>
+      <div class="formEachEl">
+        RO Category
+        <select class="myInput">
+          <option>Sales Category</option>
+        </select>
+      </div>
+      <div class="formEachEl">
+        Head Office
+        <input class="myInput" placeholder="Enter head office" />
+      </div>
+      <div class="formEachEl">
+        Address
+        <input class="myInput" placeholder="Enter address here" />
+      </div>
+      <div class="formEachEl">
+        State
+        <input class="myInput" placeholder="Enter state here" />
+      </div>
+      <div class="formEachEl">
+        District
+        <input class="myInput" placeholder="Enter enter district here" />
+      </div>
+      <div class="formEachEl">
+        City
+        <input class="myInput" placeholder="Enter city here" />
+      </div>
+      <div class="formEachEl">
+        PIN Code
+        <input class="myInput" placeholder="Enter PIN" />
+      </div>
+      <div class="formEachEl">
+        RO Status
+        <select class="myInput">
+          <option>Active</option>
+        </select>
+      </div>
+      <div class="formEachEl">
+        FZD Status
+        <select class="myInput">
+          <option>Active</option>
+        </select>
+      </div>
+      <div class="formEachEl">
+        Location Type
+        <select class="myInput">
+          <option>High Way</option>
+        </select>
+      </div>
+      <div class="formEachEl">
+        High Way Number
+        <input class="myInput" placeholder="Enter here" />
+      </div>
+      <div class="formEachEl">
+        High Way Stats
+        <input class="myInput" placeholder="Enter here" />
+      </div>
+      <div class="formEachEl">
+        NHAI (National highway Authority) document number
+        <input class="myInput" placeholder="Enter here" />
+      </div>
+      <div class="formEachEl">
+        NHAI document number validity till date
+        <input class="myInput" type="date" />
+      </div>
+    </div>
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+    <div class="form" *ngIf="formSelectedTab === 1">
+      <div class="formEachEl">
+        Dealer Name
+        <input class="myInput" placeholder="Enter dealer name" />
+      </div>
+      <div class="formEachEl">
+        Valid Lease Date
+        <input type="date" class="myInput" />
+      </div>
+      <div class="formEachEl">
+        Dealer Phone Number
+        <input class="myInput" placeholder="Phone number" />
+      </div>
+      <div class="formEachEl">
+        Dealer Mobile Number
+        <input class="myInput" placeholder="Mobile number" />
+      </div>
+      <div class="formEachEl">
+        HPCL Email ID
+        <input class="myInput" placeholder="Email id" />
+      </div>
+      <div class="formEachEl">
+        WMN Validity Date
+        <input type="date" class="myInput" />
+      </div>
+      <div class="formEachEl">
+        TIN Number
+        <input class="myInput" placeholder="Enter TIN Number" />
+      </div>
+      <div></div>
+      <div class="formEachEl">
+        PESO License Number
+        <input class="myInput" placeholder="Enter number" />
+      </div>
+      <div class="formEachEl">
+        PESO Validity till date
+        <input type="date" class="myInput" />
+      </div>
+    </div>
+  </div>
+  <div class="formFooter">
+    <button class="myBtn delete" *ngIf="isEdit">DELETE</button>
+    <div></div>
+    <div style="display: flex">
+      <button class="myBtn bordered" (click)="onClickCloseForm()">
+        CANCEL
+      </button>
+      <button class="myBtn" (click)="onClickAddForm()">NEXT</button>
+    </div>
+  </div>
+  <div class="formDetils">
+    <div>RO Communicated</div>
+    <div>Created by</div>
+    <div>Created on</div>
+    <div>Modified by</div>
+    <div>Modified on</div>
+  </div>
+</div>

@@ -21,6 +21,8 @@
 <div class="body">
   <app-dashboard *ngIf="selectedTab === 'dashboard'" />
   <Home-fual-mr *ngIf="selectedTab === 'pumpMR'" />
+  <Home-ro-master *ngIf="selectedTab === 'roMaster'" />
+  <Home-rit-master *ngIf="selectedTab === 'ritMaster'" />
   <app-settings *ngIf="selectedTab === 'settings'" />
 </div>
 <div class="sidebar">

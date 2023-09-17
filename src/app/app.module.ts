@@ -32,6 +32,8 @@ import { MopSalesComponent } from './home/dashboard/widget/mop-sales/mop-sales.c
 import { TransactionBucketComponent } from './home/dashboard/widget/transaction-bucket/transaction-bucket.component';
 import { IndentStatusComponent } from './home/dashboard/widget/indent-status/indent-status.component';
 import { FualMRComponent } from './home/fual-mr/fual-mr.component';
+import { RoMasterComponent } from './home/ro-master/ro-master.component';
+import { RitMasterComponent } from './home/rit-master/rit-master.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { FualMRComponent } from './home/fual-mr/fual-mr.component';
     TransactionBucketComponent,
     IndentStatusComponent,
     FualMRComponent,
+    RoMasterComponent,
+    RitMasterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgChartsModule],
   providers: [],
