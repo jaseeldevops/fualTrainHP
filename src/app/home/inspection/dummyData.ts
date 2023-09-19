@@ -10,7 +10,13 @@ export const RITDummy = {
     { title: 'Name of officer', value: 'GOEL BALRAM' },
   ],
   categories: [
-    { title: 'Sales and Stock', value: 'salesAndStock', status: 'Pending' },
+    {
+      title: 'Sales and Stock',
+      value: 'salesAndStock',
+      status: 'Pending',
+      list1: [],
+      list2: [{}, {}],
+    },
     {
       title: 'Performance Review',
       value: 'performanceReview',

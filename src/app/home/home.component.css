@@ -125,11 +125,11 @@
 .sidebar .roMaster_ {
   background-image: url(../../assets/dashboard/roMaster_.svg);
 }
-.sidebar .ritMaster {
-  background-image: url(../../assets/dashboard/ritMaster.svg);
+.sidebar .inspection {
+  background-image: url(../../assets/dashboard/inspection.svg);
 }
-.sidebar .ritMaster_ {
-  background-image: url(../../assets/dashboard/ritMaster_.svg);
+.sidebar .inspection_ {
+  background-image: url(../../assets/dashboard/inspection_.svg);
 }
 .sidebar .settings {
   background-image: url(../../assets/dashboard/settings.svg);

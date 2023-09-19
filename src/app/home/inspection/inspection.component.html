@@ -116,7 +116,7 @@
       <!-- ////////////////////////////////////////////////////////// -->
       <div
         class="categoryEach"
-        [ngClass]="ritSelectedCategory === it?.value ? 'selected' : ''"
+        [ngClass]="ritSelectedCategory?.value === it?.value ? 'selected' : ''"
         *ngFor="let it of slectedRIT?.categories"
         (click)="onClickRITCategory(it)"
       >
@@ -127,8 +127,15 @@
         <div style="color: #848484">></div>
       </div>
     </div>
-    <div class="formArea" *ngIf="ritSelectedCategory === 'salesAndStock'">
+    <div
+      class="formArea"
+      *ngIf="ritSelectedCategory?.value === 'salesAndStock'"
+    >
+      <!-- ////////////////////////////////////////////////////////// -->
+      <!-- ////////////////////////////////////////////////////////// -->
+      <!-- ////////////////////////////////////////////////////////// -->
       <div class="formMainTitle">1. Totalizer Reading</div>
+      <!-- ////////////////////////////////////////////////////////// -->
       <div class="div1">
         <div class="header">
           <div style="width: 8%">DU no</div>
@@ -169,18 +176,33 @@
           <div style="width: 12%">Reading on Previous Visit</div>
           <div style="width: 45%">&nbsp;</div>
         </div>
-        <div class="row" style="padding: 0" *ngFor="let it of [1, 1, 1, 1]">
+        <div
+          class="row"
+          style="padding: 0"
+          *ngFor="let it of ritSelectedCategory?.list2; let k = index"
+        >
           <div></div>
           <input class="myInput" style="width: 12%" />
           <input class="myInput" style="width: 12%" />
           <input class="myInput" style="width: 12%" />
           <input class="myInput" style="width: 12%" />
           <div style="width: 45%; height: 2.5vw; background: white">
-            <div class="plusIcon"></div>
-            <!-- <div class="binIcon"></div> -->
+            <div
+              class="plusIcon"
+              (click)="onClickFN1(k)"
+              *ngIf="ritSelectedCategory?.list2?.length === k + 1"
+            ></div>
+            <div
+              class="binIcon"
+              (click)="onClickFN1(k)"
+              *ngIf="ritSelectedCategory?.list2?.length !== k + 1"
+            ></div>
           </div>
         </div>
       </div>
+      <!-- /////////////////////////////////////////////////////////////// -->
+      <!-- /////////////////////////////////////////////////////////////// -->
+      <!-- /////////////////////////////////////////////////////////////// -->
       <div class="formMainTitle">2. Summary of Sales(prodect wise)</div>
       <!-- /////////////////////////////////////////////////////////////// -->
       <div class="div2">
@@ -205,12 +227,147 @@
           </div>
         </div>
       </div>
+      <!-- /////////////////////////////////////////////////////////////// -->
+      <!-- /////////////////////////////////////////////////////////////// -->
+      <!-- /////////////////////////////////////////////////////////////// -->
       <div class="formMainTitle">3. Stock in Tank</div>
       <!-- /////////////////////////////////////////////////////////////// -->
+      <div class="div1">
+        <div class="header">
+          <div style="width: 12%">Tank No.</div>
+          <div style="width: 12%">Capacity</div>
+          <div style="width: 12%">Previous Quantity</div>
+          <div style="width: 12%">Prduct</div>
+          <div style="width: 15%">Actual Stock on Inspection Date</div>
+          <div style="width: 15%">Dip in CM. on insoection Date</div>
+        </div>
+        <div class="row3" *ngFor="let it of [1, 1, 1, 1]">
+          <div style="width: 12%">178H083dKMS</div>
+          <div style="width: 12%">MS-1</div>
+          <div style="width: 12%">MS</div>
+          <div style="width: 12%">15390</div>
+          <input class="myInput" style="width: 15%" />
+          <input class="myInput" style="width: 15%" />
+        </div>
+        <!-- /////////////////////////////////////////////////////////////// -->
+        <div class="header" style="padding: 0.5vw 0; padding-top: 1.5vw">
+          <div></div>
+          <div style="width: 8%">From Date</div>
+          <div style="width: 8%">To Date</div>
+          <div style="width: 8%">MS R(in Liters)</div>
+          <div style="width: 8%">MS PT(in Liters)</div>
+          <div style="width: 8%">HST R(in Liters)</div>
+          <div style="width: 8%">HST PT(in Liters)</div>
+          <div style="width: 45%">&nbsp;</div>
+        </div>
+        <div
+          class="row1"
+          style="padding: 0"
+          *ngFor="let it of ritSelectedCategory?.list2; let k = index"
+        >
+          <div></div>
+          <input class="myInput" style="width: 8%" type="date" />
+          <input class="myInput" style="width: 8%" type="date" />
+          <input class="myInput" style="width: 8%" />
+          <input class="myInput" style="width: 8%" />
+          <input class="myInput" style="width: 8%" />
+          <input class="myInput" style="width: 8%" />
+          <div style="width: 45%; height: 2.5vw; background: white">
+            <div
+              class="plusIcon"
+              (click)="onClickFN1(k)"
+              *ngIf="ritSelectedCategory?.list2?.length === k + 1"
+            ></div>
+            <div
+              class="binIcon"
+              (click)="onClickFN1(k)"
+              *ngIf="ritSelectedCategory?.list2?.length !== k + 1"
+            ></div>
+          </div>
+        </div>
+        <div class="row" style="padding: 0">
+          <div></div>
+          <div style="width: 8%"></div>
+          <div style="width: 8%">Total</div>
+          <div style="width: 8%">2000</div>
+          <div style="width: 8%">28</div>
+          <div style="width: 8%">28000</div>
+          <div style="width: 8%">202</div>
+          <div style="width: 45%; height: 2.5vw; background: white"></div>
+        </div>
+        <div class="formTitle">Recipt details since last inspection</div>
+        <!-- /////////////////////////////////////////////////////////////// -->
+        <div class="header" style="padding: 0.5vw 0; padding-top: 1.5vw">
+          <div></div>
+          <div style="width: 12%">Product</div>
+          <div style="width: 12%">Previous Stock in all Tanks</div>
+          <div style="width: 12%">Recipt since last inspection</div>
+          <div style="width: 12%">Total Stock</div>
+          <div style="width: 12%">Total sales as per DIP</div>
+          <div style="width: 43%">&nbsp;</div>
+        </div>
+        <div
+          class="row"
+          style="padding: 0"
+          *ngFor="let it of ritSelectedCategory?.list2; let k = index"
+        >
+          <div></div>
+          <div style="width: 10%">MS</div>
+          <div style="width: 10%">4333 ltrs</div>
+          <div style="width: 10%">2000</div>
+          <div style="width: 10%">2409 ltrs</div>
+          <div style="width: 10%">2409 ltrs</div>
+          <div style="width: 43%; height: 2.5vw; background: white"></div>
+        </div>
+        <div class="formTitle">Variation details</div>
+        <!-- /////////////////////////////////////////////////////////////// -->
+        <div class="header" style="padding: 0.5vw 0; padding-top: 1.5vw">
+          <div></div>
+          <div style="width: 10%">Product</div>
+          <div style="width: 10%">Variation (+/-)</div>
+          <div style="width: 10%">% Variation</div>
+          <div style="width: 10%">4% of stock</div>
+          <div style="width: 10%">Varation within permissible limit</div>
+          <div style="width: 43%">&nbsp;</div>
+        </div>
+        <div
+          class="row2"
+          style="padding: 0"
+          *ngFor="let it of ritSelectedCategory?.list2; let k = index"
+        >
+          <div></div>
+          <div style="width: 10%">MS</div>
+          <div style="width: 10%">-16 Ltrs</div>
+          <div style="width: 10%">-0.07</div>
+          <div style="width: 10%">120</div>
+          <div style="width: 10%">Yes</div>
+          <div style="width: 43%; height: 2.5vw; background: white"></div>
+        </div>
+        <!-- /////////////////////////////////////////////////////////////// -->
+        <!-- /////////////////////////////////////////////////////////////// -->
+        <!-- /////////////////////////////////////////////////////////////// -->
+        <!-- /////////////////////////////////////////////////////////////// -->
+      </div>
     </div>
     <div
       class="formArea"
-      *ngIf="ritSelectedCategory === 'performanceReview'"
-    ></div>
+      *ngIf="ritSelectedCategory?.value === 'performanceReview'"
+    >
+      <!-- /////////////////////////////////////////////////////////////// -->
+      <!-- /////////////////////////////////////////////////////////////// -->
+      <!-- /////////////////////////////////////////////////////////////// -->
+      <div class="formMainTitle">1. Performance Review (Sales Data in KL)</div>
+      <!-- /////////////////////////////////////////////////////////////// -->
+      <div class="div1">
+        <div class="row4" *ngFor="let it of [1, 1]">
+          <div></div>
+          <div style="width: 70%">Stock Available of MS</div>
+          <select class="myInput" style="width: 20%">
+            <option>Select</option>
+          </select>
+          <div></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

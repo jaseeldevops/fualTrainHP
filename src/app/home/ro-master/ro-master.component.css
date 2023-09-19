@@ -114,35 +114,35 @@
   margin-bottom: 0;
   border-radius: 0.8vw;
   display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
   padding: 0.5vw;
   box-sizing: border-box;
 }
-.addform .eachFormChangerTab,
-.addform .eachFormChangerTab_ {
+.addform .formTabChanger .Tab,
+.addform .formTabChanger .Tab_ {
   height: 100%;
   width: 15vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   color: white;
   font-size: 1vw;
   font-weight: 500;
-  background-color: #8da9ce;
   border-radius: 0.8vw;
   box-sizing: border-box;
-  /* border-top-right-radius: 3vw; */
-  /* border-bottom-right-radius: 3vw; */
-  /* border-right: 0.3vw solid white; */
-  /* padding-left: 2vw; */
-  /* margin-right: -2vw; */
-  margin-right: 0.3vw;
+  padding-left: 3vw;
+  margin-right: -2vw;
   position: relative;
+  background-image: url(../../../assets/ro/navTabStart.svg);
+  background-size: cover;
+  background-position: center;
 }
-.addform .eachFormChangerTab_ {
-  background-color: #19437a;
+.addform .formTabChanger .Tab_ {
+  background-image: url(../../../assets/ro/navTabStart_.svg);
 }
-.addform .eachFormChangerTab div,
-.addform .eachFormChangerTab_ div {
+.addform .Tab div,
+.addform .Tab_ div {
   background-color: white;
   color: #19437a;
   width: 1.6vw;

@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   showProfileDrower: boolean = false;
-  selectedTab: string = 'ritMaster';
+  selectedTab: string = 'inspection';
 
   dashbordRouts = [
     { title: 'Dashboard', value: 'dashboard' },
     { title: 'Pump M&R', value: 'pumpMR' },
     { title: 'RO Masters', value: 'roMaster' },
-    { title: 'RIT Masters', value: 'ritMaster' },
+    { title: 'Inspection', value: 'inspection' },
     { title: 'Settings', value: 'settings' },
   ];
 }

@@ -1,5 +1,5 @@
-    <div *ngIf="page === 'listPage'">
-    <div class="pageHeader">RO Details</div>
+<div *ngIf="page === 'listPage'">
+  <div class="pageHeader">RO Details</div>
   <div class="pageBody">
     <div class="filterContainer">
       <input class="myInput" placeholder="Search ID" />
@@ -345,45 +345,25 @@
     <div class="backBtn" (click)="page = 'listPage'">CREATE NEW RO</div>
   </div>
   <div class="formTabChanger">
-    <div
-      [ngClass]="
-        formSelectedTab === 0 ? 'eachFormChangerTab_' : 'eachFormChangerTab'
-      "
-    >
-      <div>1</div>
-      RO Mapping
+    <div [ngClass]="formSelectedTab === 4 ? 'Tab_' : 'Tab'">
+      <div>5</div>
+      ITPS Details
     </div>
-    <div
-      [ngClass]="
-        formSelectedTab === 1 ? 'eachFormChangerTab_' : 'eachFormChangerTab'
-      "
-    >
-      <div>2</div>
-      Dealer Details
-    </div>
-    <div
-      [ngClass]="
-        formSelectedTab === 2 ? 'eachFormChangerTab_' : 'eachFormChangerTab'
-      "
-    >
-      <div>3</div>
-      Automatoion Details
-    </div>
-    <div
-      [ngClass]="
-        formSelectedTab === 3 ? 'eachFormChangerTab_' : 'eachFormChangerTab'
-      "
-    >
+    <div [ngClass]="formSelectedTab === 3 ? 'Tab_' : 'Tab'">
       <div>4</div>
       RO Infrastructure
     </div>
-    <div
-      [ngClass]="
-        formSelectedTab === 4 ? 'eachFormChangerTab_' : 'eachFormChangerTab'
-      "
-    >
-      <div>5</div>
-      ITPS Details
+    <div [ngClass]="formSelectedTab === 2 ? 'Tab_' : 'Tab'">
+      <div>3</div>
+      Automatoion Details
+    </div>
+    <div [ngClass]="formSelectedTab === 1 ? 'Tab_' : 'Tab'">
+      <div>2</div>
+      Dealer Details
+    </div>
+    <div [ngClass]="formSelectedTab === 0 ? 'Tab_' : 'Tab'">
+      <div>1</div>
+      RO Mapping
     </div>
   </div>
   <div class="formBody">
