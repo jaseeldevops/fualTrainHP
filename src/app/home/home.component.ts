@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   showProfileDrower: boolean = false;
-  selectedTab: string = 'inspection';
+  selectedTab: string = 'dashboard';
 
   dashbordRouts = [
     { title: 'Dashboard', value: 'dashboard' },

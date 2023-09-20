@@ -7,7 +7,7 @@ import { RITDummy, allRITDummy } from './dummyData';
   styleUrls: ['./inspection.component.css'],
 })
 export class InspectionComponent {
-  page = 'ritFormPage'; // ritListPage, ritFormPage
+  page = 'ritListPage'; // ritListPage, ritFormPage
   allRIT: any = allRITDummy;
 
   slectedRIT: any = RITDummy;
