@@ -34,12 +34,39 @@ export class InspectionComponent {
   };
 
   onClickFN1 = (k: any) => {
+    if (this.ritSelectedCategory?.list1?.length !== k + 1) {
+      // Delete Functionality
+      this.ritSelectedCategory?.list1.splice(k, 1);
+    } else {
+      // Add Functionality
+      this.ritSelectedCategory?.list1.push({});
+    }
+  };
+  onClickFN2 = (k: any) => {
     if (this.ritSelectedCategory?.list2?.length !== k + 1) {
       // Delete Functionality
       this.ritSelectedCategory?.list2.splice(k, 1);
     } else {
       // Add Functionality
       this.ritSelectedCategory?.list2.push({});
+    }
+  };
+  onClickFN3 = (k: any) => {
+    if (this.ritSelectedCategory?.list3?.length !== k + 1) {
+      // Delete Functionality
+      this.ritSelectedCategory?.list3.splice(k, 1);
+    } else {
+      // Add Functionality
+      this.ritSelectedCategory?.list3.push({});
+    }
+  };
+  onClickFN4 = (k: any) => {
+    if (this.ritSelectedCategory?.list4?.length !== k + 1) {
+      // Delete Functionality
+      this.ritSelectedCategory?.list4.splice(k, 1);
+    } else {
+      // Add Functionality
+      this.ritSelectedCategory?.list4.push({});
     }
   };
 

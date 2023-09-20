@@ -158,6 +158,7 @@
       <!-- ////////////////////////////////////////////////////////// -->
       <div class="div1">
         <div class="header">
+          <div></div>
           <div style="width: 8%">DU no</div>
           <div style="width: 8%">Nozzle no</div>
           <div style="width: 8%">Product</div>
@@ -174,8 +175,14 @@
             >span>
           </div>
           <div style="width: 8%">Total Sales as per Reading</div>
+          <div style="width: 4%"></div>
         </div>
-        <div class="row" *ngFor="let it of [1, 1, 1, 1]">
+        <div
+          class="row"
+          style="padding: 0"
+          *ngFor="let it of ritSelectedCategory?.list1; let k = index"
+        >
+          <div></div>
           <!-- <div style="width: 8%">178H083dKMS</div>
           <div style="width: 8%">MS-1</div>
           <div style="width: 8%">MS</div>
@@ -194,6 +201,18 @@
           <input class="myInput" style="width: 8%" />
           <input class="myInput" style="width: 8%" />
           <!-- <div style="width: 8%">7698</div> -->
+          <div style="width: 4%; height: 2.5vw; background: white">
+            <div
+              class="plusIcon"
+              (click)="onClickFN1(k)"
+              *ngIf="ritSelectedCategory?.list1?.length === k + 1"
+            ></div>
+            <div
+              class="binIcon"
+              (click)="onClickFN1(k)"
+              *ngIf="ritSelectedCategory?.list1?.length !== k + 1"
+            ></div>
+          </div>
         </div>
         <div class="header" style="padding: 0.5vw 0; padding-top: 1.5vw">
           <div></div>
@@ -216,12 +235,12 @@
           <div style="width: 45%; height: 2.5vw; background: white">
             <div
               class="plusIcon"
-              (click)="onClickFN1(k)"
+              (click)="onClickFN2(k)"
               *ngIf="ritSelectedCategory?.list2?.length === k + 1"
             ></div>
             <div
               class="binIcon"
-              (click)="onClickFN1(k)"
+              (click)="onClickFN2(k)"
               *ngIf="ritSelectedCategory?.list2?.length !== k + 1"
             ></div>
           </div>
@@ -261,20 +280,43 @@
       <!-- /////////////////////////////////////////////////////////////// -->
       <div class="div1">
         <div class="header">
+          <div></div>
           <div style="width: 12%">Tank No.</div>
           <div style="width: 12%">Capacity</div>
           <div style="width: 12%">Previous Quantity</div>
           <div style="width: 12%">Prduct</div>
           <div style="width: 15%">Actual Stock on Inspection Date</div>
           <div style="width: 15%">Dip in CM. on insoection Date</div>
+          <div style="width: 4%"></div>
         </div>
-        <div class="row3" *ngFor="let it of [1, 1, 1, 1]">
-          <div style="width: 12%">178H083dKMS</div>
+        <div
+          class="row3"
+          style="padding: 0"
+          *ngFor="let it of ritSelectedCategory?.list3; let k = index"
+        >
+          <div></div>
+          <!-- <div style="width: 12%">178H083dKMS</div>
           <div style="width: 12%">MS-1</div>
           <div style="width: 12%">MS</div>
-          <div style="width: 12%">15390</div>
+          <div style="width: 12%">15390</div> -->
+          <input class="myInput" style="width: 12%" />
+          <input class="myInput" style="width: 12%" />
+          <input class="myInput" style="width: 12%" />
+          <input class="myInput" style="width: 12%" />
           <input class="myInput" style="width: 15%" />
           <input class="myInput" style="width: 15%" />
+          <div style="width: 4%; height: 2.5vw; background: white">
+            <div
+              class="plusIcon"
+              (click)="onClickFN3(k)"
+              *ngIf="ritSelectedCategory?.list3?.length === k + 1"
+            ></div>
+            <div
+              class="binIcon"
+              (click)="onClickFN3(k)"
+              *ngIf="ritSelectedCategory?.list3?.length !== k + 1"
+            ></div>
+          </div>
         </div>
         <!-- /////////////////////////////////////////////////////////////// -->
         <div class="header" style="padding: 0.5vw 0; padding-top: 1.5vw">
@@ -290,7 +332,7 @@
         <div
           class="row1"
           style="padding: 0"
-          *ngFor="let it of ritSelectedCategory?.list2; let k = index"
+          *ngFor="let it of ritSelectedCategory?.list4; let k = index"
         >
           <div></div>
           <input class="myInput" style="width: 8%" type="date" />
@@ -302,13 +344,13 @@
           <div style="width: 45%; height: 2.5vw; background: white">
             <div
               class="plusIcon"
-              (click)="onClickFN1(k)"
-              *ngIf="ritSelectedCategory?.list2?.length === k + 1"
+              (click)="onClickFN4(k)"
+              *ngIf="ritSelectedCategory?.list4?.length === k + 1"
             ></div>
             <div
               class="binIcon"
-              (click)="onClickFN1(k)"
-              *ngIf="ritSelectedCategory?.list2?.length !== k + 1"
+              (click)="onClickFN4(k)"
+              *ngIf="ritSelectedCategory?.list4?.length !== k + 1"
             ></div>
           </div>
         </div>

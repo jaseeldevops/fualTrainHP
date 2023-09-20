@@ -14,8 +14,10 @@ export const RITDummy = {
       title: 'Sales and Stock',
       value: 'salesAndStock',
       status: 'Pending',
-      list1: [],
+      list1: [{}, {}],
       list2: [{}, {}],
+      list3: [{}, {}],
+      list4: [{}, {}],
     },
     {
       title: 'Performance Review',
