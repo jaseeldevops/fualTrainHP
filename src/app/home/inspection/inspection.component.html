@@ -1,7 +1,11 @@
 <div class="ritListPage" *ngIf="page === 'ritListPage'">
   <div class="pageHeader">RIT</div>
   <div class="statusDiv">
-    <div class="eachStatus">
+    <div
+      class="eachStatus"
+      [ngClass]="ritSelectedTable === 'Scheduled' ? 'selected' : ''"
+      (click)="onChangeRITTable('Scheduled')"
+    >
       <div>
         <div style="padding-bottom: 0.3vw">Scheduled</div>
         <div style="font-size: 0.65vw">No of scheduled inspection</div>
@@ -11,7 +15,11 @@
         <span style="color: #9a9a9a70">></span>
       </div>
     </div>
-    <div class="eachStatus">
+    <div
+      class="eachStatus"
+      [ngClass]="ritSelectedTable === 'Completed' ? 'selected' : ''"
+      (click)="onChangeRITTable('Completed')"
+    >
       <div>
         <div style="padding-bottom: 0.3vw">Completed</div>
         <div style="font-size: 0.65vw">No of scheduled inspection</div>
@@ -21,7 +29,11 @@
         <span style="color: #9a9a9a70">></span>
       </div>
     </div>
-    <div class="eachStatus">
+    <div
+      class="eachStatus"
+      [ngClass]="ritSelectedTable === 'In Progress' ? 'selected' : ''"
+      (click)="onChangeRITTable('In Progress')"
+    >
       <div>
         <div style="padding-bottom: 0.3vw">In Progress</div>
         <div style="font-size: 0.65vw">No of scheduled inspection</div>
@@ -31,7 +43,11 @@
         <span style="color: #9a9a9a70">></span>
       </div>
     </div>
-    <div class="eachStatus">
+    <div
+      class="eachStatus"
+      [ngClass]="ritSelectedTable === 'Pending' ? 'selected' : ''"
+      (click)="onChangeRITTable('Pending')"
+    >
       <div>
         <div style="padding-bottom: 0.3vw">Pending</div>
         <div style="font-size: 0.65vw">No of scheduled inspection</div>
@@ -41,7 +57,11 @@
         <span style="color: #9a9a9a70">></span>
       </div>
     </div>
-    <div class="eachStatus">
+    <div
+      class="eachStatus"
+      [ngClass]="ritSelectedTable === 'Overdue' ? 'selected' : ''"
+      (click)="onChangeRITTable('Overdue')"
+    >
       <div>
         <div style="padding-bottom: 0.3vw">Overdue</div>
         <div style="font-size: 0.65vw">No of scheduled inspection</div>
@@ -355,6 +375,10 @@
         <!-- /////////////////////////////////////////////////////////////// -->
         <!-- /////////////////////////////////////////////////////////////// -->
       </div>
+      <div class="flex hrEnd">
+        <button class="myBtn bordered">SAVE</button>
+        <button class="myBtn" (click)="onClickNextRit()">NEXT</button>
+      </div>
     </div>
     <div
       class="formArea"
@@ -626,6 +650,10 @@
           </select>
           <div></div>
         </div>
+      </div>
+      <div class="flex hrEnd">
+        <button class="myBtn bordered">SAVE</button>
+        <button class="myBtn" (click)="onClickNextRit()">NEXT</button>
       </div>
     </div>
   </div>

@@ -180,3 +180,6 @@ select.myInput {
 .flex.hrBetween {
   justify-content: space-between;
 }
+.flex.hrEnd {
+  justify-content: flex-end;
+}

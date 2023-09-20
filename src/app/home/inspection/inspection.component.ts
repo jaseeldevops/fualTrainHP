@@ -8,10 +8,19 @@ import { RITDummy, allRITDummy } from './dummyData';
 })
 export class InspectionComponent {
   page = 'ritListPage'; // ritListPage, ritFormPage
+
+  ritSelectedTable = 'Scheduled';
+  onChangeRITTable = (v: string) => {
+    this.ritSelectedTable = v;
+  };
+
   allRIT: any = allRITDummy;
 
   slectedRIT: any = RITDummy;
-  ritSelectedCategory: any = this.slectedRIT?.categories?.[0];
+
+  ritSelectedCategoryCount: any = 0;
+  ritSelectedCategory: any =
+    this.slectedRIT?.categories?.[this.ritSelectedCategoryCount];
 
   onChangePage = (page: any, count: any) => {};
 
@@ -32,5 +41,11 @@ export class InspectionComponent {
       // Add Functionality
       this.ritSelectedCategory?.list2.push({});
     }
+  };
+
+  onClickNextRit = () => {
+    this.ritSelectedCategoryCount++;
+    this.ritSelectedCategory =
+      this.slectedRIT?.categories?.[this.ritSelectedCategoryCount];
   };
 }

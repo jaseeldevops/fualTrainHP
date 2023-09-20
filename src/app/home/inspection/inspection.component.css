@@ -66,6 +66,41 @@
 .ritListPage .eachStatus:nth-child(5) {
   background-image: url(../../../assets/rit/overdue.svg);
 }
+.ritListPage .eachStatus:nth-child(1).selected {
+  border: 0.18vw solid #603abb;
+  padding: 0.6vw 0.7vw;
+  padding-left: 3.3vw;
+  background-position: 0.9vw;
+  background-color: #613abb4b;
+}
+.ritListPage .eachStatus:nth-child(2).selected {
+  border: 0.18vw solid #068e5c;
+  padding: 0.6vw 0.7vw;
+  padding-left: 3.3vw;
+  background-position: 0.9vw;
+  background-color: #068e5c4b;
+}
+.ritListPage .eachStatus:nth-child(3).selected {
+  border: 0.18vw solid #f29a00;
+  padding: 0.6vw 0.7vw;
+  padding-left: 3.3vw;
+  background-position: 0.9vw;
+  background-color: #f29a004b;
+}
+.ritListPage .eachStatus:nth-child(4).selected {
+  border: 0.18vw solid #199de4;
+  padding: 0.6vw 0.7vw;
+  padding-left: 3.3vw;
+  background-position: 0.9vw;
+  background-color: #199de44b;
+}
+.ritListPage .eachStatus:nth-child(5).selected {
+  border: 0.18vw solid #fd607b;
+  padding: 0.6vw 0.7vw;
+  padding-left: 3.3vw;
+  background-position: 0.9vw;
+  background-color: #fd607b4b;
+}
 .ritListPage .filterHeader {
   margin: 0.6vw 1vw;
   background-color: white;
