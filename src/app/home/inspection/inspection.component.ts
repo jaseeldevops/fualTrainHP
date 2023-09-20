@@ -11,7 +11,7 @@ export class InspectionComponent {
   allRIT: any = allRITDummy;
 
   slectedRIT: any = RITDummy;
-  ritSelectedCategory: any = this.slectedRIT?.categories?.[1];
+  ritSelectedCategory: any = this.slectedRIT?.categories?.[0];
 
   onChangePage = (page: any, count: any) => {};
 

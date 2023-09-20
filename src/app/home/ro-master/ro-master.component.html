@@ -2,27 +2,27 @@
   <div class="pageHeader">RO Details</div>
   <div class="pageBody">
     <div class="filterContainer">
-      <input class="myInput" placeholder="Search ID" />
+      <input class="myInput" style="width: 15%;" placeholder="Search ID" />
       <span>Filter</span>
-      <select class="myInput">
+      <select class="myInput" style="width: 8%;">
         <option>All Zone</option>
       </select>
-      <select class="myInput">
+      <select class="myInput" style="width: 8%;">
         <option>All Region</option>
       </select>
-      <select class="myInput">
+      <select class="myInput" style="width: 8%;">
         <option>All Sales Area</option>
       </select>
-      <select class="myInput">
+      <select class="myInput" style="width: 8%;">
         <option>All Vendor</option>
       </select>
-      <select class="myInput">
+      <select class="myInput" style="width: 8%;">
         <option>All RO</option>
       </select>
-      <select class="myInput">
+      <select class="myInput" style="width: 8%;">
         <option>All Type</option>
       </select>
-      <select class="myInput">
+      <select class="myInput" style="width: 8%;">
         <option>All Caregory</option>
       </select>
       <button
@@ -340,12 +340,18 @@
     </div>
   </div>
 </div>
+<!-- ////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////////////////////////////////////// -->
 <div *ngIf="page === 'addPage'" class="addform">
   <div class="pageHeader">
     <div class="backBtn" (click)="page = 'listPage'">CREATE NEW RO</div>
   </div>
   <div class="formTabChanger">
-    <div [ngClass]="formSelectedTab === 4 ? 'Tab_' : 'Tab'">
+    <div [ngClass]="formSelectedTab === 4 ? 'Tab_ last' : 'Tab last'">
       <div>5</div>
       ITPS Details
     </div>

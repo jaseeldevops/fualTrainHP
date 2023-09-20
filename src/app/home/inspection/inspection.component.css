@@ -205,6 +205,14 @@
 .ritFormPage .div1 .row4 {
   background-color: #e0e6ee;
 }
+.ritFormPage .div1 .row5 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5vw;
+  font-size: 0.88vw;
+  text-align: center;
+  margin-top: 2vw;
+}
 /* ///////////////////////////////////////////////////////////////// */
 .ritFormPage .div2 {
   padding: 1vw;

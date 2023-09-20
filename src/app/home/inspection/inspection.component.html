@@ -156,17 +156,24 @@
           <div style="width: 8%">Total Sales as per Reading</div>
         </div>
         <div class="row" *ngFor="let it of [1, 1, 1, 1]">
-          <div style="width: 8%">178H083dKMS</div>
+          <!-- <div style="width: 8%">178H083dKMS</div>
           <div style="width: 8%">MS-1</div>
           <div style="width: 8%">MS</div>
-          <div style="width: 8%">15390</div>
+          <div style="width: 8%">15390</div> -->
           <input class="myInput" style="width: 8%" />
           <input class="myInput" style="width: 8%" />
           <input class="myInput" style="width: 8%" />
-          <div style="width: 8%">-</div>
-          <div style="width: 8%">-</div>
           <input class="myInput" style="width: 8%" />
-          <div style="width: 8%">7698</div>
+          <input class="myInput" style="width: 8%" />
+          <input class="myInput" style="width: 8%" />
+          <input class="myInput" style="width: 8%" />
+          <input class="myInput" style="width: 8%" />
+          <input class="myInput" style="width: 8%" />
+          <!-- <div style="width: 8%">-</div>
+          <div style="width: 8%">-</div> -->
+          <input class="myInput" style="width: 8%" />
+          <input class="myInput" style="width: 8%" />
+          <!-- <div style="width: 8%">7698</div> -->
         </div>
         <div class="header" style="padding: 0.5vw 0; padding-top: 1.5vw">
           <div></div>
@@ -359,9 +366,261 @@
       <div class="formMainTitle">1. Performance Review (Sales Data in KL)</div>
       <!-- /////////////////////////////////////////////////////////////// -->
       <div class="div1">
-        <div class="row4" *ngFor="let it of [1, 1]">
+        <!-- ////////////////////////////////////////////// -->
+        <div class="row5">
+          <div style="width: 55%">For the Month</div>
+          <div style="width: 45%">Cumulatie Year</div>
+        </div>
+        <div
+          class="flex hrBetween"
+          style="font-size: 0.8vw; margin-bottom: 0.2vw"
+        >
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #fdf6ed; padding: 0.3vw; width: 55%"
+          >
+            <div style="width: 5%">S No</div>
+            <div style="width: 20%"></div>
+            <div style="width: 20%">Traget</div>
+            <div style="width: 20%">Sales In January 2018</div>
+            <div style="width: 20%">Sales In January 2018</div>
+          </div>
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #fdf6ed; padding: 0.3vw; width: 42%"
+          >
+            <div style="width: 30%">Target</div>
+            <div style="width: 30%">Sales In April 2018 to January 2018</div>
+            <div style="width: 30%">Sales In April 2018 to January 2018</div>
+          </div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <div
+          class="flex hrBetween"
+          style="font-size: 0.88vw; margin-bottom: 0.2vw"
+        >
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #ececec; padding: 0.3vw; width: 55%"
+          >
+            <div style="width: 5%">01</div>
+            <div style="width: 20%">MS</div>
+            <input class="myInput" style="width: 22%" />
+            <input class="myInput" style="width: 22%" />
+            <input class="myInput" style="width: 22%" />
+          </div>
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #ececec; padding: 0.3vw; width: 42%"
+          >
+            <input class="myInput" style="width: 30%" />
+            <input class="myInput" style="width: 30%" />
+            <input class="myInput" style="width: 30%" />
+          </div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <div
+          class="flex hrBetween"
+          style="font-size: 0.88vw; margin-bottom: 0.2vw"
+        >
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #edf6fd; padding: 0.3vw; width: 55%"
+          >
+            <div style="width: 5%">01</div>
+            <div style="width: 20%">HDS</div>
+            <input class="myInput" style="width: 22%" />
+            <input class="myInput" style="width: 22%" />
+            <input class="myInput" style="width: 22%" />
+          </div>
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #edf6fd; padding: 0.3vw; width: 42%"
+          >
+            <input class="myInput" style="width: 30%" />
+            <input class="myInput" style="width: 30%" />
+            <input class="myInput" style="width: 30%" />
+          </div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <div
+          class="flex hrBetween"
+          style="font-size: 0.88vw; margin-bottom: 0.2vw"
+        >
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #ededed; padding: 0.6vw 0.3vw; width: 55%"
+          >
+            <div style="width: 5%">03</div>
+            <div style="width: 95%">Lubes Up lifted from the compony</div>
+          </div>
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #ededed; padding: 0.3vw; width: 42%"
+          ></div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <div
+          class="flex hrBetween"
+          style="font-size: 0.88vw; margin-bottom: 0.2vw"
+        >
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #d9d4e5; padding: 0.6vw 0.3vw; width: 55%"
+          >
+            <div style="width: 5%"></div>
+            <div style="width: 20%">Racer 2</div>
+            <input class="myInput" style="width: 22%" [defaultValue]="0" />
+            <input class="myInput" style="width: 22%" [defaultValue]="0" />
+            <input class="myInput" style="width: 22%" [defaultValue]="0" />
+          </div>
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #d9d4e5; padding: 0.3vw; width: 42%"
+          >
+            <input class="myInput" style="width: 30%" [defaultValue]="0" />
+            <input class="myInput" style="width: 30%" [defaultValue]="0" />
+            <input class="myInput" style="width: 30%" [defaultValue]="0" />
+          </div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <div
+          class="flex hrBetween"
+          style="font-size: 0.88vw; margin-bottom: 0.2vw"
+        >
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #d9d4e5; padding: 0.6vw 0.3vw; width: 55%"
+          >
+            <div style="width: 5%"></div>
+            <div style="width: 20%">Other AEGO</div>
+            <input class="myInput" style="width: 22%" [defaultValue]="0" />
+            <input class="myInput" style="width: 22%" [defaultValue]="0" />
+            <input class="myInput" style="width: 22%" [defaultValue]="0" />
+          </div>
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #d9d4e5; padding: 0.3vw; width: 42%"
+          >
+            <input class="myInput" style="width: 30%" [defaultValue]="0" />
+            <input class="myInput" style="width: 30%" [defaultValue]="0" />
+            <input class="myInput" style="width: 30%" [defaultValue]="0" />
+          </div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <!-- /////////////////////////////////////////////////////////////// -->
+        <div
+          class="flex hrBetween"
+          style="font-size: 0.8vw; margin-bottom: 0.2vw"
+        >
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #d9d4e5; padding: 0.6vw 0.3vw; width: 55%"
+          >
+            <div style="width: 5%"></div>
+            <div style="width: 20%">Total Lubes</div>
+            <div style="width: 20%"></div>
+            <div style="width: 20%">0.23</div>
+            <div style="width: 20%"></div>
+          </div>
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #d9d4e5; padding: 0.3vw; width: 42%"
+          >
+            <div style="width: 30%"></div>
+            <div style="width: 30%">0.49</div>
+            <div style="width: 30%">0.97</div>
+          </div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <!-- /////////////////////////////////////////////////////////////// -->
+        <div
+          class="flex hrBetween"
+          style="font-size: 0.8vw; margin-bottom: 0.2vw"
+        >
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #d9d4e5; padding: 0.6vw 0.3vw; width: 55%"
+          >
+            <div style="width: 5%"></div>
+            <div style="width: 20%">Lube Fuel Ratio</div>
+            <div style="width: 20%"></div>
+            <div style="width: 20%">0.23</div>
+            <div style="width: 20%"></div>
+          </div>
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #d9d4e5; padding: 0.3vw; width: 42%"
+          >
+            <div style="width: 30%"></div>
+            <div style="width: 30%">0.49</div>
+            <div style="width: 30%">0.97</div>
+          </div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <!-- ////////////////////////////////////////////// -->
+        <div
+          class="flex hrBetween"
+          style="font-size: 0.88vw; margin-bottom: 0.2vw"
+        >
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #edf6fd; padding: 0.6vw 0.3vw; width: 55%"
+          >
+            <div style="width: 5%">04</div>
+            <div style="width: 95%">Racer2 MS Raion</div>
+          </div>
+          <div
+            class="flex vrCenter hrBetween"
+            style="background: #edf6fd; padding: 0.3vw; width: 42%"
+          >
+            <div style="width: 30%"></div>
+            <div style="width: 30%">0.01</div>
+            <div style="width: 30%"></div>
+          </div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <div class="row4">
           <div></div>
-          <div style="width: 70%">Stock Available of MS</div>
+          <div style="width: 70%">Stock Availability Of MS</div>
+          <select class="myInput" style="width: 20%">
+            <option>Select</option>
+          </select>
+          <div></div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <div class="row4">
+          <div></div>
+          <div style="width: 70%">Stock Availability Of HSD</div>
+          <select class="myInput" style="width: 20%">
+            <option>Select</option>
+          </select>
+          <div></div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <div class="row4">
+          <div></div>
+          <div style="width: 70%">Stock Availability Of Lubricating Oils</div>
+          <select class="myInput" style="width: 20%">
+            <option>Select</option>
+          </select>
+          <div></div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <div class="row4">
+          <div></div>
+          <div style="width: 70%">
+            Grades package not available (No Grades Package(s) selected)
+          </div>
+          <div style="width: 20%">Add Grades Packager ></div>
+          <div></div>
+        </div>
+        <!-- ////////////////////////////////////////////// -->
+        <div class="row4">
+          <div></div>
+          <div style="width: 70%">
+            R.O. stocking lubes other that those supplied
+          </div>
           <select class="myInput" style="width: 20%">
             <option>Select</option>
           </select>

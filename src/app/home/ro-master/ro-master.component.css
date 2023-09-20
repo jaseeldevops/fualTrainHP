@@ -125,7 +125,6 @@
   width: 15vw;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   color: white;
   font-size: 1vw;
   font-weight: 500;
@@ -140,6 +139,12 @@
 }
 .addform .formTabChanger .Tab_ {
   background-image: url(../../../assets/ro/navTabStart_.svg);
+}
+.addform .formTabChanger .Tab.last {
+  background-image: url(../../../assets/ro/navTabEnd.svg);
+}
+.addform .formTabChanger .Tab_.last {
+  background-image: url(../../../assets/ro/navTabEnd_.svg);
 }
 .addform .Tab div,
 .addform .Tab_ div {

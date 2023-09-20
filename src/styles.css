@@ -165,3 +165,18 @@ select.myInput {
 /* ////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////// */
+.flex {
+  display: flex;
+}
+.flex.flexCol {
+  flex-direction: column;
+}
+.flex.vrCenter {
+  align-items: center;
+}
+.flex.hrCenter {
+  justify-content: center;
+}
+.flex.hrBetween {
+  justify-content: space-between;
+}
