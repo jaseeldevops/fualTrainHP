@@ -429,6 +429,19 @@ export class RetailEngineerDashboardComponent {
         },
       ],
     },
+    tableData: [
+      { title: '<2 Days', nano: '2050', connectivity: '11254' },
+      { title: '<4 Days', nano: '2050', connectivity: '114' },
+      { title: '<7 Days', nano: '2050', connectivity: '11254' },
+      { title: '<15 Days', nano: '200', connectivity: '11254' },
+      { title: '<21 Days', nano: '2050', connectivity: '15254' },
+      { title: '<30 Days', nano: '2050', connectivity: '11254' },
+      { title: '<45 Days', nano: '2050', connectivity: '66254' },
+      { title: '<60 Days', nano: '050', connectivity: '11254' },
+      { title: '<75 Days', nano: '200', connectivity: '7854' },
+      { title: '<80 Days', nano: '050', connectivity: '11654' },
+      { title: '<90 Days', nano: '250', connectivity: '112564' },
+    ],
   };
   // <END-> Sales & Inventory Trend
   //

@@ -89,3 +89,69 @@
   border: 0.1vw solid #9fa3a99c;
   border-radius: 0.2vw;
 }
+
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+.agentTable {
+  margin: 3vw 1vw;
+}
+.titleRow {
+  display: flex;
+  align-items: center;
+}
+.titleRow span {
+  padding-right: .5vw;
+  width: 12%;
+  font-size: 0.8vw;
+  text-align: right;
+  border-right: .08vw solid #00000055;
+  height: 1.2vw;
+  padding-top: .2vw;
+  box-sizing: border-box;
+}
+.titleRow div {
+  height: 1.2vw;
+  width: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8vw;
+  background-color: #dbe9fb;
+  border-right: .08vw solid #00000055;
+  border-top: .05vw solid #00000055;
+  border-bottom: .05vw solid #00000055;
+}
+.titleRow div:nth-child(odd) {
+  background-color: #F3F7FC;
+}
+.dataRow {
+  display: flex;
+  align-items: center;
+}
+.dataRow span {
+  height: 3vw;
+  width: 12%;
+  padding-right: .5vw;
+  font-size: 0.8vw;
+  text-align: right;
+  border-right: .08vw solid #00000055;
+  padding-top: 1vw;
+  box-sizing: border-box;
+  color: #000000cc;
+}
+.dataRow div {
+  height: 3vw;
+  width: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dbe9fb;
+  font-size: .9vw;
+  font-weight: 500;
+  border-right: .08vw solid #00000055;
+  border-bottom: .05vw solid #00000055;
+}
+.dataRow div:nth-child(odd) {
+  background-color: #F3F7FC;
+}

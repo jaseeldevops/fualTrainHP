@@ -417,7 +417,31 @@
           </div>
         </div>
         <!------------------------------------------------------------------->
-        <MyLineGraph [datas]="nanoConnectivity.values" height="12vw" />
+        <MyLineGraph
+          [datas]="nanoConnectivity.values"
+          height="12vw"
+          *ngIf="nanoConnectivity.selected === 'Trend'"
+        />
+        <div class="agentTable" *ngIf="nanoConnectivity.selected === 'Ageing'">
+          <div class="titleRow">
+            <span></span>
+            <div *ngFor="let it of nanoConnectivity?.tableData">
+              {{ it.title }}
+            </div>
+          </div>
+          <div class="dataRow">
+            <span>Nano</span>
+            <div *ngFor="let it of nanoConnectivity?.tableData">
+              {{ it.nano }}
+            </div>
+          </div>
+          <div class="dataRow">
+            <span>Connectivity</span>
+            <div *ngFor="let it of nanoConnectivity?.tableData">
+              {{ it.connectivity }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="graphFrame" style="width: 50%">
